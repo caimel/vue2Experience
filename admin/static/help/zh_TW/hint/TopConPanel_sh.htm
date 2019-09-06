@@ -1,0 +1,88 @@
+<HTML>
+   <HEAD>
+      <TITLE>Top Consumption Panel</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css"> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD>
+	            <H1>Top Consumption Panel</H1>
+	         </TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <TD COLSPAN="2">  <!-- begin of content -->
+               <P>This page gives you an overview of what sessions use much more CPU resources, have heavy disk I/O activities and consume lots of memory. Monitoring information in these lists that are refreshed every couple of seconds automatically, you can identify which session have heavy CPU, disk I/O and memory loading and drill down the session to find out the root cause.</P>
+               <P>The <SPAN CLASS="HL_Key">Top Busy Sessions</SPAN> shows information of active top busy sessions running in the database server. They are listed in descending order of the  <SPAN CLASS="HL_Key">[OP+]</SPAN> column. <SPAN CLASS="HL_Key">[OP+]</SPAN> column, the incremental operations  like read/write and networking etc., and <SPAN CLASS="HL_Key">[SEQ+]</SPAN> column, the incremental sequential scans,  are the number of activities exercised by a session in a refreshing interval. Each session is displayed with   how long it has been alive, how many operations have been executed up to now or in a refreshing interval, how many sequential scans have been exercised up to now or in a refreshing interval, and what the database is being accessed etc. Please refer to <A HREF="./busySes_sh.htm">Top Busy Sessions</A> for more information of symptoms and approaches found in the tabular list.</P>
+               <P>The <SPAN CLASS="HL_Key">Top I/O Sessions</SPAN> shows information of active sessions in the database server with extremenly busy I/O activities.  They are listed in descending order of the <SPAN CLASS="HL_Key">[RW+]</SPAN> column. <SPAN CLASS="HL_Key">[RW+]</SPAN>, <SPAN CLASS="HL_Key">[DskW+]</SPAN> and <SPAN CLASS="HL_Key">[DskR+]</SPAN> columns are the incremental number of disk reads/writes activities exercised by a session in a refreshing interval. Each session is displayed with how long it has been alive, how many reads/writes have been exercised up to now or in a refreshing interval, and what the database is been accessed etc. Please refer to <A HREF="./busyDskIOSes_sh.htm">Top I/O Sessions</A> for more information of symptoms and approaches found in the tabular list.</P>
+               <P>The <SPAN CLASS="HL_Key">Top Memory Sessions</SPAN> shows information of active sessions in the database server that consume the most memory. They are listed in descending order of the <SPAN CLASS="HL_Key">[Mem Allocated]</SPAN> column. Each session is displayed with how long it has been alive, how many memory have been allocated and used, how many locks are held by the session, how files are opened in a session, and how many buffer reads/writes have been exercised up to now etc. Please refer to <A HREF="./topMemSes_sh.htm">Top Memory Sessions</A> for more information of symptoms and approaches found in the tabular list.</P>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>Symptom and Approach :</H2>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="20px" ALIGN="right" VALIGN="top">1.</TD>
+                     <TD>
+                        <P>If a session in the <SPAN CLASS="HL_Key">Top Busy Sessions</SPAN> has  tremendous amount of <SPAN CLASS="HL_Key">[OP+]</SPAN> or <SPAN CLASS="HL_Key">[SEQ+]</SPAN>, you may need to drill down  to check what SQL is running, how the SQL is running and how the resource is being taken.</P>             
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">2.</TD>
+                     <TD>
+                        <P>If a session in the <SPAN CLASS="HL_Key">Top I/O Sessions</SPAN> has tremendous amount of <SPAN CLASS="HL_Key">[RW+]</SPAN> or <SPAN CLASS="HL_Key">[DskR+]</SPAN>, you may need to drill down to check what SQL is running, how the SQL is running, what tables are being accessed and how the resource is being taken by the SQL.</P>
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">3.</TD>
+                     <TD>If a session in the <SPAN CLASS="HL_Key">Top I/O Sessions</SPAN> has a large amount of <SPAN CLASS="HL_Key">[DskR+]</SPAN> and <SPAN CLASS="HL_Key">[Sequence Scans]</SPAN>, you may need to drill down to <A HREF="./gcsql_sh.htm">Active SQL in a Session</A> for analyzing how the SQL is being executed and if any index is required.</TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">4.</TD>
+                     <TD>If the <SPAN CLASS="HL_Key">[DskW+]</SPAN> of a session  in the <SPAN CLASS="HL_Key">Top I/O Sessions</SPAN> is high, you may consider increasing database buffers . </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">5.</TD>
+                     <TD>
+                        <P>If a session in the <SPAN CLASS="HL_Key">Top Memory Sessions</SPAN> has tremendous amount of <SPAN CLASS="HL_Key">[Mem Allocated]</SPAN>, you may need to drill down to <A HREF="./getActiveSqlTree_sh.htm">Active SQL Tree Diagram</A>, <A HREF="./getSqlTraceTX_exe.htm">SQL History for a Session</A>, <A HREF="./ap_analysis_sh.htm">Start Analysis Session</A> and <A HREF="./gcsql_sh.htm">Active SQL in a Session</A> of the memory-consuming session via right-click to check what SQL has been executed (is executing) and how the resource is being taken to get the root cause.</P>
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">6.</TD>
+                     <TD>If the top most memory-consuming session in the <SPAN CLASS="HL_Key">Top Memory Sessions</SPAN> has a tremendous value shown in <SPAN CLASS="HL_Key">[File Opened]</SPAN> column, you may need to drill down to <A HREF="./sqlCursorHeld_sh.htm">SQL Cursor Held Info</A> via right-click to find out which SQLs haven't freed their cursors.</TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">7.</TD>
+                     <TD>If the top buiest sessions in these three tables are the same, you may consider analyzing the session via <A HREF="./ap_analysis_sh.htm">Start Analysis Session</A> to check what SQLs have been executed, the cost of each SQL activity <A HREF="./Glossary.htm#SQLActivity">*</A> and how they have been executed for SQL tuning.</TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">8.</TD>
+                     <TD>If the busiest session is an abnormal one, you can terminate it with <SPAN CLASS="HL_Key">[Terminate Session]</SPAN> in the right-clicking context menu. This context menu item will be shown only if you have permission to terminate a session.</TD>
+                  </TR>
+               </TABLE>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>How to Operate : </H2>
+               <TABLE>
+                    <TR>
+                       <TD WIDTH="5px">&nbsp;</TD>
+                       <TD>
+                          <P>You can click on a column head of any table to sort the table in ascending order of the column. Clicking on the same column head will sort the table in descending order of the column.</P>
+                          <DIV><IMG SRC="./Images/Top_Consumption_Panel.jpg" ALT="Lists of Top Consumption"></DIV>
+                       </TD>
+                    </TR>
+               </TABLE>
+            </TD>  <!-- end of content -->
+         </TR>
+      </TABLE>
+  </BODY>
+</HTML>

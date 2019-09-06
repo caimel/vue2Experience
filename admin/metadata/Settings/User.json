@@ -1,0 +1,113 @@
+{
+  "components": {
+    "toolbar": {
+      "component": "toolbar",
+      "metadata": {
+        "children": {
+          "method": "remote",
+          "url": "/ToolbarMetadata/Settings/Role",
+          "data": []
+        },
+        "events": {
+          "submit-success#update": [
+            {
+              "target": "grid",
+              "method": "loadDataHandler",
+              "params": []
+            }
+          ],
+          "confirm-success#delete": [
+            {
+              "target": "grid",
+              "method": "loadDataHandler",
+              "params": []
+            }
+          ]
+        }
+      },
+      "id": "toolbar"
+    },
+    "grid": {
+      "component": "grid",
+      "metadata": {
+        "pagination": true,
+        "columns": {
+          "method": "remote",
+          "url": "/GridMetadata/Settings/Role"
+        },
+        "source": {
+          "method": "remote",
+          "autoLoad": true,
+          "url": "Role"
+        },
+        "events": {
+          "row-click": [
+            {
+              "target": "toolbar",
+              "method": "trigger",
+              "params": [
+                "\"update\"",
+                "\"setLoadModelParams\"",
+                "{id: row.id}"
+              ]
+            },
+            {
+              "target": "toolbar",
+              "method": "trigger",
+              "params": [
+                "\"read\"",
+                "\"setLoadModelParams\"",
+                "{id: row.id}"
+              ]
+            },
+            {
+              "target": "toolbar",
+              "method": "trigger",
+              "params": [
+                "\"delete\"",
+                "\"setParams\"",
+                "{id: row.id}"
+              ]
+            }
+          ]
+        }
+      },
+      "id": "grid"
+    }
+  },
+  "layout": {
+    "container": "panel",
+    "metadata": {
+      "items": [
+        {
+          "style": {
+            "flex": 1
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "toolbar",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 23
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "grid",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

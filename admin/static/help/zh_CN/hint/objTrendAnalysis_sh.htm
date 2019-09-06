@@ -1,0 +1,71 @@
+<HTML>
+   <HEAD>
+      <TITLE>Object-Level Trend</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD><H1>Object-Level Trend</H1></TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+		   </TR>
+		   <TR>
+			   <TD COLSPAN="2">
+	            <!-- begin of content --->
+					<P>A drilling-down option with prefix &quot;Object-Level Trend - &quot; will lauch a new tab to display the specific trend chart for a specified object. For example, the <SPAN CLASS="HL_Key">Object-Level Trend - DBSpace Page Reades/Writes </SPAN> will display the page reads/writes trend chart for a specified DBSpace that you select in a list.</P>
+			      <P>The trend chart  is helpful for identifying and tracing possible performance issues that are happening or had happened on the monitored server during the period  between the <SPAN CLASS="HL_Key">Start</SPAN> and the <SPAN CLASS="HL_Key">End</SPAN>. The default period of a trend chart is from now up to 3 days ago.</P>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>Symptom and Approach</H2>
+               <P>If there is any unusual situation shown on the trend chart, you may right-click on the trend chart and drill down into <A HREF="./sqlPointInTime_sh.htm">SQL Point in Time</A> to check what SQLs are running and how SQLs are running in the period.</P>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>How to Operate</H2>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;View More Trend Charts</H3>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD VALIGN="TOP"><IMG SRC="./Images/Object_TrendAnalysis_TrendList.jpg" ALT="Trend List" width="234" height="333" /></TD>
+							<TD VALIGN="TOP">
+								<P>When a object-level trend analysis tab shows initially, the specific trend chart is checked in the <SPAN CLASS="HL_Key">Trend List</SPAN> and the corresponding group is expanded.</P>
+								<P>All trend charts provided by dbSonar are listed and classified into various groups in the <SPAN CLASS="HL_Key">Trend List</SPAN>. You may select or unselect an item in the <SPAN CLASS="HL_Key">Trend List</SPAN> by clicking the checkbox in front of each item. As the item is selected, the corresponding trend chart is displayed automatically based on the same period of time and time mode.</P>
+							<P>For quick removing all selected items, you can click <SPAN CLASS="HL_Key">Clean all chart</SPAN> button that will uncheck all selected items and remove all displayed trend charts.</P>							</TD>
+                  </TR>
+					</TABLE>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Redrawing With New Time Period / Mode</H3>
+					<TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+							<TD VALIGN="top"><IMG SRC="./Images/TrendAnalysis_TimePeriod.jpg" ALT="Time Period Image" /></TD>
+                     <TD VALIGN="TOP"><P>You can apply different period of time and/or sampling rate to all displayed trend charts for macro-/ micro-viewing them. Click <SPAN CLASS="HL_Key">Redraw</SPAN> button after specifying the expected values in <SPAN CLASS="HL_Key">Time Mode</SPAN>, <SPAN CLASS="HL_Key">Start</SPAN> and <SPAN CLASS="HL_Key">End</SPAN> to redraw all displayed trend charts. </P>
+                        <P><SPAN CLASS="HL_Key">Time Mode</SPAN>, the sampling rate, indicates that trend charts are drawn with samples taken under this sampling rate. There are 3 options, <SPAN CLASS="HL_Key">5 Minutes</SPAN>, <SPAN CLASS="HL_Key">Hourly</SPAN> and <SPAN CLASS="HL_Key">Daily</SPAN>.</P>
+                        <P><SPAN CLASS="HL_Key">Start</SPAN> and <SPAN CLASS="HL_Key">End</SPAN> are used to specify the period of time to draw trend charts. You may click <IMG SRC="./Images/Calendar.jpg" ALT="Calendar image" /> to pick the start and end dates separately or enter the start and end dates manually.</P>
+							</TD>
+                  </TR>
+					</TABLE>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;How to Operate Trend Chart</H3>
+					<TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD>
+								<P>When you click any place on trend charts, the red line shows as below.</P>
+                        <DIV><IMG SRC="./Images/Object_TrendAnalysis_TrendChart.jpg" ALT="Trend Charts" width="520" height="389" /></DIV>
+								<P>The point-in-time values under the red line on diagrams are displayed in the Legend-Value table as below. They are listed in diagram order from top to bottom. The date and time of the red line shows above the Legend-Value table. For a diagram with more than one trend line representing separate cpu, device, DBSpace etc, the legend-value pair of each trend line will be displayed separately in the Legend-Value table with the same prefix.</P>
+                        <DIV><IMG SRC="./Images/Object_TrendAnalysis_LegendValue.jpg" ALT="Legend_Value table" width="548" height="91" /></DIV>
+                     </TD>
+                  </TR>
+               </TABLE>
+				</TD>	   <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

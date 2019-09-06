@@ -1,0 +1,100 @@
+{
+  "props": {
+    "query": {},
+    "toolbar": [
+      {
+        "id": "top_toolbar",
+        "remote": false,
+        "url": "/MOCK/TOOLBAR_METADATA?id=Common",
+        "children": [
+          { "id": "checks", "widget": "checks",
+            "size": "mini", "position": "right",
+            "props": {"label": "label", "value": "visible"}, "tooltipDisabled": true, "tooltipContent": "Columns_Select", "tooltipPlacement": "bottom", "tooltipEffect": "dark" }
+        ]
+      }
+    ],
+    "table": {
+      "selectCheckbox": false,
+      "indexed": true,
+      "url": "/{{api_project}}/allMerch",
+      "columns": [
+          {"label": "用户名", "prop": "user.username", "showOverflowTooltip": true},
+          {"label": "商户ID", "prop": "pid", "showOverflowTooltip": true},
+          {"label": "创建时间", "prop": "dateCreated", "showOverflowTooltip": true},
+          {"label": "最后更新时间", "prop": "lastUpdated", "showOverflowTooltip": true},
+          {"label": "启用", "prop": "enabled", "showOverflowTooltip": true,
+          "widget": "icon",
+          "props": {
+            "trueIcon": "el-icon-check",
+            "trueStyle": {"color": "green"},
+            "falseIcon": "el-icon-close",
+            "falseStyle": {"color": "red"}
+          }},
+          {"label": "操作", "prop": "operations", "width": 100, "fixed": "right", "widget": "operations",
+          "props": {
+            "type": "dropdown",
+            "options": [
+              {
+                "element": "x-confirm-button",
+                "props": {
+                  "id": "enabled",
+                  "type": "text",
+                  "size": "mini",
+                  "label": "启用",
+                  "disabled": "${enabled}",
+                  "checkParamsNotNull": false,
+                  "checkParamsNotNullErrorMessage": "",
+                  "promptMessage": "点击 [确定],以启用该用户",
+                  "confirmMessage": "",
+                  "cancelMessage": "",
+                  "confirmButtonText": "确定",
+                  "cancelButtonText": "取消",
+                  "url": "/{{api_project}}/allMerch",
+                  "urlStyle": "restful",
+                  "httpMethod": "patch",
+                  "params": {
+                      "enabled": true
+                  },
+                  "queryKeys": ["id"]
+                }
+              },
+              {
+                "element": "x-confirm-button",
+                "props": {
+                  "id": "disabled",
+                  "type": "text",
+                  "size": "mini",
+                  "label": "停用",
+                  "disabled": "${enabled == false}",
+                  "checkParamsNotNull": false,
+                  "checkParamsNotNullErrorMessage": "",
+                  "promptMessage": "点击 [确定],以停用该用户",
+                  "confirmMessage": "",
+                  "cancelMessage": "",
+                  "confirmButtonText": "确定",
+                  "cancelButtonText": "取消",
+                  "url": "/{{api_project}}/allMerch",
+                  "urlStyle": "restful",
+                  "httpMethod": "patch",
+                  "params": {
+                    "enabled": false
+                  },
+                  "queryKeys": ["id"]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "pagination": true,
+      "export": {
+        "output": "商户_"
+      },
+      "events": [
+        { "name" :"confirm-success#enabled", "action": "refresh"},
+        { "name" :"confirm-success#disabled", "action": "refresh"},
+        { "name" :"component-link#update", "action": "refresh"}
+      ]
+    }
+  }
+}

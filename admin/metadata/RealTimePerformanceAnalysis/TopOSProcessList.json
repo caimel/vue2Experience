@@ -1,0 +1,172 @@
+{
+  "layout": {
+    "container": "panel",
+    "metadata": {
+      "items": [
+        {
+          "style": {
+            "flex": 2
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "info",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 9
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "grid",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 6
+          },
+          "equally": false,
+          "columns": [
+            {
+              "slot": "chart",
+              "style": {
+                "flex": 2
+              }
+            },
+            {
+              "slot": "form",
+              "style": {
+                "flex": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": {
+    "info": {
+      "id":"info",
+      "component": "info",
+      "metadata": {
+        "items": []
+      }
+    },
+    "grid": {
+      "id": "grid",
+      "component": "grid",
+      "metadata": {
+        "pagination": false,
+        "columns": {
+          "method": "remote",
+          "url": "/GridMetadata/RealTimePerformanceAnalysis/TopOSProcessList"
+        },
+        "source": {
+          "method": "static",
+          "data": []
+        },
+        "events": {
+          "row-dblclick": [
+            {
+              "target": "form",
+              "method": "setModel",
+              "params": [
+                "row"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "chart": {
+      "id": "chart",
+      "component": "vechart",
+      "metadata": {
+        "settings": {
+          "type": "histogram",
+          "metrics": ["%cpu"],
+          "dimension": ["pid"],
+          "labelMap": {
+            "%cpu": "%CPU"
+          },
+          "yAxisType": ["percent"]
+        },
+        "data": {
+          "columns": ["pid", "%cpu"],
+          "rows": []
+        }
+      }
+    },
+    "form": {
+      "id": "form",
+      "component": "form",
+      "metadata": {
+        "form": {
+          "editable": false,
+          "items": {
+            "method": "static",
+            "data": {
+              "items": [
+                [
+                  {
+                    "label": "NI",
+                    "prop": "ni",
+                    "widget": "input"
+                  }
+                ],
+                [
+                  {
+                    "label": "RES",
+                    "prop": "res",
+                    "widget": "input"
+                  }
+                ]
+              ]
+            }
+          },
+          "source": {
+            "method": "static",
+            "data": {}
+          }
+        }
+      }
+    }
+  },
+  "http": [
+  {
+    "method": "get",
+    "url": "/GridData/RealTimePerformanceAnalysis/TopOSProcessList",
+    "time": 3000,
+    "autostart": true,
+    "repeat": true,
+    "immediate": false,
+    "success":{
+      "trigger": [
+        {
+          "target": "grid",
+          "method": "setData",
+          "params": ["response.data.data.items"]
+        },
+        {
+          "target": "info",
+          "method": "setItems",
+          "params": ["response.data.data.header_html"]
+        }
+      ]
+    },
+    "error":{
+      "message": "请求错误!"
+    }
+  }
+]
+}

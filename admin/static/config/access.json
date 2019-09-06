@@ -1,0 +1,21 @@
+{
+  "access": [
+    {
+      "level": 100,
+      "menus": {
+        "include":[
+          "Home|Home",
+          "Merch_Home|Merch_Home",
+          "merch_center|merch_conf,merch_order,merch_settle",
+          "merch|all_merch,all_merch_order,all_merch_settle",
+          "configurator|user,role,authority"
+        ],
+        "exclude": []
+       },
+      "operations": {
+        "include":[],
+        "excludesss": []
+      }
+    }
+  ]
+}

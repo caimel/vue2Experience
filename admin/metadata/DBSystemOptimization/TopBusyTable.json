@@ -1,0 +1,139 @@
+{
+  "layout": {
+    "container": "panel",
+    "metadata": {
+      "items": [
+        {
+          "style": {
+            "flex": 9
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "grid",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 6
+          },
+          "equally": false,
+          "columns": [
+            {
+              "slot": "chart",
+              "style": {
+                "flex": 2
+              }
+            },
+            {
+              "slot": "form",
+              "style": {
+                "flex": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": {
+    "grid": {
+      "id": "grid",
+      "component": "grid",
+      "metadata": {
+        "pagination": true,
+        "columns": {
+          "method": "remote",
+          "url": "/GridMetadata/DBSystemOptimization/TopBusyTable"
+        },
+        "source": {
+          "method": "static",
+          "data": []
+        },
+        "events": {
+          "row-dblclick": [
+            {
+              "target": "form",
+              "method": "setModel",
+              "params": [
+                "row"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "chart": {
+      "id": "chart",
+      "component": "vechart",
+      "metadata": {
+        "settings": {
+          "type": "histogram",
+          "metrics": ["bufReads"],
+          "dimension": ["table"],
+          "labelMap": {
+            "table": "Table",
+            "bufReads": "Buf Reads"
+          }
+        },
+        "data": {
+          "columns": ["table", "bufReads"],
+          "rows": []
+        }
+      }
+    },
+    "form": {
+      "id": "form",
+      "component": "form",
+      "metadata": {
+        "form": {
+          "editable": false,
+          "items": {
+            "method": "static",
+            "data": {
+              "items": [
+                [
+                  {
+                    "label": "DBSpace",
+                    "prop": "dbSpace",
+                    "widget": "input"
+                  }
+                ]
+              ]
+            }
+          },
+          "source": {
+            "method": "static",
+            "data": {}
+          }
+        }
+      }
+    }
+  },
+  "http": [
+    {
+      "method": "get",
+      "url": "/GridData/DBSystemOptimization/TopBusyTable",
+      "time": 3000,
+      "autostart": true,
+      "repeat": true,
+      "immediate": true,
+      "success":{
+        "trigger": [
+          {
+            "target": "grid",
+            "method": "setData",
+            "params": ["response.data"]
+          }
+        ]
+      },
+      "error":{
+        "message": "请求错误!"
+      }
+    }
+  ]
+}

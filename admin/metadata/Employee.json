@@ -1,0 +1,218 @@
+{
+  "components": {
+    "toolbar": {
+      "component": "toolbar",
+      "metadata": {
+        "children": {
+          "method": "static",
+          "data": [
+            {
+              "id": "create",
+              "type": "edit",
+              "label": "新增",
+              "title": "新增[员工信息]",
+              "btnType": "primary",
+              "icon": "el-icon-edit",
+              "checkFormItemsParamsNotNull": false,
+              "loadFormItems": true,
+              "checkFormItemsParamsNotNullErrorMessage": "请选择数据行",
+              "checkFormSourceParamsNotNull": false,
+              "loadFormModel": false,
+              "checkFormSourceParamsNotNullErrorMessage": "请选择数据行",
+              "form": {
+                "editable": true,
+                "items": {
+                  "method": "remote",
+                  "url": "/demo/formMetadata/employee",
+                  "params": {
+                    "type": "create"
+                  },
+                  "errorMessage": "加载表单项失败！"
+                },
+                "submit": {
+                  "url": "/demo/employee",
+                  "httpMethod": "post",
+                  "errorMessage": "提交数据失败！"
+                }
+              }
+            },
+            {
+              "id": "update",
+              "type": "edit",
+              "label": "修改",
+              "title": "修改[员工信息]",
+              "btnType": "primary",
+              "icon": "el-icon-edit",
+              "checkFormItemsParamsNotNull": false,
+              "loadFormItems": true,
+              "checkFormItemsParamsNotNullErrorMessage": "请选择数据行",
+              "checkFormSourceParamsNotNull": true,
+              "loadFormModel": true,
+              "checkFormSourceParamsNotNullErrorMessage": "请选择数据行",
+              "form": {
+                "editable": false,
+                "items": {
+                  "method": "remote",
+                  "url": "/demo/formMetadata/employee",
+                  "params": {
+                    "type": "update"
+                  },
+                  "errorMessage": "加载表单项失败！"
+                },
+                "source": {
+                  "method": "remote",
+                  "autoLoad": true,
+                  "url": "/form/meta",
+                  "errorMessage": "加载数据失败！"
+                }
+              }
+            },
+            {
+              "id": "read",
+              "type": "edit",
+              "label": "查看",
+              "title": "查看[员工信息]",
+              "btnType": "primary",
+              "icon": "el-icon-view",
+              "checkFormItemsParamsNotNull": false,
+              "loadFormItems": true,
+              "checkFormItemsParamsNotNullErrorMessage": "请选择数据行",
+              "checkFormSourceParamsNotNull": true,
+              "loadFormModel": true,
+              "checkFormSourceParamsNotNullErrorMessage": "请选择数据行",
+              "form": {
+                "editable": false,
+                "items": {
+                  "method": "remote",
+                  "url": "/demo/formMetadata/employee",
+                  "params": {
+                    "type": "read"
+                  },
+                  "errorMessage": "加载表单项失败！"
+                },
+                "source": {
+                  "method": "remote",
+                  "autoLoad": true,
+                  "url": "/demo/employee",
+                  "errorMessage": "加载数据失败！"
+                }
+              }
+            },
+            {
+              "id": "delete",
+              "type": "confirm",
+              "label": "删除",
+              "btnType": "primary",
+              "icon": "el-icon-delete",
+              "checkParamsNotNull": true,
+              "checkParamsNotNullErrorMessage": "请选择数据行",
+              "promptMessage": "确定以删除选中数据？",
+              "confirmButtonText": "确定",
+              "cancelButtonText": "取消",
+              "url": "/demo/employee",
+              "httpMethod": "delete",
+              "params": {}
+            }
+          ]
+        },
+        "events": {
+          "submit-success#update": [
+            {
+              "target": "employee",
+              "method": "loadDataHandler",
+              "params": []
+            }
+          ],
+          "confirm-success#delete": [
+            {
+              "target": "employee",
+              "method": "loadDataHandler",
+              "params": []
+            }
+          ]
+        }
+      },
+      "id": "toolbar"
+    },
+    "grid": {
+      "component": "grid",
+      "metadata": {
+        "columns": {
+          "method": "remote",
+          "url": "/demo/gridMetadata/employee"
+        },
+        "source": {
+          "method": "remote",
+          "url": "/demo/employee"
+        },
+        "events": {
+          "row-click": [
+            {
+              "target": "toolbar",
+              "method": "trigger",
+              "params": [
+                "\"update\"",
+                "\"setLoadModelParams\"",
+                "{id: row.id}"
+              ]
+            },
+            {
+              "target": "toolbar",
+              "method": "trigger",
+              "params": [
+                "\"read\"",
+                "\"setLoadModelParams\"",
+                "{id: row.id}"
+              ]
+            },
+            {
+              "target": "toolbar",
+              "method": "trigger",
+              "params": [
+                "\"delete\"",
+                "\"setParams\"",
+                "{id: row.id}"
+              ]
+            }
+          ]
+        }
+      },
+      "id": "employee"
+    }
+  },
+  "layout": {
+    "container": "panel",
+    "metadata": {
+      "items": [
+        {
+          "style": {
+            "flex": 0
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "toolbar",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 1
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "grid",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "layout": {
+    "container": "panel",
+    "metadata": {
+      "items": [
+        {
+          "style": {
+            "flex": 3
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "row1",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 10
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "row2",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 4
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "row3",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 6
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "row4",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": {
+    "row1": {
+      "component": "square",
+      "metadata": {
+        "info": "Sql Evaluator!"
+      },
+      "id": "square"
+    },
+    "row2": {
+      "component": "square",
+      "id": "square"
+    },
+    "row3": {
+      "id": "square",
+      "component": "square"
+    },
+    "row4": {
+      "id": "form",
+      "component": "form",
+      "metadata": {
+        "form": {
+          "editable": false,
+          "items": {
+            "method": "static",
+            "data": {
+              "items": [
+                [
+                  {
+                    "label": "SQL Statement",
+                    "prop": "SQL_Statement",
+                    "widget": "input"
+                  }
+                ]
+              ]
+            }
+          },
+          "source": {
+            "method": "static",
+            "data": {}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "view": {
+    "name": "dropdown-view"
+  },
+  "layout": {
+    "container": "panel",
+    "metadata": {
+      "items": [
+        {
+          "style": {
+            "flex": 5
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "info",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 2
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "grid",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 6
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "chart",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 1
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "toolbar",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": {
+    "info":{
+      "id": "info",
+      "component": "square",
+      "metadata": {
+        "info": "Info!"
+      }
+    },
+    "grid": {
+      "id": "grid",
+      "component": "grid",
+      "metadata": {
+        "pagination": false,
+        "columns": {
+          "method": "remote",
+          "url": "/GridMetadata/RealTimePerformanceAnalysis/ListAnalysisResult"
+        },
+        "source": {
+          "method": "static",
+          "data": []
+        },
+        "events": {
+          "row-click": [
+            {
+              "target": "toolbar",
+              "method": "trigger",
+              "params": [
+                "\"SQL_Evaluator\"",
+                "\"setQuery\"",
+                "{ session: row.session }"
+              ]
+            },
+            {
+              "target": "toolbar",
+              "method": "trigger",
+              "params": [
+                "\"Execution_History_Of_SQL_Pattern\"",
+                "\"setQuery\"",
+                "{ session: row.session }"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "chart": {
+      "id": "chart",
+      "component": "square",
+      "metadata": {
+        "info": "Chart!"
+      }
+    },
+    "toolbar": {
+      "component": "toolbar",
+      "metadata": {
+        "children": {
+          "method": "remote",
+          "url": "/ToolbarMetadata/RealTimePerformanceAnalysis/ListAnalysisResult",
+          "data": []
+        },
+        "events": {}
+      },
+      "id": "toolbar"
+    }
+  },
+  "http": [
+    {
+      "name": "loadData",
+      "method": "get",
+      "url": "/app-sonar-0.1/immediatelyCommand/listAnalysisResult",
+      "params":{
+        "sessionId": "this.GLOBAL.route.query.session"
+      },
+      "time": 1000,
+      "autostart": true,
+      "repeat": false,
+      "immediate": false,
+      "success": {
+        "trigger": [
+          {
+            "target": "grid",
+            "method": "setData",
+            "params": [
+              "response.data.data.items"
+            ]
+          }
+        ]
+      },
+      "error": {
+        "message": "请求错误!"
+      }
+    }
+  ]
+}

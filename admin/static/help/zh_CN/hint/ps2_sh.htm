@@ -1,0 +1,70 @@
+<HTML>
+   <HEAD>
+      <TITLE>Top OS Process List</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+            <TD><H1>Top OS Process List</H1></TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+		   </TR>
+		   <TR>
+		      <TD COLSPAN="2">  <!-- begin of content -->
+               <P>On this page, you will see  information of system loading and what the top busiest system processes are. The top busiest system processes are listed in descending order of the column <SPAN CLASS="HL_Key">%CPU</SPAN>. From the <SPAN CLASS="HL_Key">COMMAND</SPAN>, you can tell whether a top busiest process is a database process, &quot;oninit&quot;.</P>
+					<P>The table shows the top busiest system processes. For each process, you are able to know  who runs the process, how much time the process uses, what the current state of the process and how much percentage of CPU is occupied by the process etc.</P>
+               <P>Different OS will provide different process information. The table shown below is an example for your reference. </P>
+               <P>You can click a column head to sort the list in ascending/descending order of the selected column and click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page.</P>
+               <DIV><IMG SRC="./Images/Top_OS_Process_List.jpg" ALT="Process List" width="732" height="300" /></DIV>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>Symptom and Approach</H2>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="20px" ALIGN="right" VALIGN="top">1.</TD>
+                     <TD>
+                        <P>If the busiest process is a database process, oninit, and its CPU% is unreasonable high, you may need to check the <A HREF="./busyDskIOSes_sh.htm">Top I/O Session</A> or <A HREF="./busySes_sh.htm">Top Busy Session</A> to find out which session is running in the process, how the resource has been taken by the session, and what SQLs are executing etc to get the root cause.</P>             
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">2.</TD>
+                     <TD>If any process that you would like to view doesn't show in the table, you can drill down into the <A HREF="./allPS_sh.htm">Process List</A> via right-click context menu. It will list all active system processes. </TD>
+                  </TR>
+               </TABLE>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>More</H2>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Extra Information</H3>
+               <TABLE>
+                    <TR>
+                       <TD WIDTH="5px">&nbsp;</TD>
+                       <TD>
+                          <P>As clicking a row, the extra information of the row is displayed in the table beside the bar chart as the example shown below.</P>
+                          <DIV><IMG SRC="./Images/Top_OS_Process_Detail.jpg" ALT="Detail" width="233" height="48" /></DIV>
+                       </TD>
+						  </TR>
+				   </TABLE>
+                 <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Bar Chart</H3>
+					  <TABLE>
+					     <TR>
+						     <TD WIDTH="5px">&nbsp;</TD>
+							  <TD>
+								  <P>A row with checkbox checked will be drawn on the bar chart as below. You can change the y-axis of the chart by <SPAN CLASS="HL_Key">Chart Option</SPAN> option in the right-click menu of the chart.</P>
+								  <DIV><IMG SRC="./Images/Top_OS_Process_Chart.jpg" ALT="Bar Chart" /></DIV>
+							  </TD>
+                    </TR>
+               </TABLE>
+            </TD>  <!-- end of content -->
+         </TR>
+      </TABLE>
+  </BODY>
+</HTML>

@@ -1,0 +1,118 @@
+<HTML>
+   <HEAD>
+      <TITLE>Outdated Update Statistics Tables</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD>
+	            <H1>Outdated Update Statistics Table</H1>
+	         </TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+			      <P>The database server creates a statistical profile for all tables, indexes, and stored procedures when they are created. This statistical information is stored in system catalog tables and used by the optimizer to determine the lowest-cost execution plan of a SQL statement. These statistics frequently become outdated as the data changes and have to be updated using the UPDATE STATISTICS statement. However, the command imposes a further overhead on a busy system due to the large data sampling required for each table in a large database and can affect the performance.</P>
+			      <P>This page exhibits tables that may require executing the UPDATE STATISTICS statement because of having had a  number of rows inserted or deleted etc. You may  analyze a table  further to determine whether the UPDATE STATISTICS statement is required for the table. Each table listed in this page is shown with its  database, the estimated and actual number of rows, percentage of rows changed, buffer read/write operations, and number of sequential scans.</P>
+					<P>You can click a column head to sort the list in ascending/descending order of the selected column and click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page.</P>
+					<DIV><IMG SRC="./Images/Outdated_Update_Statistics_Table_List.jpg" ALT="Outdated Update Statistics Table List" width="728" height="121" /></DIV>
+			      <BR />
+			      <TABLE CELLSPACING="0">
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Column</Td>
+                     <TD STYLE="border-top:#000000 solid 2px">Description</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Changed% </Td>
+                     <TD STYLE="border-top:#000000 solid 2px">The number of rows inserted/deleted, expressed in a percentage value</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Rows Estimated </Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The estimative number of rows in the table</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Actual Rows </Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The actual number of rows in the table</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Buffer Reads</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The number of reads from buffer  for the table</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Buffer Writes</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The number of writes to buffer  for the table</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px; border-bottom:#000000 solid 2px">Seqscans</Td>
+                     <TD STYLE="border-top:#000000 solid 1px; border-bottom:#000000 solid 2px">The number of sequential scans occurred on the table</TD>
+                  </TR>
+               </TABLE>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Criteria  Window </H3>
+					<TABLE>
+						<TR>
+							<TD WIDTH="5px">&nbsp;</TD>
+							<TD>
+								<P>You can specify a database that you would like to check. If a database is specified, only statistics information of tables in the selected database will be displayed; otherwise tables in each database on the database server will be displayed.</P>
+								<DIV><IMG src="./Images/Outdated_Update_Statistics_Enquiry.jpg" alt="Enquiry Criteria" /></DIV>
+							</TD>
+					   </TR>
+					</TABLE>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+					<H2>Symptom and Approach</H2>
+			      <P>If the <SPAN CLASS="HL_Key">Changed%</SPAN> of a table is extreme high (i.e. the table has executed lots of row insertion and/or deletion.), and its <SPAN CLASS="HL_Key">Buffer Reads</SPAN> is low or its <SPAN CLASS="HL_Key">Seqscans</SPAN> is high, you may take the following ways to determine if the UPDATE STATISTICS statement is required.</P>
+					<TABLE>
+					   <TR>
+						   <TD WIDTH="20px" ALIGN="RIGHT" VALIGN="TOP">a.</TD>
+							<TD>
+							   Drill down into <A HREF="./tableRelatedSQL_sh.htm">Table Related SQL</A> to check  how the  table  contributes to a frequently-used or heavy-cost SQL activity
+							</TD>
+					   </TR>
+						<TR>
+						   <TD ALIGN="RIGHT" VALIGN="TOP">b.</TD>
+							<TD>
+							   Drill down into <A HREF="./tableInfo_sh.htm">Table Info</A> to inspect the table schema design to see if any index/fragment is required before executing the UPDATE STATISTICS statement.
+							</TD>
+						</TR>
+					</TABLE>
+			      <P>If  the UPDATE STATISTICS statement is required for a table, you may drill down into <A HREF="./genUpdateStatistics_sh.htm">Generate Update Statistics Script</A> to generate the  UPDATE STATISTICS statement for the table.</P>
+			   </TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+			      <H2>More</H2>
+			      <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Extra Information</H3>
+			      <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD>
+                        <P>As clicking a row, the extra information of the row is displayed in the table beside the bar chart as shown below.</P>
+                        <DIV><IMG SRC="./Images/Outdated_Update_Statistics_Table_Detail.jpg" ALT="Detail" width="234" height="34" /></DIV>
+							</TD>
+						</TR>
+               </TABLE>
+				   <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Bar Chart</H3>
+					<TABLE>
+						<TR>
+							<TD WIDTH="5px">&nbsp;</TD>
+							<TD>
+                        <P>A row with checkbox checked will be drawn on the bar chart as below. You can change the y-axis of the chart by <SPAN CLASS="HL_Key">Chart Option</SPAN> option in the right-click menu of the chart.</P>
+                        <DIV><IMG SRC="./Images/Outdated_Update_Statistics_Table_Chart.jpg" ALT="Bar Chart" width="448" height="155" /></DIV>
+                     </TD>
+						</TR>
+					</TABLE>
+			   </TD>  
+			   <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

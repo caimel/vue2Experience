@@ -1,0 +1,61 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #333333;
+}
+
+H1
+{
+   font-size: 12pt;
+   color: #000080;
+   font-weight: bold
+}
+
+H2
+{
+	color: #000080;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #1E1EFF;
+}
+
+.HL_Item {
+	font-weight: bold;
+	color: #414A8D;
+}
+
+.HL_Key {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #333333;
+}
+
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #333333;
+	padding: 5px;
+}
+
+li {
+	color: #0000AA;
+}
+
+li.legend_desc {
+	color: #333333;
+}
+
+A:link, a:visited, a:active {
+   color: #0000aa;
+   text-decoration: none;
+}
+
+A:hover {
+   color: #ff0000;
+   text-decoration: none;
+}

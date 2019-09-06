@@ -1,0 +1,59 @@
+{
+  "props": {
+    "value": "1",
+    "tabs": [
+      {
+        "name": "1",
+        "label": "结算账户",
+        "component": "Form",
+        "props": {
+          "width": "400px",
+          "items": [
+            [
+              { "widget": "select",
+                "label": "结算方式", "prop": "settleAccountType",
+                "multiple": false,
+                "remote": false,
+                "clearable": true,
+                "options": [
+                  {"label": "微信", "value":"WXPAY"},
+                  {"label": "支付宝","value":"ALIPAY"}
+                ]
+              }
+            ],
+            [{"widget": "input","label": "结算账户", "prop": "sttleAccountName"}],
+            [{"widget": "input","label": "结算账号", "prop": "settleAccount"}]
+          ],
+          "rules": {
+            "settleAccountType": [{ "required": true, "message":"请选择结算方式", "trigger": "blur" }],
+            "sttleAccountName": [{ "required": true, "message":"请输入结算账户名", "trigger": "blur" }],
+            "settleAccount": [{ "required": true, "message":"请输入结算账号", "trigger": "blur" }]
+          },
+          "query": {},
+          "urlStyle": "restful",
+          "loadUrl": "/{{api_project}}/merchAccount",
+          "submitUrl": "/{{api_project}}/merchAccount",
+          "submitHttpMethod": "put"
+        }
+      },
+      {
+        "name": "2",
+        "label": "商户信息",
+        "component": "Form",
+        "props": {
+          "items": [
+            [{"widget": "input","label": "商户ID", "prop": "pid", "disabled": true}],
+            [{"widget": "input","label": "商户密钥", "prop": "publicKey", "disabled": true}]
+          ],
+          "query": {},
+          "urlStyle": "restful",
+          "loadUrl": "/{{api_project}}/merch",
+          "submitUrl": "/{{api_project}}/merch",
+          "submitHttpMethod": "patch",
+          "submitText": "$button.resetKey",
+          "onSubmitRefresh": true
+        }
+      }
+    ]
+  }
+}

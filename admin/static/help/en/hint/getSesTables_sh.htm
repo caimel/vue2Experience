@@ -1,0 +1,29 @@
+<HTML>
+   <HEAD>
+      <TITLE>List of Opened Tables in a Session</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD>
+	            <H1>List of Opened Table in a Session</H1>
+	         </TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+			      <P>This page helps you check the usage of tables opened currently in a session as the session has a very busy disk I/O activities. This page displays tables/indexes opened in the session, the number of rows and size of each row returned from each table, the number of times that each table/index has been opened,  whether a table is a user-defined temporary table, sort file or permanent system temporary table and whether a page lock has been set for a table.</P>
+			      <P>The information is useful for application developer to check how the SQL statement is written to avoid defective application design affecting database performance. </P>
+			      <P>You can click a column head to sort the list in ascending/descending order of the selected column and click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page.</P>
+			      <DIV><IMG SRC="./Images/OpenedTableList_of_Session.jpg" ALT="Opened Table List of Session" width="738" height="161" /></DIV>
+			   </TD>  
+			   <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

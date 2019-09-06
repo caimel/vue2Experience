@@ -1,0 +1,1729 @@
+{
+  "login": {
+    "title": "ilia",
+    "usernmae": "userName",
+    "password": "password",
+    "sign_in": "Sign In"
+  },
+
+  "menu": {
+    "Home": "Home",
+    "Operation_Support": "Operation Support",
+    "DB_System_Optimization": "Optimization",
+    "Event_Manager": "Event Manager",
+    "dbSonar_Report": "Report",
+    "Configurator": "Configurator",
+
+    "Top_Busy_OS_Processes": "Top Busy OS Processes",
+    "File_System_Disk_Space_Utilization": "File System Disk Space Utilization",
+    "DB_System_Memory_Pool": "DB Memory Pool",
+    "Memory_Segment": "Memory Segment",
+    "Trend_Analysis": "Trend Analysis",
+    "DBSpace_Information": "DBSpace Utilization",
+    "DBSpace_IO_Information": "DBSpace I/O Info",
+    "Chunk_Information": "Chunk Utilization",
+    "Chunk_IO_Information": "Chunk IO Info",
+    "Outdated_Update_Statistics_Table": "Outdated Update Statistics Table",
+    "Incompleted_Update_Statistics_Table": "Incompleted Update Statistics Table",
+    "Top_Busy_Tables": "Top Busy Tables",
+    "Table_With_Multiple_Extents": "Table With Multiple Extents",
+    "Top_Lock_Wait_Tables": "Top Lock Wait Tables",
+    "Temp_Table": "Temp Table",
+    "Table_In_Used": "Table In Used",
+    "Least_Used_Indexes": "Least Used Indexes",
+    "Top_Busy_Indexes": "Top Busy Indexes",
+    "Lock_Waits": "Lock Waits List",
+    "DeadLocked_Connections": "DeadLocked Connections",
+    "DB_Engine_Wait_Conditions": "DB Engine Wait Conditions",
+    "Active_Connections": "Active Connections",
+    "Top_Busy_Session": "Top CPU Busy Session",
+    "Top_IO_Session": "Top I/O Session",
+    "Top_Memory_Consuming_Session": "Top Memory Session",
+    "Idle_Session": "Idle Session",
+    "Long_Transaction": "Long Transaction",
+    "List_Analysis_Jobs": "List Analysis Jobs",
+    "Top_Running_SQL": "Top Running SQL",
+    "Heavy_SQL_Statistics": "Heavy SQL Statistics",
+    "Frequent_SQL_Statistics": "Frequent SQL Statistics",
+    "Sequential_Scan_SQL_Statistics": "Sequential Scan SQL Statistics",
+    "Outstanding_Database_Message_Log": "Outstanding Database Message Log",
+    "Database_Message_Log": "Database Message Log",
+    "All_Logical_Logs": "All Logical Logs",
+    "UnBackup_Logical_Log": "UnBackup Logical Log",
+    "Logical_Log_Used_In_Active_Transactions": "Logical Log Used In Active Transactions",
+    "Event_List": "Events",
+    "Unresolved_Alert_List": "Unresolved Alerts",
+    "Resolved_Alert_List": "Resolved Alerts",
+    "Alert_Delivery_History": "Alert Delivery History",
+    "Event_Setup": "Event Setup",
+    "Health_Check_Reports": "Health Check Reports",
+    "Health_Check_Task": "Health Check Task",
+    "Health_Check_Strategy": "Health Check Strategy",
+    "Instance_Setup": "Instance Setup",
+    "User": "User Setup",
+    "Smtp": "SMTP E-Mail Server",
+    "DB_Parameter_Analysis_Report": "DB Parameter Analysis",
+    "ALL_CPU_Busy_Rate_Max_Trend": "All CPU Busy Rate Max Trend",
+    "Disk_IO_Busy_Rate_Max_Trend": "Disk I/O Busy Rate Max Trend",
+    "OS_Memory_Page_Out_Trend": "OS Memory Page Out Trend",
+    "License_Info": "License Info",
+    "Performance_Analysis_Report": "Performance Analysis",
+    "Apply_Online_Detection": "Application Changed Report"
+  },
+  "menu2":{
+    "System_Level": "System Level",
+    "DB_System_Level": "DB Level",
+    "Session_Level": "Session Level",
+    "SQL_Statement_Level": "SQL Statement Level",
+    "SQL_Skeleton_Analysis": "SQL Skeleton Analysis",
+    "Statistics_Table": "Statistics Table",
+    "Table_Level": "Table Level",
+    "Index_Level": "Index Level",
+    "Lock_Level": "Lock Level",
+    "Logs_Level": "Logs Level",
+    "Message_Logs_Level": "Message Logs Level",
+    "Logical_Logs_Level": "Logical Logs Level",
+    "DBSpcae_Level": "DBSpcae Level",
+    "DB_System_Optimization": "DB System Optimization",
+    "Health_Check": "Health Check"
+  },
+  "table_operations": {
+    "SQL_Evaluator": "SQL Evaluator",
+    "Table_Info": "Table Info",
+    "Lock_Holding_Connection": "Lock Holding Connection",
+    "Terminate_Session": "Terminate Session",
+    "List_Analysis_Result": "List Analysis Result",
+    "Clear_Analysis_Result": "Clear Analysis Result",
+    "Stop_Analysis_Session": "Stop Analysis Session",
+    "SQL_Cursor_Held_Info": "SQL Cursor Held Info",
+    "Execution_history_of_sql_pattern": "Execution History Of Sql Pattern",
+    "Chunk_Information": "Chunk Info",
+    "Chunk_IO_Information": "Chunk I/O Info",
+    "Remark": "Remark",
+    "Get_Event_Notification_List": "Get Event Notification List",
+    "Get_Event_Notification_Recipient_List": "Get Event Notification Recipient List",
+    "Update": "Update",
+    "Task_List": "Task List",
+    "Notification_Assignment": "Notification Assignment",
+    "Detail": "Detail",
+    "Reset_Pwd": "Reset Pwd",
+    "Authorization": "Authorization",
+    "Delete": "Delete",
+    "I_O_Device_Capture": "I/O Device Capture",
+    "Data_Capture_Threshold": "Data Capture Threshold",
+    "Data_Recycle": "Data Recycle",
+    "Top_Busy_Table_In_DBSpace": "Busy Table In DBSpace"
+  },
+  "table": {
+    "Temp_Tables": {
+      "User": "User",
+      "DBSpace": "DBSpace",
+      "Database": "Database",
+      "Table": "Table",
+      "Partnum": "Partnum",
+      "N_Extents": "N Extents",
+      "Table_Size": "Table Size(KB)",
+      "Disk_I_O": "Disk I/O",
+      "Disk_Reads": "Disk Reads",
+      "Disk_Writes": "Disk Writes",
+      "Buf_Writes": "Buf Writes",
+      "Buf_Reads": "Buf Reads",
+      "Page_Lock": "Page Lock",
+      "SeqScan": "SeqScan",
+      "Temp_Table": "Temp Table",
+      "PERM_SYS_TMP_TBL": "PERM SYS TMP TBL",
+      "Sort_File": "Sort File",
+      "Create_Time": "Create Time"
+    },
+    "Outdated_Update_Statistics_Table": {
+      "Database": "Database",
+      "Table": "Table",
+      "Changed": "Changed%",
+      "Actual_Rows": "Actual Rows",
+      "Rows_Estimated": "Rows Estimated",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "Seqscans": "Seqscans",
+      "Operations": "Operations"
+    },
+    "Incompleted_Update_Statistics_Table": {
+      "Database": "Database",
+      "Table": "Table",
+      "Index": "Index",
+      "distribution": "distribution",
+      "N_Rows": "N Rows",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "Seqscans": "Seqscans",
+      "Operations": "Operations"
+    },
+    "Table_Extent_List": {
+      "DBSpace": "DBSpace",
+      "Database": "Database",
+      "N_Extents": "N Extents",
+      "N_Rows": "N Rows",
+      "RowSize": "RowSize",
+      "Size(KB)": "Size(KB)",
+      "Used(KB)": "Used(KB)",
+      "Page_Lock": "Page Lock",
+      "Table/Index": "Table/Index",
+      "Temp_Table": "Temp Table",
+      "PERM_SYS_TMP_TBL": "PERM SYS TMP TBL",
+      "Sort_File": "Sort File",
+      "Create_Time": "Create Time"
+    },
+    "Top_Busy_Table": {
+      "DBSpace": "DBSpace",
+      "Database": "Database",
+      "Table": "Table",
+      "Size": "Size(KB)",
+      "N_Rows": "N Rows",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "Seqscans": "Seqscans",
+      "Temp_Table": "Temp Table",
+      "Sort_File": "Sort File",
+      "PermSysTmpTbl": "PermSysTmpTbl",
+      "Page_Lock": "Page Lock",
+      "Re-Hit": "Re-Hit%",
+      "Operations": "Operations"
+    },
+    "Top_Lock_Wait_Tables": {
+      "Database": "Database",
+      "Table": "Table",
+      "Lock_Mode": "Lock Mode",
+      "Lock_Reqs": "Lock Reqs",
+      "Lock_Waits": "Lock Waits",
+      "Lock_Timeouts": "Lock Timeouts",
+      "Disk_Reads": "Disk Reads",
+      "Disk_Writes": "Disk Writes",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "Seqscans": "Seqscans",
+      "Operations": "Operations"
+    },
+    "Table_Related_SQL": {
+      "SEQ": "SEQ",
+      "Database": "Database",
+      "Max_Cost": "Max Cost",
+      "Min_Cost": "Min Cost",
+      "Ret_Rows": "Ret Rows",
+      "SeqScan": "SeqScan",
+      "Frequency": "Frequency",
+      "Weight": "Weight",
+      "Brief_SQL": "Brief SQL",
+      "SQL": "SQL",
+      "HashCode": "HashCode",
+      "Operations": "Operations"
+    },
+    "ActiveSQL": {
+      "SEQ": "SEQ",
+      "Session": "Session",
+      "Database": "Database",
+      "Host": "Host",
+      "User": "User",
+      "Cost": "Cost",
+      "Brief_SQL": "Brief SQL",
+      "SQL": "SQL",
+      "Ret_Rows": "Ret Rows",
+      "Seqscan": "Seqscan",
+      "Host_Vars": "Host Vars",
+      "HashCode": "HashCode",
+      "PID": "PID",
+      "TTY": "TTY",
+      "Operations": "Operations"
+    },
+    "Least_Used_Indexes": {
+      "DBSpace": "DBSpace",
+      "Database": "Database",
+      "Table": "Table",
+      "Index": "Index",
+      "Size": "Size(KB)",
+      "N_Cols": "N Cols",
+      "Disk_Reads": "Disk Reads",
+      "Disk_Writes": "Disk Writes",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "keyLen": "keyLen"
+    },
+    "Top_Busy_Indexes": {
+      "DBSpace": "DBSpace",
+      "Database": "Database",
+      "Table": "Table",
+      "Index": "Index",
+      "Size": "Size(KB)",
+      "N_Cols": "N Cols",
+      "Disk_Reads": "Disk Reads",
+      "Disk_Writes": "Disk Writes",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "keyLen": "keyLen",
+      "Re-Hit": "Re-Hit%"
+    },
+    "Top_Busy_Session": {
+      "Session": "Session",
+      "User": "User",
+      "Connected": "Connected",
+      "ToTal_OP": "ToTal OP",
+      "OP": "OP+",
+      "Cost": "Cost",
+      "Seqscans": "Seqscans",
+      "SEQ": "SEQ+",
+      "Lock_Reqs": "Lock Reqs",
+      "LCK": "LCK+",
+      "Lock_Held": "Lock Held",
+      "Database_Program": "Database",
+      "Host": "Host",
+      "PID": "PID",
+      "TTY": "TTY",
+      "Operations": "Operations"
+    },
+    "Top_IO_Session": {
+      "Session": "Session",
+      "User": "User",
+      "Connected": "Connected",
+      "ToTal_RW": "ToTal RW",
+      "RW": "RW+",
+      "Disk_Reads": "Disk Reads",
+      "DskR": "DskR+",
+      "Disk_Writes": "Disk Writes",
+      "DskW": "DskW+",
+      "SeqScan": "SeqScan",
+      "Database": "Database",
+      "TTY": "TTY",
+      "Host": "Host",
+      "Operations": "Operations"
+    },
+    "Top_Memory_Consuming_Session": {
+      "Session": "Session",
+      "User": "User",
+      "Connected": "Connected",
+      "Mem_Allocated": "Mem Allocated",
+      "DB_Virtual_Memory": "% of DB Virtual Memory",
+      "Mem_Used": "Mem Used",
+      "Sort_Mem": "Sort Mem",
+      "Lock_Hold": "Lock Hold",
+      "File_Opened": "File Opened",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "SeqScans": "SeqScans",
+      "Database": "Database",
+      "TTY": "TTY",
+      "Host": "Host",
+      "Operations": "Operations"
+    },
+    "ShowIdleSession": {
+      "Session": "Session",
+      "Host": "Host",
+      "PID": "PID",
+      "TTY": "TTY",
+      "User": "User",
+      "Idle_Time": "Idle Time",
+      "Lock_Hold": "Lock Hold",
+      "Lock_Wait": "Lock Wait",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "Database": "Database"
+    },
+    "DeadLocked_Connections": {
+      "Database": "Database",
+      "Table": "Table",
+      "PID": "PID",
+      "Session": "Session",
+      "Lock_Holder": "Lock Holder",
+      "Locked_Session": "Locked Session",
+      "Locked_User": "Locked User",
+      "Lock_Type": "Lock Type",
+      "Operations": "Operations"
+    },
+    "Active_Connections": {
+      "Session": "Session",
+      "User": "User",
+      "Connect_Time": "Connect Time",
+      "Idle_Time": "Idle Time",
+      "Lock_Held": "Lock Held",
+      "Lock_Wait": "Lock Wait",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "Host": "Host",
+      "PID": "PID",
+      "Operations": "Operations"
+    },
+    "DB_Engine_Wait_Conditions": {
+      "Condition_Id": "Condition Id",
+      "Address": "Address",
+      "Name": "Name",
+      "Waiter": "Waiter",
+      "Wait_Time": "Wait Time"
+    },
+    "Table_In_Used": {
+      "Session": "Session",
+      "Host": "Host",
+      "PID": "PID",
+      "TTY": "TTY",
+      "User": "User",
+      "Database": "Database",
+      "Table_index": "Table/index"
+    },
+    "List_Analysis_Jobs": {
+      "Analysis_Start_Time": "Analysis Start Time",
+      "Analysis_Duration": "Analysis Duration",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "Mem_Size": "Mem Size",
+      "Max_Locks": "Max Locks",
+      "User": "User",
+      "Session": "Session",
+      "Status": "Status",
+      "ID": "ID",
+      "SeqScans": "Seqscans",
+      "Host": "Host",
+      "PID": "PID",
+      "Process": "Process",
+      "TTY": "TTY",
+      "Operations": "Operations"
+    },
+    "LockWaitedConnections": {
+      "Condition_ID": "Condition ID",
+      "Name": "Name",
+      "Waiter": "Waiter",
+      "Wait_Time": "Wait Time"
+    },
+    "Table_With_Multiple_Extents": {
+      "Database": "Database",
+      "Table_Index": "Table/Index",
+      "Partnum": "Partnum",
+      "N_Extents": "N Extents",
+      "N_Rows": "N Rows",
+      "Used_Pages": "Used Pages",
+      "Allocated_Pages": "Allocated Pages",
+      "Data_Pages": "Data Pages",
+      "Object_Type": "Object Type",
+      "Temp_Table": "Temp Table",
+      "Sort_File": "Sort File",
+      "PERM_SYS_TMP_TBL": "PERM SYS TMP TBL",
+      "Page_Lock": "Page Lock",
+      "Create_Time": "Create Time"
+    },
+    "Un_backup_Logical_Log": {
+      "Num": "Num",
+      "UniqueID": "UniqueID",
+      "Size": "Size",
+      "Used_Size": "Used Size",
+      "Backup_Status": "Backup Status",
+      "New": "New(Unused)",
+      "Transaction_In_Used": "Transaction In Used",
+      "Current": "Current"
+      },
+    "Active_Transaction_In_Logical_Log": {
+    "Session": "Session",
+    "User": "User",
+    "PID": "PID",
+    "Host": "Host",
+    "Connect_Time": "Connect Time",
+    "Start_Log_UniqueID": "Start Log UniqueID",
+    "Long_Transaction": "Long Transaction",
+    "N_Locks": "N Locks",
+    "Lock_Wait": "Lock Wait",
+    "Lock_request": "Lock request"
+  },
+    "Logical_Log_Used_In_Active_Transactions": {
+      "Num": "Num",
+      "UniqueID": "UniqueID",
+      "Size": "Size",
+      "Used_Size": "Used Size",
+      "Backup_Status": "Backup Status",
+      "New": "New(Unused)",
+      "In_Used": "In Used",
+      "Current": "Current"
+      },
+
+    "All_Logical_Logs": {
+      "Num": "Num",
+      "UniqueID": "UniqueID",
+      "Size": "Size",
+      "Used_Size": "Used Size",
+      "Backup_Status": "Backup Status",
+      "New": "New(Unused)",
+      "Transaction_In_Used": "Transaction In Used",
+      "In_Used": "In Used",
+      "Current": "Current"
+      },
+    "SQL_Point_In_Time": {
+      "SEQ": "SEQ",
+      "Database": "Database",
+      "Max_Cost": "Max Cost",
+      "Min_Cost": "Min Cost",
+      "Ret_Rows": "Ret Rows",
+      "SeqScan": "SeqScan",
+      "Frequency": "Frequency",
+      "Weight": "Weight",
+      "Brief_SQL": "Brief SQL",
+      "SQL": "SQL",
+      "HashCode": "HashCode",
+      "Operations": "Operations"
+    },
+    "Memory_Segment": {
+      "Address": "Address",
+      "Type": "Type",
+      "Size": "Size(MB)",
+      "Used": "Used(MB)",
+      "Free": "Free(MB)",
+      "Use": "Used%"
+    },
+    "DBSystem_Memory_Pool": {
+      "Pool": "Pool",
+      "Mem_Allocated": "Mem Allocated",
+      "BD_Virtual_Memory": "% of BD Virtual Memory",
+      "Free_Mem": "Free Mem",
+      "Allocated_Fragment": "# Allocated Fragment",
+      "Free_Fragment": "# Free Fragment"
+      },
+    "DBSpace_Information": {
+      "DBSNum": "DBSNum",
+      "DBSpace": "DBSpace",
+      "Type": "Type",
+      "N_Chunks": "N Chunks",
+      "Size": "Size(MB)",
+      "Used": "Used(MB)",
+      "Free": "Free(MB)",
+      "used": "used(%)",
+      "Alert_Threshold": "Alert Threshold(%)",
+      "Operations": "Operations"
+      },
+    "DBSpace_IO_Information": {
+      "DBSNum": "DBSNum",
+      "DBSpace": "DBSpace",
+      "Type": "Type",
+      "Size": "Size(MB)",
+      "Used": "Used(MB)",
+      "Free": "Free(MB)",
+      "Disk_Reads": "Disk Reads",
+      "Disk_Writes": "Disk Writes",
+      "Disk_Read": "Disk Read(MB)",
+      "Disk_Write": "Disk Writes(MB)",
+      "Operations": "Operations"
+      },
+    "Chunk_Information": {
+      "DBSNum": "DBSNum",
+      "DBSpace": "DBSpace",
+      "Type": "Type",
+      "ChunkNum": "ChunkNum",
+      "Status": "Status",
+      "Used": "Used(MB)",
+      "Free": "Free(MB)",
+      "used": "used(%)",
+      "File": "File"
+      },
+    "Chunk_IO_Information": {
+      "DBSNum": "DBSNum",
+      "DBSpace": "DBSpace",
+      "Type": "Type",
+      "ChunkNum": "ChunkNum",
+      "Status": "Status",
+      "Size": "Size(MB)",
+      "Used": "Used(MB)",
+      "Free": "Free(MB)",
+      "Disk_Reads": "Disk Reads",
+      "Disk_Writes": "Disk Writes",
+      "Disk_Read": "Disk Read(MB)",
+      "Disk_Write": "Disk Write(MB)",
+      "File": "File"
+      },
+    "File_System_Disk_Space_Utilization": {
+      "File_System": "File System",
+      "1K-blocks": "1K-blocks",
+      "Used": "Used",
+      "Use": "Use(%)",
+      "Available": "Available",
+      "Mounted_on": "Mounted on",
+      "Iused_P": "%Iused",
+      "Used_P": "%Used",
+      "Free": "Free",
+      "Iused": "Iused",
+      "K-bytes": "K-bytes"
+    },
+    "Virtual_Processes": {
+      "VP_ID": "VP ID",
+      "Ready_Queue": "Ready Queue",
+      "VP_Class": "VP Class",
+      "System_Time(sec)": "System Time(sec)",
+      "User_Time(sec)": "User Time(sec)"
+      },
+    "Top_Busy_OS_Processes": {
+      "PID": "PID",
+      "USER": "USER",
+      "PR": "PR",
+      "VIRT": "VIRT",
+      "SHR": "SHR",
+      "S": "S",
+      "CPU_": "%CPU",
+      "MEM": "%MEM",
+      "TIME_": "TIME+",
+      "COMMAND": "COMMAND",
+      "UserName": "UserName",
+      "PRI": "PRI",
+      "NICE": "NICE",
+      "SIZE": "SIZE",
+      "RES": "RES",
+      "STATE": "STATE",
+      "TIME": "TIME",
+      "WCPU": "WCPU",
+      "CPU": "CPU",
+      "TTY": "TTY",
+      "NI": "NI",
+      "WCPU_P": "%WCPU"
+    },
+    "Top_Running_SQL": {
+      "SEQ": "SEQ",
+      "Session": "Session",
+      "User": "User",
+      "Database": "Database",
+      "Cost": "Cost",
+      "Ret_Rows": "Ret Rows",
+      "SeqScan": "SeqScan",
+      "Brief_SQL": "Brief SQL",
+      "Host_Vars": "Host Vars",
+      "Host": "Host",
+      "PID": "PID",
+      "SQL": "SQL",
+      "HashCode": "HashCode",
+      "Operations": "Operations"
+      },
+    "Heavy_SQL_Statistics": {
+      "SEQ": "SEQ",
+      "Database": "Database",
+      "Max_Cost": "Max Cost",
+      "Min_Cost": "Min Cost",
+      "Ret_Rows": "Ret Rows",
+      "SeqScan": "SeqScan",
+      "Frequency": "Frequency",
+      "Weight": "Weight",
+      "Brief_SQL": "Brief SQL",
+      "Host_Vars": "Host Vars",
+      "SQL": "SQL",
+      "Hash_Code": "Hash Code",
+      "Operations": "Operations"
+      },
+    "Frequent_SQL_Statistics": {
+      "SEQ": "SEQ",
+      "Database": "Database",
+      "Max_Cost": "Max Cost",
+      "Min_Cost": "Min Cost",
+      "Ret_Rows": "Ret Rows",
+      "SeqScan": "SeqScan",
+      "Frequency": "Frequency",
+      "Weight": "Weight",
+      "Brief_SQL": "Brief SQL",
+      "Host_Vars": "Host Vars",
+      "SQL": "SQL",
+      "Hash_Code": "Hash Code",
+      "Operations": "Operations"
+    },
+    "Sequential_Scan_SQL_Statistics": {
+      "SEQ": "SEQ",
+      "Database": "Database",
+      "Max_Cost": "Max Cost",
+      "Min_Cost": "Min Cost",
+      "Ret_Rows": "Ret Rows",
+      "SeqScan": "SeqScan",
+      "Frequency": "Frequency",
+      "Weight": "Weight",
+      "Brief_SQL": "Brief SQL",
+      "Host_Vars": "Host Vars",
+      "SQL": "SQL",
+      "Hash_Code": "Hash Code",
+      "Operations": "Operations"
+      },
+    "Thread": {
+      "Thread_ID": "Thread ID",
+      "Thread_Name": "Thread Name",
+      "VP_ID": "VP ID",
+      "VP_class": "VP class",
+      "prioirity": "prioirity",
+      "Tcb_address": "Tcb address",
+      "Rstcb_address": "Rstcb address",
+      "Status": "Status"
+      },
+    "Long_Transaction": {
+      "Host": "Host",
+      "Session": "Session",
+      "Starting_Log": "Starting Log",
+      "Log_Pos": "Log Pos",
+      "Long_Trans": "Long Trans",
+      "Log_Uniq_ID": "Log Uniq ID",
+      "N_Locks": "N Locks",
+      "Used_Logs": "Used Logs",
+      "Log_Recs": "Log Recs",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "Page_Reads": "Page Reads",
+      "Page_Writes": "Page Writes",
+      "PID": "PID",
+      "User": "User"
+      },
+    "Event_List": {
+      "ID": "ID",
+      "Occurrence": "Occurrence",
+      "Resolution": "Resolution",
+      "Agent_ID": "Agent ID",
+      "dbSonar_Agent": "dbSonar Agent",
+      "Severity": "Severity",
+      "Event": "Event",
+      "Status": "Status",
+      "Remark": "Remark",
+      "Operations": "Operations"
+      },
+    "Alert_Delivery_History": {
+      "ID": "ID",
+      "Delivered_Time": "Delivered Time",
+      "dbSonar_Agent": "dbSonar Agent",
+      "IP": "IP",
+      "Instance": "Instance",
+      "Event": "Event",
+      "Severity": "Severity",
+      "Type": "Type",
+      "Method": "Method",
+      "Recipient": "Recipient",
+      "Target": "Target",
+      "Retry": "Retry",
+      "Status": "Status",
+      "Operations": "Operations"
+      },
+    "Event_Setup": {
+      "ID": "ID",
+      "Name": "Name",
+      "Description": "Description",
+      "Host": "Host",
+      "Status": "Status",
+      "Operations": "Operations"
+      },
+    "HealthCheck_Strategy": {
+      "Name": "Name",
+      "Schedule": "Schedule",
+      "CreateDate": "CreateDate",
+      "Enable": "Enable",
+      "Operations": "Operations"
+      },
+    "Health_Check_Report": {
+      "JobName": "JobName",
+      "StartDate": "StartDate",
+      "EndDate": "EndDate",
+      "Fail_Item_Count": "Fail Item Count",
+      "Status": "Status",
+      "Operations": "Operations"
+    },
+    "HealthCheck_Task": {
+      "JobName": "JobName",
+      "Schedule": "Schedule",
+      "CreateDate": "CreateDate",
+      "Status": "Status",
+      "Enable": "Enable",
+      "Operations": "Operations"
+    },
+    "Setting_User": {
+      "User_Account": "User Account",
+      "E-Mail": "E-Mail",
+      "CellPhone": "CellPhone",
+      "Enabled": "Enabled",
+      "Operations": "Operations"
+      },
+    "Setting_Email": {
+      "ID": "ID",
+      "Name": "Name",
+      "E-Mail_Account": "E-Mail Account",
+      "IP": "IP",
+      "Operations": "Operations"
+      },
+    "Instance_List": {
+      "ID": "ID",
+      "Agent_Name": "Agent Name",
+      "Instances_Name": "Instances Name",
+      "Description": "Description",
+      "Host": "Host",
+      "Status": "Status",
+      "Operations": "Operations"
+      },
+    "List_Of_Opened_Table_In_Session": {
+      "Partnum": "Partnum",
+      "DBSpace": "DBSpace",
+      "Database": "Database",
+      "Table_Index": "Table/Index",
+      "N_Rows": "N Rows",
+      "RowSize": "RowSize(KB)",
+      "Usage_Count": "Usage Count",
+      "Open_Count": "Open Count",
+      "Temp_Table": "Temp Table",
+      "Sort_File": "Sort File",
+      "Perm_Sys_tmp_Tbl": "Perm_Sys_tmp_Tbl",
+      "Page_Lock": "Page Lock"
+      },
+
+    "License_Info": {
+      "Config_Name": "Config Name",
+      "Server_Machine": "Server Machine",
+      "Host_IP": "Host IP",
+      "DB_Server": "DB Server",
+      "Days_before_expiration": "Days before expiration"
+      },
+    "Lock_Waits": {
+      "Session": "Session",
+      "Host": "Host",
+      "PID": "PID",
+      "TTY": "TTY",
+      "Database": "Database",
+      "Table_Index": "Table/Index",
+      "Lock_Type": "Lock Type"
+      },
+    "Get_Event_Notification_Recipient_List": {
+      "Event": "Event",
+      "Login_Name": "Login Name",
+      "Last_Name": "Last Name",
+      "First_Name": "First Name",
+      "E_Mail": "E-Mail",
+      "Cellphone": "Cellphone"
+      },
+    "Get_Event_Notification_List": {
+      "Event": "Event",
+      "dbSonar_Instance": "dbSonar Instance",
+      "IP": "IP",
+      "Severity": "Severity",
+      "Type": "Type",
+      "Recipient": "Recipient",
+      "Target": "Target",
+      "Time": "Time",
+      "Status": "Status"
+      },
+
+    "SQL_Cursor_Held_Info0": {
+      "Host": "Host",
+      "PID": "PID",
+      "TTY": "TTY",
+      "User": "User",
+      "Connected": "Connected"
+    },
+    "SQL_Cursor_Held_Info1": {
+      "Mem_Allocated": "Mem Allocated",
+      "DB_Virtual_Mem": "% of DB Virtual Mem",
+      "Mem_Used": "Mem Used",
+      "Sort_Mem": "Sort Mem"
+    },
+    "SQL_Cursor_Held_Info2": {
+      "Lock_Hold": "Lock Hold",
+      "File_Opened": "File Opened",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "Sequence_Scans": "Sequence Scans",
+      "Database": "Database"
+    },
+    "SQL_Cursor_Held_Info3": {
+      "sdblock": "sdblock",
+      "heapsz": "heapsz",
+      "Status": "Status"
+    },
+    "ActiveSQL_SQLExecutionTreeQueryOperators": {
+      "addr": "addr",
+      "ses-id": "ses-id",
+      "opname": "opname",
+      "phase": "phase",
+      "time": "time",
+      "in1": "in1",
+      "in2": "in2",
+      "stmt-type": "stmt-type"
+    },
+    "ActiveSQL_SQLStatement": {
+      "host_variables": {
+        "address": "Address",
+        "flags": "Flags",
+        "type": "Type",
+        "value": "Value"
+      }
+    },
+    "Active_SQl_Tree_Diagram0": {
+      "Current_Time": "Current Time",
+      "Process_ID": "Process ID",
+      "Session": "Session",
+      "TTY": "TTY",
+      "User": "User"
+    },
+    "Active_SQl_Tree_Diagram1": {
+      "Database": "Database",
+      "Estimated_Cost": "Estimated Cost",
+      "Estimated_Rows": "Estimated Rows",
+      "Host": "Host",
+      "SQL": "SQL",
+      "Sequential_Scan": "Sequential Scan"
+    },
+    "Execution_history_of_sql_pattern": {
+      "SEQ": "SEQ",
+      "Exec_Time": "Exec Time",
+      "Session": "Session",
+      "User": "User",
+      "Database": "Database",
+      "Cost": "Cost",
+      "Ret_Rows": "Ret Rows",
+      "SeqScan": "SeqScan",
+      "HostVars": "HostVars",
+      "HashCode": "HashCode"
+    },
+    "Remark": {
+      "ID": "ID",
+      "Event": "Event",
+      "Severity": "Severity",
+      "dbSonar_Agent" : "dbSonar Agent",
+      "Occurrence": "Occurrence",
+      "Resolution": "Resolution"
+    },
+    "List_Analysis_Result_JobProfile": {
+      "SessionID": "SessionID",
+      "Analysis_Job_ID": "Analysis Job ID",
+      "User": "User",
+      "Host": "Host",
+      "PID": "PID",
+      "Program": "Program",
+      "TTY": "TTY",
+      "Analysis_Status": "Analysis Status"
+    },
+    "List_Analysis_Result_AnalysisPeriod": {
+      "Duration": "Duration",
+      "Start": "Start",
+      "End": "End"
+    },
+    "List_Analysis_Result_ProgramExecutionPeriod": {
+      "Duration": "Duration",
+      "Start": "Start"
+    },
+    "List_Analysis_Result_ResourceUtilization": {
+      "Buf_Readss": "Buf Readss",
+      "Buf_Writess": "Buf Writess",
+      "Mem_Size": "Mem Size",
+      "Seqscans": "Seqscans",
+      "Max_Locks": "Max Locks"
+    },
+    "List_Analysis_Result_Analyzed": {
+      "SEQ": "SEQ",
+      "Process_Time": "Process Time",
+      "Time": "Time%",
+      "Database": "Database",
+      "Cost": "Cost",
+      "Rows": "Rows",
+      "SeqScan": "SeqScan",
+      "Brief_SQL": "Brief SQL",
+      "HostVars": "HostVars",
+      "HashCode": "HashCode",
+      "Operations": "Operations"
+    },
+    "DB_Parameter_Analysis_Report": {
+      "DB_Parameter_Name": "DB Parameter Name",
+      "Effective_Value": "Effective Value",
+      "Original_Value": "Original Value",
+      "Suggestions": "Suggestions"
+    },
+    "Process": {
+      "ID": "ID",
+      "Event": "Event",
+      "Severity": "Severity",
+      "dbSonar_Agent": "dbSonar Agent",
+      "Occurrence": "Occurrence",
+      "Resolution": "Resolution"
+    },
+    "HealthCheck": {
+      "JobName": "JobName",
+      "Schedule": "Schedule",
+      "Strage": "Strage",
+      "Instance": "Instance"
+    },
+    "Task": {
+      "Enabled": "Enabled",
+      "Instance": "Instance",
+      "Host": "Host",
+      "Check_item": "Check item"
+    },
+    "Diff_Cost_Sql_Pattern": {
+      "database": "Database",
+      "max_cost": "Comp Max Cost",
+      "min_cost": "Comp Min Cost",
+      "freq": "Comp Frequency",
+      "weight": "Comp Weight",
+      "t_max_cost": "Base Max Cost",
+      "t_min_cost": "Base Min Cost",
+      "t_freq": "Base Frequency",
+      "t_weight": "Base Weight",
+      "brief_sql": "Brief SQL",
+      "host_vars": "Host Vars",
+      "sql": "SQL",
+      "hash_code": "Hash Code",
+      "Operations": "Operations"
+    },
+    "Diff_Frequency_Sql_Pattern": {
+      "database": "Database",
+      "max_cost": "Comp Max Cost",
+      "min_cost": "Comp Min Cost",
+      "freq": "Comp Frequency",
+      "weight": "Comp Weight",
+      "t_max_cost": "Base Max Cost",
+      "t_min_cost": "Base Min Cost",
+      "t_freq": "Base Frequency",
+      "t_weight": "Base Weight",
+      "brief_sql": "Brief SQL",
+      "host_vars": "Host Vars",
+      "sql": "SQL",
+      "hash_code": "Hash Code",
+      "Operations": "Operations"
+    },
+    "Diff_Weight_Sql_Pattern": {
+      "database": "Database",
+      "max_cost": "Comp Max Cost",
+      "min_cost": "Comp Min Cost",
+      "freq": "Comp Frequency",
+      "weight": "Comp Weight",
+      "t_max_cost": "Base Max Cost",
+      "t_min_cost": "Base Min Cost",
+      "t_freq": "Base Frequency",
+      "t_weight": "Base Weight",
+      "brief_sql": "Brief SQL",
+      "host_vars": "Host Vars",
+      "sql": "SQL",
+      "hash_code": "Hash Code",
+      "Operations": "Operations"
+    }
+  },
+  "button": {
+    "ADD": "ADD",
+    "Active_SQL": "Active SQL",
+    "Active_SQL_Tree_Diagram": "Active SQL Tree Diagram",
+    "Start_Analysis": "Start Analysis",
+    "List_Of_Opened_Table_In_Session": "List Of Opened Table In Session",
+    "Related_SQL": "Related_SQL",
+    "SQL_Point_In_Time": "SQL Point In Time",
+    "Top_Busy_OS_Processes": "Top CPU Busy OS Processes",
+    "Top_Busy_Session": "Top Busy Session",
+    "DB_Engine_Wait_Conditions": "DB Engine Wait Conditions",
+    "Active_Connections": "Active Connections",
+    "DB_System_Memory_Pool": "DB System Memory Pool",
+    "Table_Related_SQL": "Table Related SQL",
+    "Top_Memory_Session": "Top Memory Session",
+    "Cancel": "Cancel",
+    "Lock": "Lock",
+    "unLock": "unLock",
+    "Top_Busy_OS_Processes__Real_Time": "Top Busy OS Processes - Real-Time",
+    "Top_Busy_Session__Real_Time": "Top Busy Session - Real-Time",
+    "File_System_Disk_Space_Utilization": "File System Disk Space Utilization",
+    "Top_IO_Busy_Session__Real_Time": "Top I/O Busy Session - Real-Time",
+    "Connection_Memory_Usage": "Connection Memory Usage",
+    "OS_Process_Memory_Consumption__Real-Time": "OS Process Memory Consumption - Real-Time",
+    "Top_Memory_Session__Real-Time": "Top Memory Consuming Session - Real-Time",
+    "Diff_Cost_Sql_Pattern": "Diff Cost Sql Pattern",
+    "Diff_Frequency_Sql_Pattern": "Diff Frequency Sql Pattern",
+    "Diff_Weight_Sql_Pattern": "Diff Weight Sql Pattern"
+  },
+  "form": {
+    "Confirm": "Confirm",
+    "Delete": "Delete",
+    "Evaluate_SQL": "Evaluate SQL",
+    "Filter": "Filter",
+    "Generate": "Generate",
+    "dbSonarOnlineHelp": "dbSonar  Online Help",
+    "SQL": "SQL",
+    "Database": "Database",
+    "Table": "Table",
+    "Cost": "Cost",
+    "BeginDate": "BeginDate",
+    "BeginTime": "BeginTime",
+    "EndDate": "EndDate",
+    "EndTime": "EndTime",
+    "Time": "Time",
+    "Report": "Please select at least one report.",
+    "daterange": "Please select date range",
+    "Remark": {
+      "Overview": "Overview",
+      "Details": "Details",
+      "Process": "Process",
+      "Remark": "Remark"
+    },
+    "HealthCheck_Information": "Health Check Info",
+    "Health_Check_Report": "Health Check Report",
+    "Target_Database_Instance": "Target Database Instance",
+    "Check_item": "Check item",
+    "ActiveSql": {
+      "SQL_Execution": "SQL Execution",
+      "Query_Operators": "Query Operators",
+      "SQL_Statement": "SQL Statement",
+      "Last_parsed_SQL_statement": "Last parsed SQL statement",
+      "Stored_procedure_stack": "Stored procedure stack",
+      "User-createdTempTables": "User-created Temp tables"
+    },
+    "NotificationAssignment": {
+      "Target_Agent": "Target Agent",
+      "User": "User",
+      "Event": "Event",
+      "Method_Assigned": "Method Assigned",
+      "Severity": "Severity"
+    },
+    "TaskList": {
+      "Target_Instances": "Target Instances",
+      "Task": "Task",
+      "Description": "Description",
+      "Task_Type": "Task Type",
+      "Schedule": "Schedule",
+      "Enabled": "Enabled",
+      "Operations": "Operations",
+      "Update": "Update"
+    },
+    "TaskListUpdate": {
+      "Task_Update" : "Task Update",
+      "Task_Type": "Task Type",
+      "Task_Name": "Task Name",
+      "Description": "Description",
+      "Schedule": "Schedule",
+      "Task_Program": "Task Program",
+      "Enabled": "Enabled",
+      "Task_List": "Task List"
+    },
+    "EventUpdate": {
+      "Target_Instances": "Target Instances",
+      "Event": "Event",
+      "Event_Type": "Event Type",
+      "Severity": "Severity",
+      "Schedule": "Schedule",
+      "Repeated_Occurrences": "Repeated Occurrences",
+      "Threshold": "Threshold",
+      "Enabled": "Enabled",
+      "Event_Setup": "Event Setup"
+    },
+    "InstanceUpdate": {
+      "dbSonar_Instance": "dbSonar Instance",
+      "Agent_Name": "Agent Name",
+      "Instance_Name": "Instance Name",
+      "Description": "Description",
+      "Host_Name": "Host Name",
+      "DB_Server_Name": "DB Server Name",
+      "IP_Address": "IP Address",
+      "Port_Number": "Port Number",
+      "Update_Time": "Update Time",
+      "Repostory_Server": "Repostory Server",
+      "DB_Name": "DB Name",
+      "RepostoryDescription": "Description",
+      "Update_Instance": "Update Instance"
+    },
+    "AddStrategy": {
+      "Name": "Name",
+      "Target_Database_Instance": "Target Database Instance",
+      "Enabled": "Enabled",
+      "Instance": "Instance",
+      "Host": "Host",
+      "Check_Items": "Check Items",
+      "Check_item": "Check item",
+      "ADD_HealthCheck_Strategy": "ADD HealthCheck Strategy",
+      "Update_Strategy": "Update Strategy"
+    },
+    "AddTask": {
+      "Name": "Name",
+      "Type": "Type",
+      "Immediately": "Immediately",
+      "Every_Time": "Every Time",
+      "Per_Month": "Per Month",
+      "Per_Week": "Per Week",
+      "Checkpoint": "Checkpoint",
+      "Strategy": "Strategy",
+      "Enable": "Enable",
+      "Enabled": "Enabled",
+      "Target_Database_Instance": "Target Database Instance",
+      "Instance": "Instance",
+      "Host": "Host",
+      "Check_Items" : "Check Items",
+      "Check_item": "Check item",
+      "ADD_HealthCheck_Task": "ADD HealthCheck Task",
+      "HealthCheck_Detail": "HealthCheck Detail",
+      "Update_Task": "Update Task"
+    },
+    "TrendAnalysis": {
+      "Time_Mode": "Time Mode",
+      "5-Minutes": "5 Minutes",
+      "Hourly": "Hourly",
+      "Daily": "Daily",
+      "Date_Range": "Date Range",
+      "Trend_List": "Trend List",
+      "ACM_BeginDate": "ACM BeginDate",
+      "Before_BeginDate": "Before Online Begin Date",
+      "Comp_Time": "Compare Time",
+      "Base_Time": "Base Time"
+    },
+    "Home": {
+      "Select_Instance": "Select Agent Name",
+      "User_Settings": "User Settings",
+      "Sign_Out": "Sign Out",
+      "Lock_Screen": "Lock Screen",
+
+      "Screenfull": "Screenfull",
+      "DB_Run-Time": "Uptime",
+      "Connections": "Connections",
+      "SQL": "SQL",
+      "Network": "Packet In/Out Queue",
+      "Alert": "Alert",
+
+      "User": "User",
+      "Load": "Load",
+      "Process": "Process",
+      "ActiveSessionMaxActiveSession24Hours": "Active Session / Max Active Session (24 Hours)",
+      "ActiveSQLMaxActiveSQL24Hours": "Active SQL / Max Active SQL (24 Hours)",
+      "NetworkPacketInOut": "Packet In Queue Size / Out Queue Size",
+      "ActiveAlertPast24HoursAlert": "Active Alert / Past 24 Hours Alert",
+
+      "OS_Overview": "OS Overview",
+      "Top_Busy_Session": "Top Busy Session",
+      "Top_Running_SQL": "Top Running SQL",
+      "NetworkReceivingQueue": "Network Receiving Queue",
+      "UnresolvedAlertList": "Unresolved Alert List",
+      "Database_Message_Log": "Databas Message Log",
+
+      "CPU_Busy": "CPU Busy%",
+      "Disk_Busy": "Disk Busy%",
+      "PageInOutSec": "Page In Out / Sec",
+      "VP_Busy": "VP Busy%",
+      "DBDiskRWSec": "DB Disk RW / Sec",
+      "VirtualMemAllocUsed": "Virtual Mem Alloc / Used",
+
+      "OS_CPU_Panel": "OS CPU Panel",
+      "CPU_Loading_Panel": "CPU Loading Panel",
+      "CPU_Bottleneck_Panel": "CPU Bottleneck Panel",
+      "Top_OS_Process_List": "Top OS Process List",
+
+      "OS_Disk_Panel": "OS Disk Panel",
+      "Disk_Loading_Panel": "Disk Loading Panel",
+      "Disk_Bottleneck_Panel": "Disk Bottleneck Panel",
+
+      "OS_Memory_Panel": "OS Memory Panel",
+      "Memory_Loading_Panel": "Memory Loading Panel",
+      "Memory_Bottleneck_Panel": "Memory Bottleneck Panel",
+
+      "Database_VP_Panel": "Database VP Panel",
+      "Top_Busy_Tables": "Top Busy Tables",
+      "Temp_Tables": "Temp Tables",
+      "Sequential_Scan_SQL_Statistics": "Sequential Scan SQL Statistics",
+
+      "Database_Disk_Panel": "Database Disk Panel",
+      "Top_IO_Session": "Top IO Session",
+      "Database_Memory_Trend_Panel": "Database Memory Trend Panel",
+
+      "DatabaseMemoryTrendPanel": "Database Memory Trend Panel",
+      "DBSystemMemoryPool": "DB System Memory Pool",
+      "TopMemoryConsumingSession": "Top Memory Session",
+      "Memory_Segment": "Memory Segment",
+
+      "Active_Alert_List": "Active Alert List",
+      "Message_Log": "Message Log",
+      "Database_Overview": "Database Overview",
+
+      "Session": "Session",
+      "OP": "OP+",
+      "Program": "Program"
+    },
+    "ExecutionHistoryOfSQLPattern": {
+      "SQL": "SQL",
+      "Sessions": "Sessions"
+    },
+    "ListAnalysisResult": {
+      "JobProfile": "Job Profile",
+      "AnalysisPeriod": "Analysis Period",
+      "ProgramExecutionPeriod": "Program Execution Period",
+      "ResourceUtilization": "Resource Utilization",
+      "Analyzed": "Analyzed"
+    },
+    "SqlCursorHeldInfo": {
+      "Statement": "Statement",
+      "Session": "Session"
+    },
+    "DataCapture": {
+      "Target_Agent": "Target Agent",
+      "Item": "Item",
+      "Threshold": "Threshold",
+      "Default_Value": "Default Value",
+      "Description": "Description",
+      "DataCaptureThreshold": "Data Capture Threshold",
+      "Data_Recycle": "Data Recycle",
+      "Reset_To_Default": "Reset To Default"
+    },
+    "IODeviceCaptureList": {
+      "Target_Agent": "Target Agent",
+      "IO_Devices": "I/O Devices",
+      "Enabled": "Enabled",
+      "IODeviceCaptureList": "I/O Device Capture List"
+    },
+    "SmtpEmail": {
+      "Add_Email_Server": "Add Email Server",
+      "E-Mail_Server_Name": "E-Mail Server Name",
+      "Description": "Description",
+      "IP_Address": "IP Address",
+      "Port_Number": "Port Number",
+      "User_Name": "User Name",
+      "Password": "Password",
+      "EnterPasswordAgain": "Enter Password Again",
+      "Senders_e-mai": "Sender's e-mai",
+      "Test_Mail": "Test Mail",
+      "E-Mail_Test": "E-Mail Test",
+      "Recipient_E-Mail": "Recipient E-Mail",
+      "Subject": "Subject",
+      "Mail_Content": "Mail Content",
+      "Update_Email_Server": "Update Email Server",
+      "Update": "Update",
+      "Alert_Message": "The data is not filled correctly.Please re-enter.",
+      "Reset": "Reset"
+    },
+    "User": {
+      "Add_User": "Add User",
+      "Update_User": "Update User",
+      "First_Name": "First Name",
+      "Last_Name": "Last Name",
+      "Login_Name": "Login Name",
+      "Login_Password": "Login Password",
+      "EnterPasswordAgain": "Enter Password Again",
+      "E-Mail_Address": "E-Mail Address",
+      "CellPhoneNumber": "Cell Phone Number",
+      "Enabled": "Enabled",
+      "Detail_User": "Detail User",
+      "Server_Name": "Server Name",
+      "Role_Name": "Role Name",
+      "Reset_Password": "Reset Password",
+      "Authorization": "Authorization",
+      "User_Account": "User Account",
+      "ServerInstanceName": "Server Instance Name",
+      "Operations": "Operations",
+      "Add_Authorization": "Add Authorization",
+      "Instance_Name": "Instance Name",
+      "User_Role": "User Role"
+    },
+    "Table_Info": {
+      "Database": "Database",
+      "Table": "Table",
+      "Columns": "Table Columns of Table",
+      "Indices": "Indices of Table",
+      "Privileges": "Access Privileges of Table ",
+      "Fragments": "Fragments of Table",
+      "References": "References of Table",
+      "ColumnsTable": {
+        "Type": "Type",
+        "Column_Name": "Column_Name",
+        "Nulls": "Nulls"
+      },
+      "IndicesTable": {
+        "Access_Method": "Access_Method",
+        "Columns": "Columns",
+        "Index_name": "Index_name",
+        "Owner": "Owner",
+        "Type_Clstr": "Type/Clstr"
+      },
+      "PrivilegesTable": {
+        "Alter": "Alter",
+        "Delete": "Delete",
+        "Index": "Index",
+        "Insert": "Insert",
+        "Select": "Select",
+        "Update": "Update",
+        "User": "User"
+      },
+      "FragmentsTable": {
+        "Dbspace": "Dbspace",
+        "Expression": "Expression",
+        "Idx_Tbl_name": "Idx/Tbl_name",
+        "Partition": "Partition",
+        "Type": "Type"
+      },
+      "ReferencesTable": {
+        "Column": "Column",
+        "References": "References",
+        "User": "User"
+      }
+    },
+    "Performance_Report": {
+      "DateRange": "DateRange",
+      "Source": "Source",
+      "Target": "Target"
+    }
+  },
+  "panel": {
+    "Other": "Other",
+    "ACM": "ACM"
+  },
+  "shortcut-options":{
+    "1-Hour": "1 Hour",
+    "1-Day": "1 Day",
+    "1-Week": "1 Week",
+    "1-Month": "1 Month",
+
+    "1-Day-ago": "1  Day ago",
+    "1-Week-ago": "1 Week ago",
+    "1-Month-ago": "1 Month ago",
+    "1-Year-ago": "1 Year ago",
+
+    "Day": "Day",
+    "Week": "Week",
+    "Hour": "Hour",
+    "Min": "Min",
+    "Sec": "Sec",
+
+    "no": "?",
+    "SUN": "SUN",
+    "MON": "MON",
+    "TUE": "TUE",
+    "WED": "WED",
+    "THU": "THU",
+    "FRI": "FRI",
+    "SAT": "SAT"
+  },
+  "menu-group": {
+    "System_Level": "System Level",
+    "Analysis_Job": "Analysis Job",
+    "Event": "Event",
+    "Transactions": "Transactions",
+    "Session": "Session",
+    "Event_Manager": "Event Manager",
+    "Instances": "Instances",
+    "Settings": "Settings",
+    "About": "About",
+    "DB_System_Optimization": "DB System Optimization",
+    "HistoricalPerformanceAnalysis": "Historical Performance Analysis"
+  },
+  "confirm": {
+    "Confirm": "Confirm",
+    "Cancel": "Cancel",
+    "Tips": "Tips",
+    "Email_Message": "Click the \"Confirm\" button to delete this email？",
+    "User_Message": "Click the \"Confirm\" button to delete this user？",
+    "Session_Message": "Do you really want to terminate the session ？",
+    "Analysis_Message": "Do you really want to clear this analysis result ？",
+    "Session_Stop_Message": "Do you really want to stop analysis session ？",
+    "Instance_Message": "Click the \"Confirm\" button to delete this instance and the data will be lost？",
+    "delete_Success": "Delete Successful",
+    "delete_Failed": "Delete Failed",
+    "checkQuery": "Please select the row data",
+    "checkQueryChart": "Please select a time point on the chart",
+    "Terminate_Success": "Terminate Successful",
+    "Clear_Success": "Clear Successful",
+    "Stop_Success": "Stop Successful"
+  },
+  "tips": {
+    "DB_Parameter_Analysis_Report": "Because performance tuning is iterative in nature, completing too many changes in one time can be a challenge. As time goes by, you should re-analyze these values and reconfigure your settings on a regular basis to maintain the best performance.",
+    "submit_success": "submit success!",
+    "submit_error": "submit error！",
+    "Strategy_Message": "Please Select the options",
+    "instance_Message": "Please Select the Target instance",
+    "name_Required_Message": "Name is required",
+    "name_Length_Message": "Make sure it's more than 1 characters and less than 100 characters ",
+    "type_Message": "Type is required",
+    "strategy_Required_Message": "Strategy is required",
+    "No_data_Message": "No data return",
+    "timemode_Message": "Time Mode is required",
+    "datetimerange_ACM_Message": "Datetime Range is required",
+    "date_Message": "Date Range is required",
+    "threshold_Message": "Please enter a number greater than 0",
+    "Expression_Message": "Please Input Cron Expression",
+    "msIp_Message": "IP Address is required",
+    "msPort_Message": "Port Number is required",
+    "msAcct_Required_Message": "E-Mail Address is required",
+    "msAcct_Message": "Please enter the correct email address",
+    "msPwd_Message": "E-Mail Password is required",
+    "msPwd_Length_Message": "Make sure it's more than 6 characters and less than 20 characters ",
+    "PasswordCheck_Required_Message": "Enter Password Again",
+    "PasswordCheck_Message": "Check that the password entered twice is consistent",
+    "subject_Message": "Subject is required",
+    "firstName_Message": "First Name is required",
+    "lastName_Message": "Last Name is required",
+    "loginName_Message": "Login Name is required",
+    "cellphone_Message": "Make sure it's more than 8 characters and less than 11 characters ",
+    "uId_Message" :"user is required",
+    "threshold_percent_Message": "Please enter a number greater than 0 and less than 100",
+    "sql_Message": "sql is required",
+    "tsId_Message": "Instance is required",
+    "rId_Message": "Role is required",
+    "database_Message": "database is required",
+    "loginPwd_Message": "Login password is required",
+    "datetimerange_Message": "Date Range is required",
+    "logoTitle": "Database Operation Support"
+  },
+  "Performance_Analysis_Report": {
+    "header" : {
+      "title": "Performance Analysis and Guide",
+      "server_version": "Server Version",
+      "server_instance": "Server Instance",
+      "platform":	"Platform",
+      "analysis_date":	"Analysis Date",
+      "analysis_period":	"Analysis Date",
+      "powered_by":	"Powered by",
+      "Sinoregal": "Sinoregal Software Inc.",
+      "dbSonar_version": "dbSonar Version"
+
+    },
+    "intro": "<p> This performance analysis report and tuning guide summarizes the overall health of the Informix database server over the specified period. The report provides valuable tips on how to fine-tune the performance of the system. The details shown in this report are based on the dbSonar performance tuning methodology described below.</p><h2>Performance Tuning Methodology</h2><p>Performance tuning based on dbSonar's performance analysis guide involves assessing performance of the operating system, database server, and application, and then conducting tuning on all levels. This multi-level approach ensures that you obtain satisfactory results from your system after performance tuning.</p><p class=\"indent\"><span class=\"item\">Database Server Tuning:</span> At database server level, you must monitor table usage and/or fragmentation as well the system catalog information for the tables. The report provides guidelines about how to tune server configuration, optimize database table design, and update system catalogs to improve Informix optimizer efficiency.</p><p class=\"indent\"><span class=\"indent\">Operating System  Tuning:</span> At the OS level, you need to monitor symptoms such as disproportionate utilization of CPU, memory, or disks. The report displays various resource utilization trends; use these to tune the OS configuration and improve performance.</p><p class=\"indent\"><span class=\"indent\">Application Tuning:</span> At the application level, you can monitor outstanding queries such as those with sequential scanning, high cost, or high frequency. The report suggests various recommended actions to optimize query performance.</p><p>Each of these tuning steps is described in further details along with guidelines and expert recommendations. Refer to the relevant section for more information.</p>",
+    "items": {
+      "UPDATE_STATISTICS_TABLE": {
+        "header": "Tables with Outdated UPDATE STATISTICS Information",
+        "intro": "<p>The following tables show out-of-date statistical information. Run the UPDATE STATISTICS command for these tables to improve performance:</p>"
+      },
+      "INCOMP_STATISTICS_TABLE": {
+        "header": "Tables with Incomplete Data Distributions",
+        "intro": "<p>The following tables show incomplete data distributions. Run the UPDATE STATISTICS command (MEDIUM or HIGH mode) for these tables to improve performance:</p>"
+      },
+      "HIGH_COST_SQL": {
+        "header": "SQL Statements with High Cost",
+        "intro": "<p>The following table lists SQL statements  with excessively high cost. Follow these guidelines to improve their performance:</p><ul> <li class=\"indent\">Check whether statistical information used by the optimizer for the associated tables is current. Use the UPDATE STATISTICS statement to ensure up-to-date information. </li><li class=\"indent\">Use optimizer hints or directives to tune SQL statements.</li><li class=\"indent\">Set OPTIMIZATION LOW for queries that join multiple tables (5 or more).</li></ul>"
+      },
+      "FREQUENTLY_SQL": {
+        "header": "SQL Statements with High Frequency",
+        "intro": "<p>The following table lists SQL statements  that occurred with high frequency. Follow these guidelines to improve their performance:</p><ul><li class=\"indent\">Check whether statistical information used by the optimizer for the associated tables is current. Use the UPDATE STATISTICS statement to ensure up-to-date information. </li><li class=\"indent\">Use optimizer hints or directives to tune SQL statements.</li><li class=\"indent\">Set OPTIMIZATION LOW for queries that join multiple tables (5 or more).</li></ul>"
+      },
+      "TABLE_DISTRIBUTION": {
+        "header": "Tables with Discontinuous Physical Storage",
+        "intro": "<p>The following tables were found to have discontinuous physical storage of data. Re-organize the tables to increase I/O operation speed.</p>"
+      },
+      "SEQSCAN_TABLE": {
+        "header": "Tables with Heavy Sequential Scans",
+        "intro": "<p>The following tables were found to have been accessed with repeated sequential scans. Try to improve performance with additional indexing.</p>"
+      },
+      "BUSY_READ_TABLE": {
+        "header": "Tables with Heavy Read Operations",
+        "intro": "<p>The following tables were found to have heavy read activity. Try to improve performance with additional indexing and contiguous space allocation.</p>"
+      },
+      "BUSY_WRITE_TABLE": {
+        "header": "Tables with Heavy Write Operations",
+        "intro": "<p>The following tables were found to have heavy write activity. Try to improve performance with additional indexing and contiguous space allocation.</p>"
+      },
+      "LOCK_WAIT_TABLE": {
+        "header": "Tables with Lock Waits",
+        "intro": "<p>The following tables were found to have lock waits. Improve performance by changing lock mode and granularity on tables with heavy access. Set lock mode to ROW for the following tables.</p>"
+      },
+      "CPU_BUSY_RATE_TR": {
+        "header": "CPU Utilization Trend",
+        "intro": "<p>Heavy CPU utilization may affect system response time and cause performance degradation. However, high utilization for  the CPU does not always indicate a performance problem.  The CPU performs all calculations that  are needed to process transactions. The more transaction-related  calculations that it performs within a given period, the higher  the throughput will be for that period. As long as transaction throughput  is high and seems to remain proportional to CPU utilization,  a high CPU utilization indicates that the  computer is being used to the fullest advantage.</p><p>On the other hand, when CPU utilization  is high but transaction throughput does not keep pace, the CPU is  either processing transactions inefficiently or it is engaged in  activity not directly related to transaction processing. CPU cycles  are being diverted to internal housekeeping tasks such as memory  management. You can easily eliminate the following activities to reduce CPU consumption: </p><ul><li>Large queries that might be better scheduled at an off-peak  time</li><li>Unrelated application programs that might be better performed  on another computer</li></ul><p>If the response time for transactions increases to such an extent  that delays become unacceptable, the processor might be swamped;  the transaction load might be too high for the computer to manage.  Slow response time can also indicate that the CPU is  processing transactions inefficiently or that CPU cycles are  being diverted. When CPU utilization is high, a detailed  analysis of the activities that the database server performs can  reveal any sources of inefficiency that might be present due to  improper configuration.</p>"
+      },
+      "DISK_IO_BUSY_RATE_TR": {
+        "type": "chart",
+        "header": "Disk I/O Utilization Trend",
+        "intro": "<p>Disk I/O operations are usually the longest component of the response time for a query. Contiguously allocated disk space improves sequential disk I/O operations because the database server can read in larger blocks of data and use the read-ahead feature to reduce the number of I/O operations. It is thus important to monitor disk I/O utilization, keep track of I/O bottlenecks, and ensure that system response times remain within acceptable values. </p>"
+      },
+      "OS_FREE_MEM_TR": {
+        "header": "Free Physical Memory Trend",
+        "intro": "<p> The free physical memory trend from the operating system shows the amount of physical memory that is available for use by a process. When the operating system needs to allocate memory for use by a process, it scavenges any unused pages within memory that it can find. If no free pages exist, the memory-management system has to choose pages that other processes are still using and that seem least likely to be needed in the short run. The free memory trend and the memory paging out trend (shown next) provide a picture of total memory consumption by the system.</p>"
+      },
+      "OS_MEM_PAGE_IN_OUT_TR": {
+        "header": "Memory Paging Trend",
+        "intro": "<p>Paging occurs when there is no free memory available for a process and the memory management system must find pages that are not likely to be used in the short run. These pages are copied to disk and freed for the process that needs free memory. Paging activity in memory must be monitored to make sure that the system has adequate memory and the CPU is not being overloaded with paging activity. Factors such as the number of page scans performed, the number of pages sent out  of memory (<em>paged out</em>), and the number of  pages brought in from memory (<em>paged in) </em>provide information about paging. </p><ul><li>Paging out is a critical factor because the operating system  pages out only when it cannot find pages that are free already.</li><li>A high rate of page scans causes increased CPU utilization and provides an early indicator that memory  utilization is becoming a bottleneck.</li></ul>"
+      },
+      "OS_MEM_FREE_TOTAL_TR": {
+        "header": "OS Physical Memory Free/Total Trend",
+        "intro": ""
+      },
+      "BUFFER_RWS_CACHE_TR": {
+        "header": "Buffer Read/Write Cache Trend (%)",
+        "intro": "<p>This trend chart shows percentage of all read operations that are read from the buffer cache without requiring a disk readand percentage of all write operations that are written into the buffer cache without requiring a physical disk write. The percentage of writes cached is an important measure of performance.</p>"
+      },
+      "BUFFER_RWS_TR": {
+        "header": "Buffer Read/Write Trend",
+        "intro": "<p>This trend chart displays the percentage of data reads and writes to and from the shared memory buffers. This trend chart is representative of the total activity occurring in the system and helps you decide the total amount of memory to be allocated for the buffer pool. </p>"
+      },
+      "CKP_DUR_TR": {
+        "header": "Checkpoint Duration Trend",
+        "intro": "<p>During a checkpoint, the database server flushes all modified pages in the shared-memory buffer pool to disk and restores physical consistency. However, all transaction activities are suspended during checkpoints. Hence, checkpoint durations are usually required to be as short as possible to avoid delays for the end user. </p><p>The Informix database server uses either fuzzy or full checkpoints, with the checkpoint interval defined by the CKPTINTVL configuration interval. Checkpoints also occur when the physical log becomes 75 percent full.     Fuzzy checkpoints take less time to complete than a full checkpoint because the database server flushes fewer pages to disk, and hence the database server can spend more time processing queries and transactions.Full checkpoints flush all dirty pages in the buffer pool to disk and consequently take longer to execute. The database server can skip a full checkpoint if all data is physically consistent when the checkpoint interval expires. Checkpoint occurrence also depends on the size and number of logical-log files. </p><p>Monitoring the checkpoint duration helps you estimate if the CKPTINTVL parameter  as well as the parameters specifying the logical logs are configured optimally. Although the database server performs checkpoints automatically, you can initiate one manually or control checkpoint frequency. To reduce the amount of work required at a checkpoint (and consequently, its duration), use the BUFFERPOOL configuration parameter to lower the <strong>lru_min_dirty</strong> and <strong>lru_max_dirty</strong> values to enable LRU write before a checkpoint. LRU write operations cause only modified pages in individual LRU queues to be flushed. </p>"
+      },
+      "DB_SEQ_SCAN_TR": {
+        "header": "DB Sequential Scan Trend",
+        "intro": "<p>This trend chart shows the number of sequential scans that are requested in the database system at any given point of time. The high sequential scans may be caused by a missing index on a table or not enough a number of contiguous pages with each I/O operation. </p>"
+      },
+      "DBSPACE_CHART": {
+        "header": "DBSpace I/O Utilization Trend",
+        "intro": "<p>This section of the report displays the I/O utilization of individual dbspaces in your system. Using this information, you can monitor the read/write activity in all the dbspaces, locate the dbspaces with high-activity tables and reorganize them if necessary, or monitor the logical/physical logspaces. </p>"
+      },
+      "DBSPACE_PAGE_READ_TR": {
+        "header": "DBSpace Read Trend",
+        "intro": "<p>This trend displays the total number of pages that are read from disk into the database system at any given point of time.</p>"
+      },
+      "DBSPACE_PAGE_WRITE_TR": {
+        "header": "DBSpace Write Trend",
+        "intro": "<p>This trend displays the total number of physical-log and logical-log pages in the database system that are written into disk at any given point of time. </p>"
+      },
+      "LATCH_BUFFER_WAIT_TR": {
+        "header": "Memory Latch Wait Trend",
+        "intro": "<p>The database server uses latches to control access to shared memory structures such as the buffer pool or the memory pools for the SQL statement cache. The number of times that threads had to wait to obtain a latch or the memory latch wait is a measure of system activity. A large number of latch waits typically results from a high volume of processing activity in which the database server is logging most of the transactions. As the DBA, you cannot configure or tune the number of latches. However, you can increase the number of memory structures on which the database server places latches to reduce the number of latch waits.</p>"
+      },
+      "TOP_TB_READ_TR": {
+        "header": "Top Busy Read Tables Trend",
+        "intro": "<p>The trend chart displays the number of times that a table is read at any given point of time. If the number of times that a table is read is normally under a threshold value, it won\"t be drawn on the trend chart.</p>"
+      },
+      "TOP_TB_WRITE_TR": {
+        "header": "Top Busy Write Tables Trend",
+        "intro": "<p>The trend chart displays the number of times that a table is written at any given point of time. If the number of times that a table is read is normally under a threshold value, it won\"t be drawn on the trend chart.</p>"
+      },
+      "TOP_TB_LOCK_TR": {
+        "header": "Top Lock Wait Tables Trend",
+        "intro": "<p>This trend chart displays the number of times that a table is locked at any given point of time. If the number of times that a table is locked is normally under a threshold value, it won\"t be drawn on the trend chart. A table lock is more efficient than individual row locks, but it reduces concurrency for the table, which can affect performance. If the database server uses unusual large number of locks, you may need to examine the SQL statements to determine whether you should lock the table or use individual row or page locks.</p>"
+      },
+      "DB_VIR_MEM_AU_TR": {
+        "header": "Virtual Memory Utilization Trend",
+        "intro": "<p>The virtual portion of shared memory is expandable by the database server and can be paged out to disk by the operating system. As the database server executes, it automatically attaches additional operating-system segments, as needed, to the virtual portion. This trend chart displays the consumption of virtual memory by database processes.</p>"
+      },
+      "VP_QUEUE_TR": {
+        "header": "VP Queue Trend",
+        "intro": "<p>The trend chart displays the number of threads in the ready queue at any given point of time. A thread in the ready queue is ready to run when the current (running) thread yields. If the number of threads in the ready queue is high, it indicates that work is accumulating faster than the virtual processor can process, you may need to start additional virtual processors to distribute processing load.</p>"
+      },
+      "DB_VP_BUSY_RATE_TR": {
+        "header": "VP Utilization Trend",
+        "intro": "<p>A virtual processor is a process scheduled by the OS to carry out basic tasks such as I/O, network management, queries, and so on. Multiple applications or threads that are accessing the server are split up into smaller virtual processors for faster and concurrent processing. The rate of usage of virtual processors on the database server is an indirect measure of the system performance. A high rate of virtual processing indicates a system with heavy load which might not have sufficient system resources to complete all transactions. By monitoring the number of virtual processors, you can keep an eye on CPU usage and add virtual processors to handle excess CPU load.</p>"
+      },
+      "ACTIVE_LOCK_TR": {
+        "header": "Active LOCK Trend",
+        "intro": "<p> This trend chart displays the number of locks that are active in the database system at any given point of time. A lock can be applied to entire databases, entire tables, disk pages, single rows, or index-key values.</p>"
+      },
+      "DB_COMMIT_TR": {
+        "header": "Commits Trend",
+        "intro": "<p>This trend chart shows the number of transactions that are committed in the database system at any given point of time. The number of transactions committed in a given point of time provides an estimate of the transaction throughput which is a measure of the overall performance of your database system. The throughput can be affected by your host computer, the processing overhead in the application, the layout of data on disk, the degree of parallelism that both hardware and software support and the types of transactions.</p>"
+      },
+      "DB_TRANS_TR": {
+        "header": "Database Transaction Trend",
+        "intro": "<p>This trend chart displays the number of database transactions that are active in a system at any given point of time. A high number of transactions indicates a higher rate of throughput. </p>"
+      },
+      "DB_ROLLBACK_TR": {
+        "header": "DB Rollback Trend",
+        "intro": "<p>This trend chart presents the number of database transactions that are rollbacked at any given point of time.</p>"
+      },
+      "LOCK_REQUEST_TR": {
+        "header": "Lock Request Trend",
+        "intro": "<p>This trend chart shows the number of lock requests that are initiated at any given point of time.</p>"
+      },
+      "ACTIVE_SQL_TR": {
+        "header": "SQL Execution Trend",
+        "intro": "<p>This trend chart shows the number of SQL statements that are active at any given time in the database system. A high number of SQL statements may indicate a high throughput but that is dependent on end-user response times and efficiency of operation.</p>"
+      },
+      "NET_CONN_TR": {
+        "header": "Network Connection Trend",
+        "intro": "<p>The network connection trend shows the number of connections established over the network and is a measure of total system activity. A high number of network connections indicates a busy system. Monitor this trend to keep track of periodic network activity and stay ahead of network problems.</p>"
+      },
+      "NET_WAIT_STATUS_TR": {
+        "header": "Network Connection Wait Trend",
+        "intro": "<p>The network connection wait trend shows the number of connections that had to wait before a data request was carried out. These network waits impose an additional delay on end response times, thus slowing down performance. </p>"
+      },
+      "ACTIVE_DB_CONN_TR": {
+        "header": "DB Connection Trend",
+        "intro": "<p>This trend chart displays the number of database connections that are active at any given time of the day, thus enabling you to monitor database activity.</p>"
+      },
+      "NET_RECE_Q_TR": {
+        "header": "Network Received Queue Trend",
+        "intro": "<p>This trend chart shows the number of messages in the network receiving queue that are waiting to be processed.</p>"
+      },
+      "NET_SEND_Q_TR": {
+        "header": "Network Send Queue Trend",
+        "intro": "<p>This trend chart shows the number of messages in the network sending queue that are waiting to be sent out.</p>"
+      }
+    },
+    "reports": {
+      "UPDATE_STATISTICS_TABLE": "Tables with Outdated Statistics",
+      "INCOMP_STATISTICS_TABLE": "Tables with Incomplete Data Distributions",
+      "HIGH_COST_SQL": "SQL Statements with High Cost",
+      "FREQUENTLY_SQL": "SQL Statements with High Frequency",
+      "TABLE_DISTRIBUTION": "Tables with Discontinuous Physical Storage",
+      "SEQSCAN_TABLE": "Tables with Heavy Sequential Scans",
+      "BUSY_READ_TABLE": "Tables with Heavy Read Operations",
+      "BUSY_WRITE_TABLE": "Tables with Heavy Write Operations",
+      "LOCK_WAIT_TABLE": "Tables with Lock Waits",
+      "CPU_BUSY_RATE_TR": "CPU Utilization Trend",
+      "DISK_IO_BUSY_RATE_TR": "Disk I/O Utilization Trend",
+      "OS_FREE_MEM_TR": "Free Physical Memory Trend",
+      "OS_MEM_PAGE_IN_OUT_TR": "Memory Paging Trend",
+      "OS_MEM_FREE_TOTAL_TR": "Memory Free/Total Trend",
+      "BUFFER_RWS_CACHE_TR": "Buffer Read/Write Cache Trend (%)",
+      "BUFFER_RWS_TR": "Buffer Read/Write Trend",
+      "CKP_DUR_TR": "Checkpoint Duration Trend",
+      "DB_SEQ_SCAN_TR": "DB Sequential Scan Trend",
+      "DBSPACE_CHART": "DBSpace I/O Utilization Trend",
+      "DBSPACE_PAGE_READ_TR": "DBSpace Read Trend",
+      "DBSPACE_PAGE_WRITE_TR": "DBSpace Write Trend",
+      "LATCH_BUFFER_WAIT_TR": "Memory Latch Wait Trend",
+      "TOP_TB_READ_TR": "Top Busy Read Tables Trend",
+      "TOP_TB_WRITE_TR": "Top Busy Write Tables Trend",
+      "TOP_TB_LOCK_TR": "Top Lock Wait Tables Trend",
+      "DB_VIR_MEM_AU_TR": "Virtual Memory Utilization Trend",
+      "VP_QUEUE_TR": "VP Queue Trend",
+      "DB_VP_BUSY_RATE_TR": "VP Utilization Trend",
+      "ACTIVE_LOCK_TR": "Active LOCK Trend",
+      "DB_COMMIT_TR": "Commit Trend",
+      "DB_TRANS_TR": "Database Transaction Trend",
+      "DB_ROLLBACK_TR": "DB Rollback Trend",
+      "LOCK_REQUEST_TR": "Lock Request Trend",
+      "ACTIVE_SQL_TR": "SQL Execution Trend",
+      "NET_CONN_TR": "Network Connection Trend",
+      "NET_WAIT_STATUS_TR": "Network Connection Wait Trend",
+      "ACTIVE_DB_CONN_TR": "DB Connection Trend",
+      "NET_RECE_Q_TR": "Network received Queue Trend",
+      "NET_SEND_Q_TR": "Network Send Queue Trend"
+    },
+    "tables": {
+      "DB": "DB",
+      "Table": "Table",
+      "NRows_Outdated_Statistics": "NRows in Outdated Statistics",
+      "Accurated_NRows": "Accurated NRows",
+      "Change_Rate": "Change Rate%",
+      "N_Read": "N Read",
+      "N_Write": "N Write",
+      "SeqScan": "SeqScan",
+      "Index": "Index",
+      "Distribution": "Distribution",
+      "N_Rows": "NRows",
+      "Max_Cost": "Max Cost",
+      "Min_Cost": "Min Cost",
+      "Frequency": "Frequency",
+      "SQL_Statement": "SQL Statement",
+      "Table_Index": "Table/Index",
+      "N_Extent": "N Extent",
+      "Total_Pages": "Total Pages",
+      "Used_Pages": "Used Pages",
+      "Built_Time": "Built Time",
+      "Owner": "Owner",
+      "PartNum": "Partnum",
+      "Buf_Reads": "Buf Reads",
+      "Buf_Writes": "Buf Writes",
+      "N_SeqScans": "N Seq Scans",
+      "Lock_Mode": "Lock Mode",
+      "Lock_Request": "Lock Request",
+      "Lock_Wait": "Lock Wait"
+    }
+  },
+  "Apply_Online_Detection": {
+    "header": {
+      "title": "Application Changed Report and Guide",
+      "afterDateRange": "After Apply Online Time Range",
+      "beforeDateRange": "Before Apply Online Time Range"
+    },
+    "items": {
+      "New_SQL": {
+        "header": "Newly found sql list"
+      },
+      "Diff_Cost_Sql_Pattern": {
+        "header": "Cost increased SQL"
+      },
+      "Diff_Frequency_Sql_Pattern":{
+        "header": "Frequency increased SQL"
+      }
+    },
+    "tables": {
+      "database": "Database",
+      "max_cost": "After Online Max Cost",
+      "freq": "After Online Frequency",
+      "weight": "After Online Weight",
+      "sql": "SQL",
+      "b_cost": "Before Online Cost",
+      "diff_costt": "Difference In Cost",
+      "b_freq": "Before Online Frequency",
+      "diff_freq": "Difference In Frequency"
+    }
+  },
+  "toolbarTooltips": {
+    "Refresh": "Refresh",
+    "Auto_Refresh": "Auto Refresh",
+    "Columns_Select": "Columns Select",
+    "exportTable": "Export Table",
+    "help": "help",
+    "Enlarge": "Enlarge",
+    "Zoom_Out": "Zoom Out",
+    "Filter": "Filter",
+    "Print": "Print"
+  }
+}

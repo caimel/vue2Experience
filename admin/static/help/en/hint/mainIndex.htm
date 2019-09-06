@@ -1,0 +1,61 @@
+<HTML>
+   <HEAD>
+      <TITLE>DBSonar 6.0 Online Help</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+  	   <SCRIPT LANGUAGE="JavaScript" SRC="tree.js"></SCRIPT>
+	   <SCRIPT LANGUAGE="JavaScript" SRC="tree_items.js"></SCRIPT>
+	   <SCRIPT LANGUAGE="JavaScript" SRC="tree_tpl.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD>
+	            <H1>Index of dbSonar Online Help</H1>
+	         </TD>
+		      <TD ALIGN="right">&nbsp;
+				   
+		      </TD>
+			</TR>
+         <!-- begin of content -->
+			<TR>
+			   <TD COLSPAN="2">
+		         <SCRIPT LANGUAGE="JavaScript">
+		         	new tree (TREE_ITEMS, TREE_TPL);
+				      var str=document.cookie;
+					   var aCookie=str.split(';');
+					   var n_id = '';
+					   var r_id = '';
+                  for (var i=0; i < aCookie.length; i++)
+                  {
+                     // a name/value pair (a crumb) is separated by an equal sign
+                     while (aCookie[i].charAt(0)==' ') aCookie[i] = aCookie[i].substring(1,aCookie[i].length);
+                     var aCrumb = aCookie[i].split("=");
+                     if (aCrumb[0]=='SonarTree_rid')
+                        r_id = aCrumb[1];
+                     if (aCrumb[0]=='SonarTree_id')
+                        n_id = aCrumb[1];
+                  }
+
+					   t=[];
+					   if(n_id!='' && r_id!='')
+					   {
+						   while(trees[r_id].a_index[n_id].n_depth>0)
+						   {
+							   t.push(n_id);
+						      n_id=trees[r_id].a_index[n_id].o_parent.n_id;
+							}
+						   for(var i=t.length-1;i>0;i--)
+						   {
+							   trees[r_id].toggle(t[i]);
+							   var a = trees[r_id].select(t[i]);
+						   }
+						   var a = trees[r_id].select(t[0]);
+					   }
+
+				</SCRIPT>
+            </TD>
+         </TR>
+         <!-- end of content -->
+      </TABLE>
+   </BODY>
+</HTML>

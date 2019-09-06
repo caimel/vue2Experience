@@ -1,0 +1,82 @@
+<HTML>
+   <HEAD>
+      <TITLE>OS Disk Panel</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+        <TR>
+	        <TD><H1>OS Disk Panel</H1></TD>
+			  <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+			  </TD>
+		  </TR>
+		  <TR>
+		      <TD colspan=2>  <!-- begin of content -->
+               <P>This page exhibits disk busy rate, read/write size and average I/O waiting time in the period between the <SPAN CLASS="HL_Key">Start</SPAN> and the <SPAN CLASS="HL_Key">End</SPAN>, and lists current file system utilization sorted by the column <SPAN CLASS="HL_Key">Use%</SPAN>. The information will be helpful for  identifying and tracing disk I/O related performance issues that are happening or had happened on the monitored server.</P>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>Symptom and Approach</H2>
+               <P>If the disk is keeping a high utilization rate (exceeding 80%+)  and  average I/O waiting time is high, and the <SPAN CLASS="HL_Key">DB Disk RW / Sec </SPAN> on the <SPAN CLASS="HL_Key">MainPanel</SPAN> is high, you may need to find out what SQL activities are executing and how the resource has been taken.</P>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="20px" ALIGN="right" VALIGN="top">a.</TD>
+                     <TD>Right-click the high utilization rate on the diagram and drill down into <A HREF="./sqlPointInTime_sh.htm">SQL Point in Time</A> to check what SQLs are running and how SQLs are running in the interval of the red line.</TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">b.</TD>
+                     <TD>Use the <A HREF="./trendAnalysis_sh.htm">Trend Analysis</A> to view other trend charts for getting more information of database read/write activities and dbspace read/write activities etc.</TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">c.</TD>
+                     <TD>Use the <A HREF="./busyDskIOSes_sh.htm">Top I/O Session</A> to check which session has the most I/O activities and what SQLs are executing by the session. </TD>
+                  </TR>
+                  <TR>
+                    	<TD ALIGN="right" VALIGN="top">d.</TD>
+                    	<TD>By monitoring the information in the <SPAN CLASS="HL_Key">File System Disk Space Utilization</SPAN> table, you may plan your database capacity and can take proactive action to add disk drives before the system runs out of disk space, since insufficient disk space can have a catastrophic impact on the database system.</TD>
+                  </TR>
+               </TABLE>
+			  </TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>How to Operate</H2>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Trend Chart</H3>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD>
+				            <P>When you click any place on the diagram, the red line shows as below.</P>
+                        <DIV><IMG SRC="./Images/OS_Disk_Panel_TrendChart.jpg" ALT="Trend Charts" /></DIV>
+                        <P>The point-in-time values under the red line on diagrams are displayed in the Legend-Value table as below. They are listed in diagram order from top to bottom. The date and time of the red line shows above the Legend-Value table.</P>
+								<P>Here we briefly annotate legends appeared in the Legend-Value table.</P>
+							   <UL>
+								   <LI CLASS="legend_desc">&quot;Disk I/O Busy Rate&quot; is the legend for the line on the &quot;Disk I/O Busy Rate&quot; diagram.</LI>
+							      <LI CLASS="legend_desc"> &quot;Disk Reads &quot; and &quot;Disk Writes&quot; are legends for lines representing the read and write size respecttively on the  &quot;Disk Read/Write(KB/sec) &quot; diagram.</LI>
+								   <LI CLASS="legend_desc"> &quot;Disk I/O Wait &quot;  is the legent for line on the  &quot;Disk I/O Wait &quot; diagram.</LI>
+							   </UL>
+                        <DIV><IMG SRC="./Images/OS_Disk_Panel_LegendValue.jpg" ALT="Legend and Value" /></DIV>
+                        <P>If you would like to view trend charts over a long period of time, please click <IMG SRC="./Images/Calendar.jpg" ALT="Calendar image" /> to pick the start and end dates separately or enter the start and end dates manually. Then click <SPAN CLASS="HL_Key">Refresh</SPAN> to redraw diagrams.</P>
+                     </TD>
+                  </TR>
+               </TABLE>
+               <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;File System Disk Space Utilization</H3>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD><P>It is refreshed automatically every couple of seconds to display information, such as mounting point, available and used size, and percentage of used size, of each file system on this monitored database system<A HREF="./Glossary.htm#MDS">*</A>.</P>
+                        <DIV><IMG src="./Images/OS_Disk_Panel_FileSysUtilization.jpg" alt="File System Disk Space Utilization" width="722" height="94" /></DIV>
+							</TD>
+                  </TR>
+               </TABLE>
+            </TD>
+			   <!-- end of content -->
+        </TR>
+      </TABLE>
+  </BODY>
+</HTML>

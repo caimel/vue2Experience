@@ -1,0 +1,49 @@
+<HTML>
+   <HEAD>
+      <TITLE>DB Parameter Analysis Report</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD><H1>DB Parameter Analysis Report</H1></TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+			      <P>All the RDBMS configuration parameters defined in the Informix server are listed along with their effective values and default values. Since performance tuning is an iterative process, as time goes by, you need to re-analyze these values and reconfigure them on a regular basis to maintain the best performance.</P>
+				  <P>Here are descriptions of columns in the report</P>
+					<TABLE CELLSPACING="0">
+					   <TR VALIGN="TOP" >
+						   <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Column</Td>
+							<TD STYLE="border-top:#000000 solid 2px">Description</TD>
+					   </TR>
+					   <TR VALIGN="TOP" >
+						   <Td NOWRAP STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">DB Parameter Name</Td>
+							<TD STYLE="border-top:#000000 solid 2px">Configuration parameter name</TD>
+					   </TR>
+					   <TR VALIGN="TOP" >
+						   <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Effective Value</Td>
+							<TD STYLE="border-top:#000000 solid 1px">Value currently in use</TD>
+					   </TR>
+					   <TR VALIGN="TOP" >
+						   <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Original Value</Td>
+							<TD STYLE="border-top:#000000 solid 1px">Value in the ONCONFIG file at boot time</TD>
+					   </TR>
+					   <TR VALIGN="TOP" >
+						   <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px; border-bottom:#000000 solid 2px">Suggestions</Td>
+							<TD STYLE="border-top:#000000 solid 1px; border-bottom:#000000 solid 2px">Provides helpful hints and clues for changing the original value</TD>
+					   </TR>
+					</TABLE>
+					<P>After reviewing this report and <A HREF="./analysisRpt_sh.htm">Performance Analysis Report</A>, you may have an idea about what parameters may need to be adjusted and how to adjust them, but don¡¦t try to make too many changes at one time which may bring you an unimaginable challenge.  If you would like to print out the report, you may click <IMG SRC="./Images/print.gif" ALT="Print button" /> to print.</P>
+			      <P>You may also refer to IBM<SPAN STYLE="font-size:8pt;vertical-align:super">&reg;</SPAN> Informix<SPAN STYLE="font-size:8pt;vertical-align:super">&reg;</SPAN> Administrator's Guide to gauge  your database parameters setting.</P>
+            </TD>
+            <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

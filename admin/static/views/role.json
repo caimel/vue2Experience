@@ -1,0 +1,140 @@
+{
+  "props": {
+    "query": {},
+    "toolbar": [
+      {
+        "id": "top_toolbar",
+        "remote": false,
+        "url": "/MOCK/TOOLBAR_METADATA?id=Common",
+        "children": [
+          { "id": "add", "widget": "dialog-component-link-button",
+            "position": "left", "label": "新增", "type": "primary", "size": "mini", "icon": "el-icon-edit",
+            "title": "新增角色",
+            "width": "600px",
+            "component": "Form",
+            "compProps": {
+              "width": "400px",
+              "items": [
+                [{"widget": "input","label": "角色名", "prop": "name"}],
+                [
+                  { "widget": "select",
+                    "label": "权限", "prop": "auths", "multiple": true,
+                    "remote": true,
+                    "clearable": true,
+                    "url": "/{{api_project}}/items/authorities",
+                    "params": {},
+                    "options": []
+                  }
+                ]
+              ],
+              "rules": {
+                "name": [
+                  { "required": true, "message":"请输入角色名", "trigger": "blur" },
+                  { "min": 1,"max":10,  "message":"用户名长度为1-10位", "trigger": "blur" }
+                ]
+              },
+              "model": {
+                "enabled": true,
+                "accountLocked": false
+              },
+              "urlStyle": "restful",
+              "submitUrl": "/{{api_project}}/role",
+              "submitHttpMethod": "post"
+            }
+          },
+          { "id": "checks", "widget": "checks",
+            "size": "mini", "position": "right",
+            "props": {"label": "label", "value": "visible"}, "tooltipDisabled": true, "tooltipContent": "Columns_Select", "tooltipPlacement": "bottom", "tooltipEffect": "dark" }
+        ]
+      }
+    ],
+    "table": {
+      "selectCheckbox": false,
+      "indexed": true,
+      "url": "/{{api_project}}/role",
+      "columns": [
+          {"label": "角色名", "prop": "name", "showOverflowTooltip": true},
+          {"label": "创建时间", "prop": "dateCreated", "showOverflowTooltip": true},
+          {"label": "最后更新时间", "prop": "lastUpdated", "showOverflowTooltip": true},
+          {"label": "操作", "prop": "operations", "width": 100, "fixed": "right", "widget": "operations",
+          "props": {
+            "type": "dropdown",
+            "options": [
+              {
+                "element": "dialog-component-link-button",
+                "props": {
+                  "id": "update",
+                  "type": "text",
+                  "size": "mini",
+                  "label": "更新",
+                  "title": "更新角色信息",
+                  "width": "600px",
+                  "queryKeys": ["id"],
+                  "component": "Form",
+                  "compProps": {
+                    "width": "400px",
+                    "items": [
+                      [{"widget": "input","label": "角色名", "prop": "name", "disabled": true}],
+                      [
+                        { "widget": "select",
+                          "label": "权限", "prop": "auths", "multiple": true,
+                          "remote": true,
+                          "clearable": true,
+                          "url": "/{{api_project}}/items/authorities",
+                          "params": {},
+                          "options": []
+                        }
+                      ]
+                    ],
+                    "rules": {
+                      "name": [
+                        { "required": true, "message":"请输入角色名", "trigger": "blur" },
+                        { "min": 1,"max":10,  "message":"用户名长度为1-10位", "trigger": "blur" }
+                      ]
+
+                    },
+                    "query": {},
+                    "urlStyle": "restful",
+                    "loadUrl": "/{{api_project}}/role",
+                    "submitUrl": "/{{api_project}}/role",
+                    "submitHttpMethod": "put"
+                  }
+                }
+              },
+              {
+                "element": "x-confirm-button",
+                "props": {
+                  "id": "delete",
+                  "type": "text",
+                  "size": "mini",
+                  "label": "删除",
+                  "disabled": "${keyword == \"admin\" or keyword == \"merch\"}",
+                  "checkParamsNotNull": false,
+                  "checkParamsNotNullErrorMessage": "",
+                  "promptMessage": "点击 [确定],以删除该角色",
+                  "confirmMessage": "",
+                  "cancelMessage": "",
+                  "confirmButtonText": "确定",
+                  "cancelButtonText": "取消",
+                  "url": "/{{api_project}}/role",
+                  "urlStyle": "restful",
+                  "httpMethod": "delete",
+                  "params": {},
+                  "queryKeys": ["id"]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "pagination": true,
+      "export": {
+        "output": "角色_"
+      },
+      "events": [
+        { "name" :"confirm-success#delete", "action": "refresh"},
+        { "name" :"component-link#update", "action": "refresh"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<HTML>
+   <HEAD>
+      <TITLE>Show Lock Waits</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD>
+	            <H1>Show Lock Waits</H1>
+	         </TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+			     <P>Table lock is useful and more efficient when an entire table or most of rows in an table are being updated. However, lock is an important factor affecting database performance since the larger the scope of a lock, the more concurrency is reduced.</P>
+			     <P>This page exhibits a list of locked tables in the database system. You can view which table is locked by which session and with what kind of lock type. And further, you can trace which SQL is being executed in a session, how the SQL is written, which process initiates the session, and when the session is intiated to avoid creating table locks  during peak periods for update purposes. If necessary, you may consider terminating session. </P>
+				 <DIV><IMG SRC="./Images/Show_Lock_Waits.jpg" ALT="Show Lock Waits" /></DIV>
+               <P>You can click a column head to sort the list in ascending/descending order of the selected column and click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page.</P>
+		      </TD>  
+			   <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

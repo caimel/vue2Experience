@@ -1,0 +1,36 @@
+<HTML>
+   <HEAD>
+      <TITLE>SQL Tree Diagram</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD><H1>SQL Tree Diagram</H1></TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+				   <P>This functionality is provided on Informix 11 and above only that supports SQL Trace facility. You have to setup SQL TRACE configuration parameter to be able to use this functionality. Please refer to IBM<SPAN STYLE="font-size:8pt;vertical-align:super">&reg;</SPAN> Informix<SPAN STYLE="font-size:8pt;vertical-align:super">&reg;</SPAN> Administrator's Guide for how to configure SQL TRACE.</P>
+				   <P>As SQL Trace has been set, this page will exhibit the SQL execution tree<A HREF="./Glossary.htm#SQLExecTree">*</A> and related statistics of the traced SQL statement in a session. The information of the oldest traced SQL will be clean out from the SQL Trace. You may enlarge the SQL TRACE setting to keep more traced SQLs before the oldest one is clean out.</P>
+			       <P>Each SQL operator node<A HREF="./Glossary.htm#SQLOperator">*</A> displayed on the SQL tree is exhibited with its estimated cost, the number of rows returned, table used in the operator node, and the action had been executed by the node along with the related statistics.</P>
+					<DIV><IMG SRC="Images/SQL_Tree_Diagram.jpg" ALT="SQL Tree Diagram" /></DIV>
+				   <P>If the traced SQL is clean out from the SQL Trace, the following message is shown instead. You may enlarge the SQL TRACE setting to keep more traced SQLs before the oldest one is clean out. If SQL Trace doesn't setup, you see the same message but the value of the <SPAN CLASS="HL_Key">SQL ID</SPAN> is zero.</P>
+				   <DIV ALIGN="CENTER"><IMG SRC="./Images/SQL_Tree_Diagram_Mesg.jpg" ALT="Message of SQL Tree Diagram" /></DIV>
+			   </TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+					<H2>Symptom and Approach</H2>
+					<P>If the average execution time of the SQL is high and/or the cost is high, you may scrutinize the statistics such as I/O, lock and data sort provided on the page and the execution tree to get more information for further diagnosis and analysis.</P>
+            </TD>
+            <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

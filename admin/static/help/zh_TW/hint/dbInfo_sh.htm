@@ -1,0 +1,62 @@
+<HTML>
+   <HEAD>
+      <TITLE>Database Information</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD>
+	            <H1>Database Information</H1>
+	         </TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+			      <P>This page shows information of all databases created on the monitored database server<A HREF="./Glossary.htm#MDS">*</A>.</P>
+			      <P>You can click a column head to sort the list in ascending/descending order of the selected column and click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page.</P>
+				  <P>If you would like to perform UPDATE STATISTICS on a database, you can get the suggested script of a selected database via <A HREF="./genUpdateStatistics_sh.htm">Generate Update Statistics Script</A> option in the right-click menu.</P>
+			      <DIV><IMG SRC="./Images/Database_Information.jpg" ALT="Database Information" width="753" height="155" /></DIV>
+				  <BR />
+               <TABLE CELLSPACING="0">
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Column</Td>
+                     <TD STYLE="border-top:#000000 solid 2px">Description</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td NOWRAP STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Database</Td>
+                     <TD STYLE="border-top:#000000 solid 2px">Name of the database</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Owner</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Creator of the database</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Created</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Date that the database was created</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Logging</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Indicate whether logging is active</TD>
+                  </TR><TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Buffer_Log</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Indicate whether buffer logging is active</TD>
+                  </TR><TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Is Ansi</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Indicate whether the database is ANSI-compliant </TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px; border-bottom:#000000 solid 2px">NLS Supported </Td>
+                     <TD STYLE="border-top:#000000 solid 1px; border-bottom:#000000 solid 2px">Indicate whether the database is GLS-enabled</TD>
+                  </TR>
+               </TABLE>
+		      </TD>  
+			   <!-- end of content -->
+         </TR>
+      </TABLE>
+  </BODY>
+</HTML>

@@ -1,0 +1,64 @@
+<HTML>
+   <HEAD>
+      <TITLE>Lock Holding Session</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+ 	         <TD><H1>Lock Holding Connection</H1></TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+			      <P>This page exhibits the information about the session that hold locks, which covers: </P>
+				  <UL>
+				     <LI>Information of session</LI>
+					 <TABLE>
+					    <TR>
+						   <TD width="2px"></TD>
+						   <TD>It displays the session information such as who initiates the session, the connection time, memory usage, the number of buffer read/write, the number of opened files, the number of held locks etc.</TD>
+						</TR>
+					 </TABLE>
+					 <BR />
+					 <LI>All prepared statements in session</LI>
+					 <TABLE>
+					    <TR>
+						   <TD width="2px"></TD>
+						   <TD>It displays the memory that each prepared SQL statement uses.</TD>
+						</TR>
+					 </TABLE>
+					 <BR />
+					 <LI>Process Name of session</LI>
+					 <TABLE>
+					    <TR>
+						   <TD width="2px"></TD>
+						   <TD>It displays information of the process that initiates the session such as the process identification, CPU usage, elapsed time, the command etc.</TD>
+						</TR>
+					 </TABLE>
+					 <BR />
+					 <LI>SQL History of session</LI>
+					 <TABLE>
+					    <TR>
+						   <TD width="2px"></TD>
+						   <TD>
+						       <P>It displays SQL TRACE configuration  and a list of traced SQL statements of the session. Each traced SQL is displayed with its statement ID,  how the SQL statement had been executed and the captured statistics information of the SQL.</P>
+							   <P>You have to setup SQL TRACE configuration parameter for being able to view information in this part. The SQL Trace functionality is supported on Informix 11 and above only.  Please refer to IBM<SPAN STYLE="font-size:8pt;vertical-align:super">&reg;</SPAN> Informix<SPAN STYLE="font-size:8pt;vertical-align:super">&reg;</SPAN> Administrator's Guide for how to configure SQL TRACE.</P>
+						   </TD>
+						</TR>
+					 </TABLE>
+				  </UL>
+				  <P>You can click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page. No further information of the session will be displayed on this page if the lock situation is released or the session is completed.</P>
+				  <P>According to the information, you may check how SQLs in the session are written and/or when the process of the session is initiated further to avoid contention occurring between certain applications in the future.</P>
+				  <BR /><BR />
+				  <DIV><IMG SRC="./Images/Lock_Holding_Connection.jpg" ALT="Lock Holding Session" /></DIV>
+			   </TD>
+			   <!-- end of content -->
+         </TR>
+      </TABLE>
+  </BODY>
+</HTML>

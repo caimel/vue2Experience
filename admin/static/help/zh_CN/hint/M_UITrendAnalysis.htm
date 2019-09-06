@@ -1,0 +1,54 @@
+<HTML>
+   <HEAD>
+      <TITLE>Trend Analysis</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+            <TD><H1>Trend Analysis</H1></TD>
+            <TD ALIGN="right">
+               <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+            </TD>
+         </TR>
+         <!-- begin of content -->
+         <TR>
+            <TD COLSPAN="2">
+               <P>dbSonar offers the unique feature of displaying trend charts in real-time or over a specific period of time for various RDBMS performance indicators. The historical data saved in dbSonar's repository allow you to see trend charts of multiple KPIs simultaneously and help you to drill down to the root of the problem, irrespective of when it occurred. Moreover, trend charts enable you to see instantaneous values of the selected KPIs by clicking anywhere on the trend chart as well as view SQL at the point of time selected on the trend chart.</P>
+               <DIV><IMG SRC="./Images/TrendAnalysis.jpg" ALT="Trend Analysis Tab" width="641" height="485" /></DIV>
+			   <UL>
+			       <LI CLASS="legend_desc">
+				       <P><SPAN Class="HL_Item">Trend Selection :</SPAN>&nbsp;&nbsp;It enables you to select the KPIs whose trend charts you would like to view.</P>
+				   </LI>
+			       <LI CLASS="legend_desc">
+				       <P><SPAN Class="HL_Item">Sampling Rate :</SPAN>&nbsp;&nbsp;Select an sampling rate  from the <SPAN Class="HL_Key">Time Mode</SPAN> drop-down box to take samples of the selected KPI. That is, samples  taken at this sampling rate are displayed on the trend chart. For instance, if you specify the <SPAN Class="HL_Key">Hourly</SPAN> option, samples taken at every hour-interval are displayed on the trend chart. You may choose a sampling rate from <SPAN Class="HL_Key">5 Minutes</SPAN>, <SPAN Class="HL_Key">Hourly</SPAN>, or <SPAN Class="HL_Key">Daily</SPAN>.</P>
+				   </LI>
+			       <LI CLASS="legend_desc">
+				       <P><SPAN Class="HL_Item">Datetime Range :</SPAN>&nbsp;&nbsp;The default date and time range of the trend chart is from now up to 3 days ago for historical performance analysis. You may specify a custom start and end points of time interval by clicking <IMG SRC="./Images/Calendar.jpg" ALT="Calendar" ALIGN="ABSMIDDLE" /> icon to bring up a calendar pop-up window.</P>
+				   </LI>
+			       <LI CLASS="legend_desc">
+				       <P>Click <SPAN Class="HL_Key">Redraw</SPAN> to redraw trend charts manually.</P>
+				   </LI>
+			       <LI CLASS="legend_desc">
+				       <P>Click <SPAN Class="HL_Key">Clean all chart</SPAN> to clean up all displayed trend charts, legend-value pairs and selections in <SPAN Class="HL_Key">Trend List</SPAN> to start a new graphical analysis.</P>
+				   </LI>
+			       <LI CLASS="legend_desc">
+			          <P><SPAN Class="HL_Item">Trend Chart :</SPAN>&nbsp;&nbsp;It displays trend charts of the selected KPIs. Use any of the following steps to view additional
+options for the trend charts:</P>
+					  <UL>
+					      <LI CLASS="legend_desc">
+						      <P><SPAN Class="HL_Item">Legend-Value table :</SPAN>&nbsp;&nbsp;Click to select any instant of time on trend charts. A red line shows at the selected instant of time and the instantaneous values for the selected instant of time are shown under this table.</P>
+						  </LI>
+						  <LI CLASS="legend_desc">
+							  <P>Right-click to select any instant of time on trend charts and drill down to view SQL executed at the point of time</P>
+						  </LI>
+				       </UL>
+				   </LI>
+			   </UL>
+            </TD>
+         </TR>
+         <!-- end of content -->
+      </TABLE>
+   </BODY>
+</HTML>

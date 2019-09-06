@@ -1,0 +1,63 @@
+{
+  "layout": {
+    "container": "panel",
+    "metadata": {
+      "items": [
+        {
+          "style": {
+            "flex": 9
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "grid",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": {
+    "grid": {
+      "id": "grid",
+      "component": "grid",
+      "metadata": {
+        "pagination": false,
+        "columns": {
+          "method": "remote",
+          "url": "/GridMetadata/RealTimePerformanceAnalysis/ShowIdleSession"
+        },
+        "source": {
+          "method": "static",
+          "data": []
+        },
+        "events": {}
+      }
+    }
+  },
+  "http": [
+    {
+      "method": "get",
+      "url": "/GridData/RealTimePerformanceAnalysis/ShowIdleSession",
+      "time": 1000,
+      "autostart": true,
+      "repeat": false,
+      "immediate": false,
+      "success":{
+        "trigger": [
+          {
+            "target": "grid",
+            "method": "setData",
+            "params": ["response.data"]
+          }
+        ]
+      },
+      "error":{
+        "message": "请求错误!"
+      }
+    }
+  ]
+}

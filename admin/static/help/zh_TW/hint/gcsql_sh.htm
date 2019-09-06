@@ -1,0 +1,79 @@
+<HTML>
+   <HEAD>
+      <TITLE>Activ SQL in a Session</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	        <TD>
+	           <H1>Active SQL in a Session</H1>
+	        </TD>
+		    <TD ALIGN="right">
+		       <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		    </TD>
+		 </TR>
+		 <TR>
+		    <!-- begin of content -->
+ 		    <TD COLSPAN="2">
+			      <P>This page exhibits the active SQL execution tree<A HREF="./Glossary.htm#SQLExecTree">*</A> in tabular style as shown below, and the running SQL statement and the last parsed SQL statement in the session, and information of the running SQL such as the number of returned rows and the complexity of the SQL activity etc. You can click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information of SQLs running through the session.</P>
+				  <DIV><IMG SRC="./Images/Active_SQL_In_A_Session_Tree.jpg" ALT="Execution Tree of the Running SQL" /></DIV>
+			      <P>Each row in the tabular-format SQL execution tree represents a SQL operator node<A HREF="./Glossary.htm#SQLOperator">*</A>. It exhibites the node name, the current phase of the node, the number of rows returned by the node, and the estimated execution time of the node.</P>
+                  <DIV><IMG SRC="./Images/Active_SQL_In_A_Session_List.jpg" ALT="List of the Running SQL" /></DIV>
+                  <P>The table shows information of the running SQL. You are able to know  what the session is, on which database the SQL is performed, how much cost the SQL takes and how many rows are returned by the SQL etc.</P>
+                  <P>Related drilling-down options in the right-click menu : <A HREF="./evalSQL60_new_sh.htm">SQL Evaluator</A>, <A HREF="./ap_analysis_sh.htm">Start Analysis Session</A>, <A HREF="./orgSQL_sh.htm">Execution History of SQL Pattern</A>, <A HREF="./sqlCursorHeld_sh.htm">SQL Cursor Held Info</A>, <A HREF="./getSqlTree_sh.htm">SQL Tree Diagram</A>.</P>
+		   </TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+					<H2>Symptom and Approach</H2>
+		            <TABLE>
+                  <TR>
+                     <TD WIDTH="20px" ALIGN="right" VALIGN="top">1.</TD>
+                     <TD>
+                        <P>If a SQL activity has high cost and use sequential scan, you may check whether the statistics of tables refered in the SQL are outdated via <A HREF="./gupstat_sh.htm">Outdated Update Statistics Table</A>, or need to analyze the session or evaluate the SQL through <A HREF="./ap_analysis_sh.htm">Start Analysis Session</A>, <A HREF="./evalSQL60_new_sh.htm">SQL Evaluator</A>, <A HREF="./sqlCursorHeld_sh.htm">SQL Cursor Held Info</A> or <A HREF="./orgSQL_sh.htm">Execution History of SQL Pattern</A>.</P>
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">2.</TD>
+                     <TD>If a SQL returns a vast number of rows, application developer may need to check how the SQL statement is written and whether it is necessary to return such vast amount of data to avoid defective application design affecting database performance.</TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">3.</TD>
+                     <TD>If the session is an abnormal one, you can terminate it with <SPAN CLASS="HL_Key">Terminate Session</SPAN> option in the right-click menu. This option will be shown only if you have permission to terminate a session.</TD>
+                  </TR>
+               </TABLE>
+    	    </TD>  
+         </TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>More</H2>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Extra Information </H3>
+                    <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD>
+                        <P>As clicking a row, the extra information of the row is displayed in the table beside the bar chart as shown below. If the SQL  is too long, you may scroll down to view the rest or you may click <IMG SRC="./Images/Dot_Button.jpg" ALT="Dot Button" /> to view the whole SQL  in a popup window.</P>
+                        <DIV><IMG SRC="./Images/Active_SQL_In_A_Session_Detail.jpg" ALT="Detail" /></DIV>
+                        </TD>
+                    </TR>
+               </TABLE>
+			   <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Bar Chart</H3>
+			   <TABLE>
+			      <TR>
+				     <TD WIDTH="5px">&nbsp;</TD>
+					 <TD>
+                        <P>A row with checkbox checked will be drawn on the bar chart as below. You can change the y-axis of the chart by <SPAN CLASS="HL_Key">Chart Option</SPAN> option in the right-click menu.</P>
+                        <DIV><IMG SRC="./Images/Active_SQL_In_A_Session_Chart.jpg" ALT="Bar Chart" /></DIV>
+                     </TD>
+                  </TR>
+               </TABLE>
+            </TD>
+			<!-- begin of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

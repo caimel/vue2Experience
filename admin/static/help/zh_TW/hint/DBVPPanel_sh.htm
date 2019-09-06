@@ -1,0 +1,101 @@
+<HTML>
+   <HEAD>
+      <TITLE>Database VP Panel</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD><H1>Database VP Panel</H1></TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <TD COLSPAN="2">  <!-- begin of content -->
+
+               <P>This page exhibits busy rate of database virtual processors of CPU class and the number of threads in the ready queue in the period between <SPAN CLASS="HL_Key">Start</SPAN> and <SPAN CLASS="HL_Key">End</SPAN>, and lists active top busy sessions sorted by the column <SPAN CLASS="HL_Key">OP+</SPAN>. The information will be helpful for  identifying and tracing performance issues that are happening or had happened on the monitored server.</P>
+			   </TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>Symptom and Approach</H2>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="20px" ALIGN="right" VALIGN="top">1.</TD>
+                     <TD>A CPU virtual processor is a process scheduled by the OS to carry out all the CPU intensive processing. If the utilization rate of CPU virtual processors is high, you may need to find out what SQL activities are executing.
+                        <TABLE CELLPADDING="0" CELLSPACING="0">
+                           <TR>
+                              <TD WIDTH="20px" ALIGN="right" VALIGN="top">a.</TD>
+                              <TD>Right-click the high utilization rate on <SPAN CLASS="HL_Key">DB VP Busy Rate</SPAN> and drill down into <A HREF="./sqlPointInTime_sh.htm">SQL Point in Time</A> to check what SQLs are/were running and how SQLs are/were running in the interval across that point in time.</TD>
+                           </TR>
+                           <TR>
+                              <TD ALIGN="right" VALIGN="top">b.</TD>
+                              <TD>Use the <A HREF="./trendAnalysis_sh.htm">Trend Analysis</A> to view other trend charts related to CPU usage, disk activities, database transactions and database connections etc. to get the root cause.</TD>
+                           </TR>
+                        </TABLE>
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">2.</TD>
+                     <TD>If the number of threads in ready queue is high, it indicates that CPU virtual processors are too busy to process all threads in the queue. You may need to find out what heavy SQL activities are executing in the given period of time and monitor the number of virtual processors.
+                        <TABLE CELLPADDING="0" CELLSPACING="0">
+                           <TR>
+                              <TD ALIGN="right" VALIGN="top" WIDTH="20">a.</TD>
+                              <TD>Right-click the point on a line and drill down into <A HREF="./sqlPointInTime_sh.htm">SQL Point in Time</A> to check what SQLs are/were running and how SQLs are/were running in the interval across that point in time.</TD>
+                           </TR>
+                           <TR>
+                              <TD ALIGN="right" VALIGN="top">b.</TD>
+                              <TD>Use the <A HREF="./trendAnalysis_sh.htm">Trend Analysis</A> to view other trend charts related to CPU usage, disk activities, database transactions and database connections etc. to get the root cause.</TD>
+                           </TR>
+                        </TABLE>
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">3.</TD>
+                     <TD>
+					    For <SPAN CLASS="HL_Key">Top Busy Session - Real-Time</SPAN>, please refer to <A HREF="./busySes_sh.htm">Top Busy Session</A> to get an idea about how to catch and diagnose symptoms shown in the table.
+                     </TD>
+                  </TR>
+               </TABLE>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>How to Operate</H2>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD>
+					   <P>There will be more than one line on the <SPAN CLASS="HL_Key">DB VP Busy Rate</SPAN> if there are more than one database virtual processor on the monitored database server<A HREF="./Glossary.htm#MDS">*</A>. When you click any place on the diagram, the red line shows as below.</P>
+				            <DIV><IMG SRC="./Images/DB_VP_Panel_TrendChart.jpg" ALT="Trend Charts" /></DIV>
+                        <P>The point-in-time values under the red line on diagrams are displayed in the Legend-Value table as below. They are listed in diagram order from top to bottom. The date and time of the red line shows above the Legend-Value table.</P>
+						<P>Here we briefly annotate legends appeared in the Legend-Value table.</P>
+						<UL>
+						   <LI CLASS="legend_desc">&quot;DB VP  Busy Rate &quot; is a legend prefix for each line on the &quot;DB VP  Busy Rate&quot; diagram. A line represents a database virtual processor. </LI>
+						   <LI CLASS="legend_desc">&quot;DB VP Busy Rate(Avg) &quot; is the legend for the line on the &quot;DB VP Busy Rate (Avg) &quot;.</LI>
+						   <LI CLASS="legend_desc">&quot;VP Queue&quot; is the legend for the line on the &quot;VP Queue&quot; diagram.</LI>
+					    </UL>
+                        <DIV><IMG SRC="./Images/DB_VP_Panel_LegendValue.jpg" ALT="Legend and Value" /></DIV>
+                        <P>If you would like to view trend charts over a long period of time, please click<IMG SRC="./Images/Calendar.jpg" ALT="Calendar Icon" WIDTH="21" HEIGHT="22" /> to pick the start and end dates separately or enter the start and end dates manually. Then click <SPAN CLASS="HL_Key">Refresh</SPAN> to redraw diagrams.</P>
+                     </TD>
+                  </TR>
+               </TABLE>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Top Busy Session - Real-Time</H3>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+							<TD>
+								<P>It is refreshed automatically every couple of seconds. You can click a column head to sort the list in ascending/descending order of the selected column. Please refer to <A HREF="./busySes_sh.htm">Top Busy Session</A> to get more information about how to diagnose symptoms shown in the table.</P>
+							</TD>
+						</TR>
+					</TABLE>
+            </TD>
+			   <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

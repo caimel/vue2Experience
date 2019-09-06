@@ -1,0 +1,17 @@
+{
+  "timers": [
+    {
+      "time": 3000,
+      "autostart": true,
+      "repeat": true,
+      "immediate": false,
+      "trigger":[
+        {
+          "target": "grid",
+          "method": "loadDataHandler",
+          "params": []
+        }
+      ]
+    }
+  ]
+}

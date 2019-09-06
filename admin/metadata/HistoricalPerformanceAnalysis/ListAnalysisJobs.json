@@ -1,0 +1,170 @@
+{
+  "view": {
+    "name": "dropdown-view"
+  },
+  "layout": {
+    "container": "panel",
+    "metadata": {
+      "items": [
+        {
+          "style": {
+            "flex": 9
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "grid",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 6
+          },
+          "equally": false,
+          "columns": [
+            {
+              "slot": "chart",
+              "style": {
+                "flex": 2
+              }
+            },
+            {
+              "slot": "form",
+              "style": {
+                "flex": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": {
+    "grid": {
+      "id": "grid",
+      "component": "grid",
+      "metadata": {
+        "pagination": false,
+        "columns": {
+          "method": "remote",
+          "url": "/GridMetadata/RealTimePerformanceAnalysis/ListAnalysisJobs"
+        },
+        "source": {
+          "method": "static",
+          "data": []
+        },
+        "events": {
+          "row-dblclick": [
+            {
+              "target": "form",
+              "method": "setModel",
+              "params": [
+                "row"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "chart": {
+      "id": "chart",
+      "component": "vechart",
+      "metadata": {
+        "settings": {
+          "type": "histogram",
+          "metrics": ["bufReads"],
+          "dimension": ["id"],
+          "labelMap": {
+            "id": "ID",
+            "bufReads": "Buf Reads"
+          }
+        },
+        "data": {
+          "columns": ["id", "bufReads"],
+          "rows": []
+        }
+      }
+    },
+    "form": {
+      "id": "form",
+      "component": "form",
+      "metadata": {
+        "form": {
+          "editable": false,
+          "items": {
+            "method": "static",
+            "data": {
+              "items": [
+                [
+                  {
+                    "label": "Seqscans",
+                    "prop": "seqscans",
+                    "widget": "input"
+                  }
+                ],
+                [
+                  {
+                    "label": "Host",
+                    "prop": "host",
+                    "widget": "input"
+                  }
+                ],
+                [
+                  {
+                    "label": "PID",
+                    "prop": "pid",
+                    "widget": "input"
+                  }
+                ],
+                [
+                  {
+                    "label": "Process",
+                    "prop": "process",
+                    "widget": "input"
+                  }
+                ],
+                [
+                  {
+                    "label": "TTY",
+                    "prop": "tty",
+                    "widget": "input"
+                  }
+                ]
+              ]
+            }
+          },
+          "source": {
+            "method": "static",
+            "data": {}
+          }
+        }
+      }
+    }
+  },
+  "http": [
+    {
+      "method": "get",
+      "url": "/GridData/RealTimePerformanceAnalysis/ListAnalysisJobs",
+      "time": 1000,
+      "autostart": true,
+      "repeat": false,
+      "immediate": false,
+      "success":{
+        "trigger": [
+          {
+            "target": "grid",
+            "method": "setData",
+            "params": ["response.data"]
+          }
+        ]
+      },
+      "error":{
+        "message": "请求错误!"
+      }
+    }
+  ]
+}

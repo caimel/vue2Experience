@@ -1,0 +1,65 @@
+<HTML>
+   <HEAD>
+      <TITLE>Footer</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+            <TD><H1>Footer</H1></TD>
+            <TD ALIGN="right">
+               <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+            </TD>
+         </TR>
+         <!-- begin of content -->
+         <TR>
+            <TD COLSPAN="2">
+               <P>It is on the bottom of the dbSonar interface. Constant tools are provided on the footer to refresh and print the content of the current tab. If a tool is not supported on a tab, it will be gray-out or disappear.</P>
+               <P>Here is the description of each constant tool.</P>
+               <TABLE CELLSPACING="0" CELLPADDING="0">
+                  <TR>
+                     <TD VALIGN="top" ALIGN="middle"><P><IMG SRC="./Images/Timer.jpg" ALT="Timer" /></P></TD>
+                     <TD VALIGN="top"><P>A timer tells you how many seconds left before the content of the current tab is refreshed. It shows on as you click <IMG SRC="./Images/autoRefresh.gif" ALT="Auto-refresh button" />.</P></TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="top" ALIGN="middle"><P><IMG SRC="./Images/refresh.gif" ALT="Refresh button" /></P></TD>
+                     <TD VALIGN="top"><P>It is a refresh button. It refreshes the content of the current tab upon your request. Each time you click it, the content of the current tab will be refreshed.</P></TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="top" ALIGN="middle"><P><IMG SRC="./Images/autoRefresh.gif" ALT="Auto-refresh button" /></P></TD>
+                     <TD VALIGN="top"><P>It is a refresh-toggle button for enabling/disabling auto-refreshing the content of the current tab. As the button is on, its timer is on and the refresh button will be off. The information will be refreshed when the timer counts down to zero. The timer will continue counting in the background even if the button is off.</P></TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="top" ALIGN="middle"><P><IMG SRC="./Images/print.gif" ALT="Print button" /></P></TD>
+                     <TD VALIGN="top"><P>It is to print the content on the current tab.</P></TD>
+                  </TR>
+               </TABLE>
+               <P>A tab like <SPAN Class="HL_Key">MainPanel</SPAN> is designed to refresh automatically all the time, when the tab is launched, its timer is on and shown, and both refresh and refresh-toggle button are disabled.</P>
+               <P>In a tab like <A HREF="./allPS_sh.htm">Process List</A>, if the number of returned rows exceeds the number of rows per page to display, a page navigator as below will show on the footer. The page navigator tells you which page you are viewing, the total number of rows, and what the begin and end row are for the current page.</P>
+               <DIV><IMG SRC="./Images/PageNavigator.jpg" ALT="Page Navigator" /></DIV>
+               <P>Here is the description of each button on the page navigator:</P>
+               <TABLE CELLSPACING="0" CELLPADDING="0">
+                  <TR>
+                     <TD width="30px" VALIGN="middle"><IMG SRC="./Images/FirstPage.jpg" ALT="First page button" /></TD>
+                     <TD VALIGN="middle">Navigates you to the 1st page.</TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="middle"><IMG SRC="./Images/PreviousPage.jpg" ALT="Previous page button" /></TD>
+                     <TD VALIGN="middle">Navigates you to the previous page.</TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="middle"><IMG SRC="./Images/NextPage.jpg" ALT="Next page button" /></TD>
+                     <TD VALIGN="middle">Navigates you to the next page.</TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="middle"><IMG SRC="./Images/LastPage.jpg" ALT="Last page button" height="21" /></TD>
+                     <TD VALIGN="middle">Navigates you to the last page.</TD>
+                  </TR>
+               </TABLE>
+            </TD>
+         </TR>
+         <!-- end of content -->
+      </TABLE>
+   </BODY>
+</HTML>

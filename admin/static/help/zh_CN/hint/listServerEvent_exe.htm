@@ -1,0 +1,111 @@
+<HTML>
+   <HEAD>
+      <TITLE>Event List</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD><H1>Event List</H1></TD>
+			   <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+			   </TD>
+		   </TR>
+		   <!-- begin of content -->
+		   <TR>
+			   <TD COLSPAN="2">
+				   <P>Depending on your selection on the SideBar, <SPAN CLASS="HL_Key">Unresolved Event List</SPAN>/ <SPAN CLASS="HL_Key">Resolved Event List</SPAN> / <SPAN CLASS="HL_Key">Event List</SPAN> or <SPAN CLASS="HL_Key">All Unresolved Event List</SPAN> / <SPAN CLASS="HL_Key">All Resolved Event List</SPAN> / <SPAN CLASS="HL_Key">All Event List</SPAN>, you will see a list of unresolved / resolved / both events captured and recorded by the watched dbSonar Agent<A HREF="./Glossary.htm#SonarAgent">*</A> or all dbSonar Agents that you have authority to watch in dbSonar.</P>
+					<P>As a system-defined or user-defined event is activated and has not been taken care of, it will be displayed in the unresolved list. An event will be moved into the resolved list when its situation has been resolved by the administrator or is not detected any more.</P>
+					<P>To view more detailed causes of an event, you can right-click the event and select the <A HREF="./showEventDetail_sh.htm">Show Detected Event Details</A> option from the right-click menu. To view more details about how an event was resolved, you can right-click  the event and select the <A HREF="./showEventDetail_sh.htm">Show Resolved Event Details</A> option from the right-click menu. To get notification information of an event, you can right-click the event and select the <A HREF="./getEventNotificationList_sh.htm">Get Event Notification List</A> option from the right-click menu.</P>
+					<P>You can click a column head to sort the list in ascending/descending order of the selected column and click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page.</P>
+					<DIV><IMG SRC="./Images/EventList_List.jpg" ALT="List of Unresolved Events" width="738" height="89" /></DIV>
+			        <BR />
+               <TABLE CELLSPACING="0">
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Column</Td>
+                     <TD STYLE="border-top:#000000 solid 2px">Description</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">ID</Td>
+                     <TD STYLE="border-top:#000000 solid 2px">Identification of event</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Occurrence</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Time when the  event occurred</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Resolution</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Indicates that the event hasn't been resolved, or when it was resolved</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">dbSonar Agent</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Name of the dbSonar Agent where the event was captured</TD>
+				  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Severity</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Urgency level of the event</TD>
+				  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Event</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Brief description of the event</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Status</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Indicates the status of the event such as opened, resolved etc. </TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px; border-bottom:#000000 solid 2px">Remark</Td>
+                     <TD STYLE="border-top:#000000 solid 1px; border-bottom:#000000 solid 2px">Comment that is entered when marking the event resolved manually</TD>
+                  </TR>
+               </TABLE>
+			  </TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Marking an event resolved</H3>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD>
+							  <P>Please follows steps below to mark an event resolved and enter your own remark.</P>
+							  <TABLE CELLPADDING="0" CELLSPACING="0">
+							     <TR>
+								     <TD WIDTH="20px">1.</TD>
+									  <TD>
+									     Launch <SPAN CLASS="HL_Key">Unresolved Event List</SPAN> or <SPAN CLASS="HL_Key">All Unresolved Event List</SPAN> from the <SPAN CLASS="HL_Key">Event Manager</SPAN> on the SideBar.
+									  </TD>
+								  </TR>
+							     <TR>
+								     <TD>1.</TD>
+									  <TD>
+									     Check the box in front of the row that you want to mark as resolved.
+									  </TD>
+								  </TR>
+								  <TR>
+								     <TD>2.</TD>
+									  <TD>
+									     Click <SPAN CLASS="HL_Key">Marked Event as Resolved</SPAN>.</TD>
+								  </TR>
+								  <TR>
+								     <TD>3.</TD>
+									  <TD>
+									     Enter any comment if you want, then click <SPAN CLASS="HL_Key">Submit</SPAN>; otherwise just click <SPAN CLASS="HL_Key">Submit</SPAN>.									  </TD>
+								  </TR>
+								  <TR>
+								     <TD>4.</TD>
+									  <TD>
+									     Click <SPAN CLASS="HL_Key">OK</SPAN> for the confirmation; otherwise this event won't be marked as resolved and stays in the unresolved list.									  </TD>
+								  </TR>
+							  </TABLE>
+							  <P>If you select more than one row to be marked as resolved, the remark if any will be applied to all of them.</P>
+							</TD>
+						</TR>
+					</TABLE>
+		      </TD>
+         </TR>
+         <!-- end of content -->
+      </TABLE>
+  </BODY>
+</HTML>

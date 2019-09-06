@@ -1,0 +1,87 @@
+{
+  "Home": {
+    "name": "Home",
+    "path": "home",
+    "meta": {
+      "label": "$menu_item.Home",
+      "iconClass": "el-icon-material-home",
+      "close": true
+    }
+  },
+
+  "Merch_Home": {
+    "name": "Merch_Home",
+    "path": "Merch_Home",
+    "meta": {
+      "label": "$menu_item.Merch_Home",
+      "iconClass": "el-icon-material-home",
+      "close": true
+    }
+  },
+
+  "user": {
+    "path": "configurator/user",
+    "name": "user",
+    "meta": {
+      "label": "$menu_item.user"
+    }
+  },
+  "role": {
+    "path": "configurator/role",
+    "name": "role",
+    "meta": {
+      "label": "$menu_item.role"
+    }
+  },
+  "authority": {
+    "path": "configurator/authority",
+    "name": "authority",
+    "meta": {
+      "label": "$menu_item.authority"
+    }
+  },
+
+  "all_merch": {
+    "path": "merch/all_merch",
+    "name": "merch",
+    "meta": {
+      "label": "$menu_item.all_merch"
+    }
+  },
+  "all_merch_order": {
+    "path": "merch/all_merch_order",
+    "name": "order",
+    "meta": {
+      "label": "$menu_item.all_merch_order"
+    }
+  },
+  "all_merch_settle": {
+    "path": "merch/all_merch_settle",
+    "name": "settle",
+    "meta": {
+      "label": "$menu_item.all_merch_settle"
+    }
+  },
+
+  "merch_conf": {
+    "path": "merch_center/merch_conf",
+    "name": "merch_conf",
+    "meta": {
+      "label": "$menu_item.merch_conf"
+    }
+  },
+  "merch_order": {
+    "path": "merch_center/merch_order",
+    "name": "merch_order",
+    "meta": {
+      "label": "$menu_item.merch_order"
+    }
+  },
+  "merch_settle": {
+    "path": "merch_center/merch_settle",
+    "name": "merch_settle",
+    "meta": {
+      "label": "$menu_item.merch_settle"
+    }
+  }
+}

@@ -1,0 +1,131 @@
+<HTML>
+   <HEAD>
+      <TITLE>Top Busy Table</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD><H1>Top Busy Table</H1></TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+			      <P>This page lists tables in descending order of the column <SPAN CLASS="HL_Key">Buf Reads</SPAN>, the number of
+		         buffer read operations. Each table is listed with its database, size, the number of rows in the
+			         table, the number of buffer read/write operations, the number of
+		         sequential scans, indication to tell whether it's a user-defined temporary table, sort file or permanent system temporary table, page lock setting indication, and the hit ratio of buffer read operations.</P>
+                        <P>You can click a column head to sort the list in ascending/descending order of the selected column and click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page.</P>
+                        <DIV><IMG SRC="./Images/Busy_Table_List.jpg" ALT="Busy Table List" /></DIV>
+						<BR />
+      			      <TABLE CELLSPACING="0">
+                        <TR VALIGN="TOP" >
+                           <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Column</Td>
+                           <TD STYLE="border-top:#000000 solid 2px">Description</TD>
+                        </TR>
+                        <TR VALIGN="TOP" >
+                           <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Size(KB)</Td>
+                           <TD STYLE="border-top:#000000 solid 2px">Size of the table </TD>
+                        </TR>
+                        <TR VALIGN="TOP" >
+                           <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">N Rows </Td>
+                           <TD STYLE="border-top:#000000 solid 1px">The number of records in the table </TD>
+                        </TR>
+                        <TR VALIGN="TOP" >
+                           <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Buf Reads</Td>
+                           <TD STYLE="border-top:#000000 solid 1px">The number of  reads from the buffer pool and not from disk</TD>
+                        </TR>
+                        <TR VALIGN="TOP" >
+                           <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Buf Writes</Td>
+                           <TD STYLE="border-top:#000000 solid 1px">The number of pages modified and sent back to the buffer pool</TD>
+                        </TR>
+                        <TR VALIGN="TOP" >
+                           <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px; border-bottom:#000000 solid 2px">Re-Hit%</Td>
+                           <TD STYLE="border-top:#000000 solid 1px; border-bottom:#000000 solid 2px">
+                              <P>The percentage of  pages found in the buffer without having to read them from the disk.</P>
+                           </TD>
+                        </TR>
+                     </TABLE>
+			   </TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+					<H2>Symptom and Approach</H2>
+			        <TABLE>
+                  <TR>
+                     <TD WIDTH="20px" ALIGN="right" VALIGN="top">1.</TD>
+                     <TD>
+                        <P>If a table has low buffer reads, you may drill down into <A HREF="./tableRelatedSQL_sh.htm">Table Related SQL</A> to check what SQLs are accessing the table and how the table is accessed by a SQL activity<A HREF="./Glossary.htm#SQLActivity">*</A>, and drill down to <A HREF="./tableInfo_sh.htm">Table Info</A> to inspect the table schema design.</P>
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">2.</TD>
+                     <TD> 
+                        If a table has high sequential scans, you may take the following actions:
+								<TABLE CELLPADDING="0" CELLSPACING="0">
+								   <TR>
+									   <TD WIDTH="25">a.</TD>
+										<TD width="672">
+										   Drill down into <A HREF="./tableRelatedSQL_sh.htm">Table Related SQL</A> to check what SQLs are accessing the table and how the table is accessed by a SQL.										</TD>
+								   </TR>
+								   <TR>
+									   <TD>b.</TD>
+										<TD>
+										   Drill down into <A HREF="./tableInfo_sh.htm">Table Info</A> to check if no proper index is set.
+										</TD>
+									</TR>
+								   <TR>
+									   <TD>c.</TD>
+										<TD>
+										   Check whether the statistics of the table is outdated  via <A HREF="./gupstat_sh.htm">Outdated Update Statistics Table</A>.
+										</TD>
+									</TR>
+								</TABLE>
+                     </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">3.</TD>
+                     <TD>If <SPAN CLASS="HL_Key">Re-Hit%</SPAN> is low, you may need to increase buffers and restart the database server. </TD>
+                  </TR>
+                  <TR>
+                     <TD ALIGN="right" VALIGN="top">4.</TD>
+                     <TD>If the buffer writes is low, this could mean that no empty or unmodified buffer can be located,  and you may need to allocate more buffer space. You may drill down into <A HREF="./tableRelatedSQL_sh.htm">Table Related SQL</A> to see what INSERT/UPDATE/DELETE SQLs are executing in the session and how they are executed.</TD>
+                  </TR>
+               </TABLE>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+			      <H2>More</H2>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Extra Information</H3>
+			      <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD>
+                        <P>As clicking a row, the extra information of the row is displayed in the table beside the bar chart as shown below.</P>
+                        <DIV><IMG SRC="./Images/Busy_Table_Detail.jpg" ALT="Detail" /></DIV>
+                       </TD>
+                    </TR>
+               </TABLE>
+				   <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Bar Chart</H3>
+					<TABLE>
+						  <TR>
+						     <TD WIDTH="5px">&nbsp;</TD>
+							  <TD>
+                        <P>A row with checkbox checked  will be drawn on the bar chart as below. You can change the y-axis of the chart by <SPAN CLASS="HL_Key">Chart Option</SPAN> option in the right-click menu of the chart.</P>
+                        <DIV><IMG SRC="./Images/Busy_Table_Chart.jpg" ALT="Bar Chart" /></DIV>
+                     </TD>
+                  </TR>
+               </TABLE>
+			   </TD>  
+			   <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

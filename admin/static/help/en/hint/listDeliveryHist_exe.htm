@@ -1,0 +1,84 @@
+<HTML>
+   <HEAD>
+      <TITLE>Alert Delivery History</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD><H1>Alert Delivery History</H1></TD>
+			   <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+			   </TD>
+		   </TR>
+		   <!-- begin of content -->
+		   <TR>
+			   <TD COLSPAN="2">
+				   <P>It shows alerts/notifications sent by the dbSonar Control Center for events detected on the selected dbSonar Agent<A HREF="./Glossary.htm#SonarAgent">*</A>.</P>
+					<P>As a system-defined or user-defined event is detected, an alert or notification will be sent by email or SMS to notify persons who should manage the detected event. Any unsuccessfully delivered alert/notification will be re-sent again and again till it's delivered successfully.</P>
+					<P>You can click a column head to sort the list in ascending/descending order of the selected column and click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page.</P>
+					<P>You may drill down into <A HREF="./getEventRecipientList_sh.htm">Get Event Notification Recipient List</A> to get the list of recipients who receive the delivered alert notice, as well as contact information of every recipient in the list.</P>
+					<P>Here are descriptions of columns in the list.</P>
+               <TABLE CELLSPACING="0">
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Column</Td>
+                     <TD STYLE="border-top:#000000 solid 2px">Description</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">ID</Td>
+                     <TD STYLE="border-top:#000000 solid 2px">Identification of event</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Delivered Time</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Time when the alert is delivered successfully</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">dbSonar Agent</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Name of the dbSonar Agent where the event is detected</TD>
+                  </TR>
+                  <TR VALIGN="TOP">
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">IP</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">IP address where the database instance resides on</TD>
+                  </TR>
+                  <TR VALIGN="TOP">
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Instance</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Name of the database instance that the event occurred</TD>
+                  </TR>
+                  <TR VALIGN="TOP">
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Event</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Brief description of the event</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Severity</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Level of urgency for the event</TD>
+				  </TR>
+                  <TR VALIGN="TOP">
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Type</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Type of the delivered alert</TD>
+                  </TR>
+                  <TR VALIGN="TOP">
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Method</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Indicates how the alert is delivered</TD>
+                  </TR><TR VALIGN="TOP">
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Recipient</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Name of the recipient who recieves the alert notice</TD>
+                  </TR><TR VALIGN="TOP">
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Target</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The destination where the alert is delivered to, like email address</TD>
+                  </TR>
+                  <TR VALIGN="TOP">
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Retry</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The number of times that the alert has been tried before delivered successfully</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px; border-bottom:#000000 solid 2px">Status</Td>
+                     <TD STYLE="border-top:#000000 solid 1px; border-bottom:#000000 solid 2px">Indicates the delivery status</TD>
+                  </TR>
+               </TABLE>
+			 </TD>
+			</TR>
+         <!-- end of content -->
+      </TABLE>
+  </BODY>
+</HTML>

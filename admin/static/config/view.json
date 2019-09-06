@@ -1,0 +1,28 @@
+{
+  "user_setup": {
+    "props": {
+      "query": {},
+      "toolbar": [
+        {
+          "id": "top_toolbar",
+          "url": "/MOCK/TOOLBAR_METADATA?id=Common",
+          "children": []
+        }
+      ],
+      "table": {
+        "showSelectCheckbox": false,
+        "url": "/{{api_project}}/user",
+        "columns": {
+          "url": "/MOCK/TABLE_METADATA?id=Instance_List"
+        },
+        "pagination": {
+          "enable": true
+        },
+        "export": {
+          "output": "Instance_Setup_"
+        },
+        "refreshEvents": ["confirm-success#clearAnalysisResult", "confirm-success#stopAnalysisSession"]
+      }
+    }
+  }
+}

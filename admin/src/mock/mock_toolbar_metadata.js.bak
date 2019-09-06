@@ -1,0 +1,385 @@
+import { param2Obj } from '@/utils/param2Obj'
+
+const Operations = {
+  SQL_Point_In_Time: { id: 'SQL_Point_In_Time',
+    widget: 'routerLink',
+    position: 'right',
+    label: 'SQL Point In Time',
+    type: 'text',
+    size: 'mini',
+    icon: 'el-icon-arrow-down',
+    checkQueryNotNull: true,
+    checkQueryNotNullErrorMessage: 'Please select a time point on the chart',
+    tooltipDisabled: true,
+    tooltipContent: 'Please select a time point on the chart',
+    to: {
+      path: 'SQL_Point_In_Time'
+    }
+  },
+  Execution_History_Of_SQL_Pattern: {
+    id: 'Execution_History_Of_SQL_Pattern',
+    widget: 'routerLink',
+    position: 'right',
+    label: 'Execution History Of SQL Pattern',
+    type: 'text',
+    size: 'mini',
+    icon: 'el-icon-caret-bottom',
+    checkQueryNotNull: true,
+    checkQueryNotNullErrorMessage: 'Please select the row data',
+    to: {
+      path: './Execution_History_Of_SQL_Pattern/SQL_Point_In_Time'
+    }
+  }
+}
+
+const TOOLBAR = {
+  REFRESH: { id: 'refresh', widget: 'click', position: 'right', label: '', type: 'primary', size: 'mini', icon: 'el-icon-refresh' },
+  ADD: { id: 'add', widget: 'click', position: 'left', label: 'ADD', type: 'primary', size: 'mini', icon: 'el-icon-edit' }
+}
+
+const METADATA = {
+  Common: [
+    TOOLBAR.REFRESH
+  ],
+  Empty: [],
+  ActiveSQL_Bottom: [
+    // {
+    //   id: 'SQL_Evaluator',
+    //   widget: 'routerLink',
+    //   position: 'right',
+    //   label: 'SQL Evaluator',
+    //   type: 'text',
+    //   size: 'mini',
+    //   icon: 'el-icon-caret-bottom',
+    //   checkQueryNotNull: false,
+    //   checkQueryNotNullErrorMessage: '请选择数据行',
+    //   to: {
+    //     path: './SQL_Evaluator/Active_SQL'
+    //   }
+    // }
+  ],
+
+  Connections_Bottom: [
+    { id: 'Active_SQL',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Active SQL',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: 'Please select the row data',
+      queryKeys: ['session'],
+      to: {
+        path: 'Active_SQL'
+      }
+    },
+    { id: 'Active_SQL_Tree_Diagram',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Active SQL Tree Diagram',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: 'Please select the row data',
+      queryKeys: ['session'],
+      to: {
+        path: 'Active_SQL_Tree_Diagram'
+      }
+    },
+    { id: 'Start_Analysis',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Start Analysis',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: 'Please select the row data',
+      queryKeys: ['session'],
+      to: {
+        path: 'Start_Analysis'
+      }
+    }
+  ],
+
+  TableInUsed: [
+    TOOLBAR.REFRESH
+  ],
+  Table_Bottom: [
+    { id: 'Related_SQL',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Related SQL',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: 'Please select the row data',
+      queryKeys: ['database', 'table'],
+      to: {
+        path: 'Related_SQL'
+      }
+    }
+  ],
+  RelatedSQL_Bottom: [],
+  CpuBusyRate_Bottom: [
+    Operations.SQL_Point_In_Time,
+    { id: 'Active_DB_Connection',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Active DB Connection',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: '请设置参数',
+      to: {
+        path: 'Active_DB_Connection'
+      }
+    },
+    { id: 'DB_VP_Busy_Rate',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'DB VP Busy Rate',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: '请设置参数',
+      to: {
+        path: 'DB_VP_Busy_Rate'
+      }
+    },
+    { id: 'VP_Queue',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'VP Queue',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: '请设置参数',
+      to: {
+        path: 'VP_Queue'
+      }
+    }
+  ],
+  CpuBusyRate_Bottom2: [
+    Operations.SQL_Point_In_Time,
+    { id: 'Top_Busy_OS_Processes',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Current Busy OS Processes',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: false,
+      checkQueryNotNullErrorMessage: '',
+      to: {
+        path: 'Top_Busy_OS_Processes'
+      }
+    },
+    { id: 'Top_Busy_Session',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Current Busy Session',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: false,
+      checkQueryNotNullErrorMessage: '',
+      to: {
+        path: 'Top_Busy_Session'
+      }
+    }
+  ],
+  SQL_Point_In_Time_Bottom: [],
+  DBspaceRead_Bottom: [
+    Operations.SQL_Point_In_Time,
+    { id: 'Active_DB_Connection',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Active DB Connection',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: '请设置参数',
+      to: {
+        path: 'Active_DB_Connection'
+      }
+    },
+    { id: 'DB_Page_Reads',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'DB Page Reads',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: '请设置参数',
+      to: {
+        path: 'DB_Page_Reads'
+      }
+    },
+    { id: 'DB_Disk_Reads',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'DB Disk Reads',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: '请设置参数',
+      to: {
+        path: 'DB_Disk_Reads'
+      }
+    }
+  ],
+  DBspaceWrite_Bottom: [
+    Operations.SQL_Point_In_Time,
+    { id: 'Active_DB_Connection',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Active DB Connection',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: '请设置参数',
+      to: {
+        path: 'Active_DB_Connection'
+      }
+    },
+    { id: 'DB_Page_Writes',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'DB Page Writes',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: '请设置参数',
+      to: {
+        path: 'DB_Page_Writes'
+      }
+    },
+    { id: 'DB_Disk_Writes',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'DB Disk Writes',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: true,
+      checkQueryNotNullErrorMessage: '请设置参数',
+      to: {
+        path: 'DB_Disk_Writes'
+      }
+    }
+  ],
+  MemorySegment_Bottom: [
+    { id: 'Active_Connections',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Active Connections',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: false,
+      checkQueryNotNullErrorMessage: '',
+      to: {
+        path: 'Active_Connections'
+      }
+    },
+    { id: 'Top_Busy_Session',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Current Busy Session',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: false,
+      checkQueryNotNullErrorMessage: '',
+      to: {
+        path: 'Top_Busy_Session'
+      }
+    },
+    { id: 'Top_Memory_Consuming_Session',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Current Memory Consuming Session',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: false,
+      checkQueryNotNullErrorMessage: '',
+      to: {
+        path: 'Top_Memory_Consuming_Session'
+      }
+    },
+    { id: 'DB_System_Memory_Pool',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'DB System Memory Pool',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: false,
+      checkQueryNotNullErrorMessage: '请在图表上选择时间点',
+      to: {
+        path: 'DB_System_Memory_Pool'
+      }
+    }
+  ],
+  Trend_Analysis_Bottom: [
+    Operations.SQL_Point_In_Time
+  ],
+  HealthCheck_Task: [
+    TOOLBAR.ADD, TOOLBAR.REFRESH
+  ],
+  HealthCheck_Strategy: [
+    TOOLBAR.ADD, TOOLBAR.REFRESH
+  ],
+
+  Real_Time: [
+    { id: 'Top_Busy_OS_Processes',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Current Busy OS Processes',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: false,
+      checkQueryNotNullErrorMessage: '',
+      to: {
+        path: 'Top_Busy_OS_Processes'
+      }
+    },
+    { id: 'Top_Busy_Session',
+      widget: 'routerLink',
+      position: 'right',
+      label: 'Current Busy Session',
+      type: 'text',
+      size: 'mini',
+      icon: 'el-icon-arrow-down',
+      checkQueryNotNull: false,
+      checkQueryNotNullErrorMessage: '',
+      to: {
+        path: 'Top_Busy_Session'
+      }
+    }
+  ]
+}
+
+export default {
+  GET: config => {
+    const { id } = param2Obj(config.url)
+    if (id) {
+      return METADATA[id]
+    }
+    return []
+  }
+}

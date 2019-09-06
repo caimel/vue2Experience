@@ -1,0 +1,159 @@
+{
+  "view": {
+    "name": "dropdown-view"
+  },
+  "layout": {
+    "container": "panel",
+    "metadata": {
+      "items": [
+        {
+          "style": {
+            "flex": 1
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "toolbar",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 10
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "grid",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "flex": 1
+          },
+          "equally": true,
+          "columns": [
+            {
+              "slot": "toolbarFoot",
+              "style": {
+                "flex": 24
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "components": {
+    "toolbar": {
+      "component": "toolbar",
+      "metadata": {
+        "children": {
+          "method": "remote",
+          "url": "/ToolbarMetadata/EventManager/ThisAgent/EventList",
+          "data": []
+        },
+        "events": {
+          "click#click": [
+            {
+              "method": "loadData",
+              "params": []
+            }
+          ]
+        }
+      },
+      "id": "toolbar"
+    },
+    "grid": {
+      "id": "grid",
+      "component": "grid",
+      "metadata": {
+        "pagination": false,
+        "columns": {
+          "method": "remote",
+          "url": "/GridMetadata/EventManager/ThisAgent/EventList"
+        },
+        "source": {
+          "method": "static",
+          "data": []
+        },
+        "events": {
+          "row-click": [
+            {
+              "target": "toolbarFoot",
+              "method": "trigger",
+              "params": [
+                "\"Show_Detected_Event_Details\"",
+                "\"setQuery\"",
+                "{ session: row.session }"
+              ]
+            },
+            {
+              "target": "toolbarFoot",
+              "method": "trigger",
+              "params": [
+                "\"Show_Resolved_Event_Details\"",
+                "\"setQuery\"",
+                "{ session: row.session }"
+              ]
+            },
+            {
+              "target": "toolbarFoot",
+              "method": "trigger",
+              "params": [
+                "\"Get_Event_Notification_List\"",
+                "\"setQuery\"",
+                "{ session: row.session }"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "toolbarFoot": {
+      "component": "toolbar",
+      "metadata": {
+        "children": {
+          "method": "remote",
+          "url": "/ToolbarMetadata/EventManager/ThisAgent/EventListFoot",
+          "data": []
+        },
+        "events": {}
+      },
+      "id": "toolbarFoot"
+    }
+  },
+  "http": [
+    {
+      "name": "loadData",
+      "method": "get",
+      "url": "/sqlSkeletonAnalysis/heavySql64",
+      "params":{},
+      "time": 1000,
+      "autostart": false,
+      "repeat": false,
+      "immediate": false,
+      "success": {
+        "trigger": [
+          {
+            "target": "grid",
+            "method": "setData",
+            "params": [
+              "response.data.data.items"
+            ]
+          }
+        ]
+      },
+      "error": {
+        "message": "请求错误!"
+      }
+    }
+  ]
+}

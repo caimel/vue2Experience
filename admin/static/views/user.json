@@ -1,0 +1,187 @@
+{
+  "props": {
+    "query": {},
+    "toolbar": [
+      {
+        "id": "top_toolbar",
+        "remote": false,
+        "url": "/MOCK/TOOLBAR_METADATA?id=Common",
+        "children": [
+          { "id": "add", "widget": "dialog-component-link-button",
+            "position": "left", "label": "新增", "type": "primary", "size": "mini", "icon": "el-icon-edit",
+            "title": "新增用户",
+            "width": "600px",
+            "component": "Form",
+            "compProps": {
+              "width": "400px",
+              "items": [
+                [{"widget": "input","label": "用户名", "prop": "username"}],
+                [{"widget": "input","label": "密码", "prop": "password", "type": "password"}],
+                [
+                  { "widget": "select",
+                    "label": "角色", "prop": "roles", "multiple": true,
+                    "remote": true,
+                    "clearable": true,
+                    "url": "/{{api_project}}/items/roles",
+                    "params": {},
+                    "options": []
+                  }
+                ],
+                [{"widget": "switch","label": "启用", "prop": "enabled"}],
+                [{"widget": "switch","label": "锁定", "prop": "accountLocked"}]
+              ],
+              "rules": {
+                "username": [
+                  { "required": true, "message":"请输入用户名", "trigger": "blur" },
+                  { "min": 6,"max":20,  "message":"用户名长度为6-12位", "trigger": "blur" }
+                ],
+                "password": [
+                  { "required": true, "message":"请输入密码", "trigger": "blur" },
+                  { "min": 6,"max":20,  "message":"密码长度为6-12位", "trigger": "blur" }
+                ]
+              },
+              "model": {
+                  "enabled": true,
+                  "accountLocked": false
+              },
+              "urlStyle": "restful",
+              "submitUrl": "/{{api_project}}/user",
+              "submitHttpMethod": "post"
+            }
+          },
+          { "id": "checks", "widget": "checks",
+            "size": "mini", "position": "right",
+            "props": {"label": "label", "value": "visible"}, "tooltipDisabled": true, "tooltipContent": "Columns_Select", "tooltipPlacement": "bottom", "tooltipEffect": "dark" }
+        ]
+      }
+    ],
+    "table": {
+      "selectCheckbox": false,
+      "indexed": true,
+      "url": "/{{api_project}}/user",
+      "columns": [
+          {"label": "用户名", "prop": "username", "showOverflowTooltip": true},
+          {"label": "超管", "prop": "admin", "showOverflowTooltip": true,
+            "widget": "icon",
+            "props": {
+              "trueIcon": "el-icon-check",
+              "trueStyle": {"color": "green"},
+              "falseIcon": "el-icon-close",
+              "falseStyle": {"color": "red"}
+            }},
+          {"label": "启用", "prop": "enabled", "showOverflowTooltip": true,
+            "widget": "icon",
+            "props": {
+              "trueIcon": "el-icon-check",
+              "trueStyle": {"color": "green"},
+              "falseIcon": "el-icon-close",
+              "falseStyle": {"color": "red"}
+            }},
+          {"label": "密码过期", "prop": "passwordExpired", "showOverflowTooltip": true,
+          "widget": "icon",
+          "props": {
+            "trueIcon": "el-icon-check",
+            "trueStyle": {
+              "color": "green"
+            },
+            "falseIcon": "el-icon-close",
+            "falseStyle": {
+              "color": "red"
+            }
+          }},
+          {"label": "锁定", "prop": "accountLocked", "showOverflowTooltip": true,
+            "widget": "icon",
+            "props": {
+              "trueIcon": "el-icon-check",
+              "trueStyle": {"color": "green"},
+              "falseIcon": "el-icon-close",
+              "falseStyle": {"color": "red"}
+            }},
+          {"label": "过期", "prop": "accountExpired", "showOverflowTooltip": true,
+            "widget": "icon",
+            "props": {
+              "trueIcon": "el-icon-check",
+              "trueStyle": {"color": "green"},
+              "falseIcon": "el-icon-close",
+              "falseStyle": {"color": "red"}
+            }},
+          {"label": "操作", "prop": "operations", "width": 100, "fixed": "right", "widget": "operations",
+          "props": {
+            "type": "dropdown",
+            "options": [
+              {
+                "element": "dialog-component-link-button",
+                "props": {
+                  "id": "update",
+                  "type": "text",
+                  "size": "mini",
+                  "label": "更新",
+                  "title": "更新用户信息",
+                  "width": "600px",
+                  "queryKeys": ["id"],
+                  "component": "Form",
+                  "compProps": {
+                    "width": "400px",
+                    "items": [
+                      [{"widget": "input","label": "用户名", "prop": "username", "disabled": true}],
+                      [
+                        { "widget": "select",
+                          "label": "角色", "prop": "roles", "multiple": true,
+                          "remote": true,
+                          "clearable": true,
+                          "url": "/{{api_project}}/items/roles",
+                          "params": {},
+                          "options": []
+                        }
+                      ],
+                      [{"widget": "switch","label": "启用", "prop": "enabled"}],
+                      [{"widget": "switch","label": "锁定", "prop": "accountLocked"}]
+                    ],
+                    "rules": {
+                      "username": [{ "required": true, "message":"请输入用户名", "trigger": "blur" }]
+                    },
+                    "query": {},
+                    "urlStyle": "restful",
+                    "loadUrl": "/{{api_project}}/user",
+                    "submitUrl": "/{{api_project}}/user",
+                    "submitHttpMethod": "put"
+                  }
+                }
+              },
+              {
+                "element": "x-confirm-button",
+                "props": {
+                  "id": "delete",
+                  "type": "text",
+                  "size": "mini",
+                  "label": "删除",
+                  "disabled": "${admin or username == \"merch\"}",
+                  "checkParamsNotNull": false,
+                  "checkParamsNotNullErrorMessage": "",
+                  "promptMessage": "点击 [确定],以删除该用户",
+                  "confirmMessage": "",
+                  "cancelMessage": "",
+                  "confirmButtonText": "确定",
+                  "cancelButtonText": "取消",
+                  "url": "/{{api_project}}/user",
+                  "urlStyle": "restful",
+                  "httpMethod": "delete",
+                  "params": {},
+                  "queryKeys": ["id"]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "pagination": true,
+      "export": {
+        "output": "用户_"
+      },
+      "events": [
+        { "name" :"confirm-success#delete", "action": "refresh"},
+        { "name" :"component-link#update", "action": "refresh"}
+      ]
+    }
+  }
+}

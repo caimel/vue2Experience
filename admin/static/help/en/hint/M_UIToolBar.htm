@@ -1,0 +1,65 @@
+<HTML>
+   <HEAD>
+      <TITLE>ToolBar</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+            <TD><H1>ToolBar</H1></TD>
+            <TD ALIGN="right">
+               <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+            </TD>
+         </TR>
+         <!-- begin of content -->
+         <TR>
+            <TD colspan="2"><P>It is on the top of the dbSonar interface. It will present whether there is any unresolved event on a dbSonar Agent that you are able to monitor, which dbSonar Agent is watched currently, and who the logon user is, and provides other UI operation functions.</P>
+               <TABLE>
+                  <TR>
+                     <TD VALIGN="top"><P><IMG SRC="./Images/autoShowHide.gif" ALT="Auto Show Hide" /></P></TD>
+                     <TD VALIGN="top"><P>It is a toggle button to show or hide the SideBar.</P></TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="top"><P><IMG SRC="./Images/OnlineHelp.gif" ALT="Online Help" /></P></TD>
+                     <TD VALIGN="top"><P>It shows the online help.</P></TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="top"><P><IMG SRC="./Images/logout.gif" ALT="Logout" /></P></TD>
+                     <TD VALIGN="top"><P>It is to sign you off the dbSonar system and discard the current working session. Any child window launched from the initial browsing window will lose their connections after you log-off.</P></TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="top"><P><IMG SRC="./Images/AgentList.jpg" ALT="AgentList" /></P></TD>
+                     <TD VALIGN="top"><P>It is to list all dbSonar agents that the current user has authority to monitor. As selecting another dbSonar agent, another browser window will be launched to watch the selected dbSonar agent. Thus you are able to diagnosis and watch several dbSonar agents in different browser windows at the same time.</P></TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="top"><P><IMG SRC="./Images/LogonName.jpg" ALT="Logon Name" /></P></TD>
+                     <TD VALIGN="top"><P>It shows who logon the dbSonar system. You can click this icon to change your password.</P></TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="top"><P><IMG SRC="./Images/More.jpg" ALT="More" /></P></TD>
+                     <TD VALIGN="top"><P>This icon indicates  that dbSonar Agents the logon user can monitor cannot be exhibited in a  row.? Click on it to bring up the whole  list of dbSonar Agents. As clicking a dbSonar Agent on the list, a new tab is launched to list all unresolved events on the selected dbSonar Agent</P></TD>
+                  </TR>
+                  <TR>
+                     <TD VALIGN="top"><P><IMG SRC="./Images/NoMonitoredEvent.gif" ALT="No Monitored Event Occurred" /> or <IMG SRC="./Images/MonitoredEvent.gif" ALT="Monitored Event Occurred" /></P></TD>
+                     <TD VALIGN="top"><P>Event indicator, displayed in front of a dbSonar Agent, to indicate whether any unresolved event exists on the dbSonar Agent.</P>
+                        <TABLE>
+                          <TR>
+                            <TD><P><IMG SRC="./Images/NoMonitoredEvent.gif" ALT="No Monitored Event Occurred" /></P></TD>
+                            <TD><P>To indicate there is no unresolved event on the dbSonar Agent.</P></TD>
+                          </TR>
+                          <TR>
+                            <TD><P><IMG SRC="./Images/MonitoredEvent.gif" ALT="Monitored Event Occurred" /></P></TD>
+                            <TD><P>To indicate there is unresolved event(s) on the dbSonar Agent. As clicking the dbSonar Agent, a new tab is launched to list all unresolved events on the dbSonar Agent. Please refer to <A HREF="./listServerEvent_exe.htm">Event List</A> for details of the unresolved event list.</P></TD>
+                         </TR>
+                        </TABLE>
+                        <DIV><IMG src="./Images/EventList.jpg" alt="Event List" width="650" height="95" /></DIV>                     </TD>
+                  </TR>
+               </TABLE>
+            </TD>
+         </TR>
+         <!-- end of content -->
+      </TABLE>
+     
+   </BODY>
+</HTML>

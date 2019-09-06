@@ -1,0 +1,382 @@
+---
+templates:
+  - name: DBParameterAnalysisReport
+    description: vue template
+    mode: json
+    filepath: ./metadata/DBSystemOptimization/DBParameterAnalysisReport.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\DBSystemOptimization\DBParameterAnalysisReport
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: IncompletedUpdateStatisticsTable
+    description: vue template
+    mode: json
+    filepath: ./metadata/DBSystemOptimization/IncompletedUpdateStatisticsTable.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\DBSystemOptimization\IncompletedUpdateStatisticsTable
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: OutdatedUpdateStatisticsTable
+    description: vue template
+    mode: json
+    filepath: ./metadata/DBSystemOptimization/OutdatedUpdateStatisticsTable.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\DBSystemOptimization\OutdatedUpdateStatisticsTable
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: TopLockWaitTable
+    description: vue template
+    mode: json
+    filepath: ./metadata/DBSystemOptimization/TopLockWaitTable.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\DBSystemOptimization\TopLockWaitTable
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: TopBusyTable
+    description: vue template
+    mode: json
+    filepath: ./metadata/DBSystemOptimization/TopBusyTable.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\DBSystemOptimization\TopBusyTable
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: TopOSProcessList
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopOSProcessList.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopOSProcessList
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: DBSpaceInformation
+    description: vue template
+    mode: json
+    filepath: ./metadata/DBSystemOptimization/DBSpaceInformation.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\DBSystemOptimization\DBSpaceInformation
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: DBSpaceIOInformation
+    description: vue template
+    mode: json
+    filepath: ./metadata/DBSystemOptimization/DBSpaceIOInformation.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\DBSystemOptimization\DBSpaceIOInformation
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: ChunkInformation
+    description: vue template
+    mode: json
+    filepath: ./metadata/DBSystemOptimization/ChunkInformation.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\DBSystemOptimization\ChunkInformation
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: ChunkIOInformation
+    description: vue template
+    mode: json
+    filepath: ./metadata/DBSystemOptimization/ChunkIOInformation.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\DBSystemOptimization\ChunkIOInformation
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: ActiveConnections
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/ActiveConnections.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\ActiveConnections
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: RealTimePerformanceAnalysis ListAnalysisJobs
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/ListAnalysisJobs.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\ListAnalysisJobs
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: LockedSessions
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/LockedSessions.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\LockedSessions
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: ShowIdleSession
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/ShowIdleSession.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\ShowIdleSession
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: ShowLockWaits
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/ShowLockWaits.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\ShowLockWaits
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: TableInUsed
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TableInUsed.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TableInUsed
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: TopBusySession
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopBusySession.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopBusySession
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: TopIOSession
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopIOSession.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopIOSession
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: TopMemoryConsumingSession
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopMemoryConsumingSession.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopMemoryConsumingSession
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: TopRunningSQL
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopRunningSQL.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopRunningSQL
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: Trend Analysis
+    description: Trend Analysis
+    mode: json
+    filepath: ./metadata/HistoricalPerformanceAnalysis/TrendAnalysis.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\HistoricalPerformanceAnalysis\TrendAnalysis
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: ActiveSqlTreeDiagram
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopBusySession/ActiveSqlTreeDiagram.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopBusySession\ActiveSqlTreeDiagram
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: StartAnalysisSession
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopBusySession/StartAnalysisSession.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopBusySession\StartAnalysisSession
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: StopAnalysisSession
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopBusySession/StopAnalysisSession.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopBusySession\StopAnalysisSession
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: ListAnalysisResult
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopBusySession/ListAnalysisResult.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopBusySession\ListAnalysisResult
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: SqlEvaluator
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopBusySession/SqlEvaluator.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopBusySession/SqlEvaluator
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: ExecutionHistoryOfSQLPattern
+    description: vue template
+    mode: json
+    filepath: ./metadata/RealTimePerformanceAnalysis/TopBusySession/ExecutionHistoryOfSQLPattern.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\RealTimePerformanceAnalysis\TopBusySession\ExecutionHistoryOfSQLPattern
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: Heavy SQL Statistics
+    description: Heavy SQL Statistics
+    mode: json
+    filepath: ./metadata/HistoricalPerformanceAnalysis/HeavySQLStatistics.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\HistoricalPerformanceAnalysis\SQLSkeletonAnalysis\HeavySQLStatistics
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: Frequent SQL Statistics
+    description: Heavy SQL Statistics
+    mode: json
+    filepath: ./metadata/HistoricalPerformanceAnalysis/FrequentSQLStatistics.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\HistoricalPerformanceAnalysis\SQLSkeletonAnalysis\FrequentSQLStatistics
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: Sequential Scan SQL Statistics
+    description: Heavy SQL Statistics
+    mode: json
+    filepath: ./metadata/HistoricalPerformanceAnalysis/SequentialScanSQLStatistics.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\HistoricalPerformanceAnalysis\SQLSkeletonAnalysis\SequentialScanSQLStatistics
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: HistoricalPerformanceAnalysis ListAnalysisJobs
+    description: vue template
+    mode: json
+    filepath: ./metadata/HistoricalPerformanceAnalysis/ListAnalysisJobs.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\HistoricalPerformanceAnalysis\SessionAnalysis\ListAnalysisJobs
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: EventManager ThisAgent UnresolvedEventList
+    description: vue template
+    mode: json
+    filepath: ./metadata/EventManager/ThisAgent/UnresolvedEventList.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\EventManager\ThisAgent\UnresolvedEventList
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: EventManager ThisAgent ResolvedEventList
+    description: vue template
+    mode: json
+    filepath: ./metadata/EventManager/ThisAgent/ResolvedEventList.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\EventManager\ThisAgent\ResolvedEventList
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: EventManager ThisAgent EventList
+    description: vue template
+    mode: json
+    filepath: ./metadata/EventManager/ThisAgent/EventList.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\EventManager\ThisAgent\EventList
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: EventManager ThisAgent AlertDeliveryHistory
+    description: vue template
+    mode: json
+    filepath: ./metadata/EventManager/ThisAgent/AlertDeliveryHistory.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\EventManager\ThisAgent\AlertDeliveryHistory
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: Settings User
+    description: vue template
+    mode: json
+    filepath: ./metadata/Settings/User.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\Settings\User
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: Settings Role
+    description: vue template
+    mode: json
+    filepath: ./metadata/Settings/Role.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\Settings\Role
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js
+  - name: Settings Resource
+    description: vue template
+    mode: json
+    filepath: ./metadata/Settings/Resource.json
+    path: ./templates/vue.hbs
+    decode: utf-8
+    target: src\views\Settings\Resource
+    targetFile: index
+    suffix: .vue
+    parser: src/parser/parser.js

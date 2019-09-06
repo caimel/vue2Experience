@@ -1,0 +1,68 @@
+<HTML>
+   <HEAD>
+      <TITLE>Trend Analysis</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD><H1>Trend Analysis</H1></TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>		      </TD>
+		   </TR>
+		   <TR>
+			   <TD COLSPAN="2">  <P>
+	            <!-- begin of content --->
+				    Any item with prefix &quot;Trend - &quot; in the SideBar  will launch a trend analysis tab. And each trend analysis tab is launched with a specific trend chart which is specified on its menu context. For example, the specific trend chart used in <SPAN CLASS="HL_Key">Trend - CPU Busy Rate(Max)</SPAN> is <SPAN CLASS="HL_Key">CPU Busy Rate(Max)</SPAN>.</P>
+			      <P>The trend chart of a specific  item drawn between the <SPAN CLASS="HL_Key">Start</SPAN> and the <SPAN CLASS="HL_Key">End</SPAN> is helpful for identifying and tracing possible performance issues that are happening or had happened on the monitored server.</P>				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>Symptom and Approach</H2>
+               <P>If there is any unusual situation shown on the trend chart, you may right-click the point on the trend chart and drill down into <A HREF="./sqlPointInTime_sh.htm">SQL Point in Time</A> to check what SQLs are running around the point in time and how these SQLs are running.</P>				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+			   <TD COLSPAN="2">
+               <H2>How to Operate</H2>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;View More Trend Charts</H3>
+               <TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD VALIGN="TOP"><IMG SRC="./Images/TrendAnalysis_TrendList.jpg" ALT="Trend List" /></TD>
+							<TD VALIGN="TOP"><P>All trend charts provided by dbSonar are listed and classified into various groups. You may select or unselect an item in the <SPAN CLASS="HL_Key">Trend List</SPAN> by clicking the checkbox in front of each item. The trend chart of the selected item will be displayed automatically according to the same period of time and time mode. When a trend analysis tab shows initially, the corresponding item of its specific trend chart is checked and its group is expanded.</P>
+							<P>For quick removing all selected items, you can click <SPAN CLASS="HL_Key">Clean all chart</SPAN> button to uncheck all selected items and remove all displayed trend charts.</P>							</TD>
+                  </TR>
+					</TABLE>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Redrawing With New Time Period / Mode</H3>
+					<TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+							<TD VALIGN="top"><IMG SRC="./Images/TrendAnalysis_TimePeriod.jpg" ALT="Time Period Image" /></TD>
+                     <TD VALIGN="TOP"><P>You can apply different period of time and/or sampling rate to all displayed trend charts for macro-/ micro-viewing them.  After specifying the expected values in <SPAN CLASS="HL_Key">Time Mode</SPAN>, <SPAN CLASS="HL_Key">Start</SPAN> and <SPAN CLASS="HL_Key">End</SPAN>, click <SPAN CLASS="HL_Key">Redraw</SPAN> button to redraw all displayed trend charts. </P>
+                        <P><SPAN CLASS="HL_Key">Time Mode</SPAN>, the sampling rate, indicates that trend charts are drawn with samples taken under this rate. There are 3 options: <SPAN CLASS="HL_Key">5 Minutes</SPAN>, <SPAN CLASS="HL_Key">Hourly</SPAN> and <SPAN CLASS="HL_Key">Daily</SPAN>.</P>
+                        <P><SPAN CLASS="HL_Key">Start</SPAN> and <SPAN CLASS="HL_Key">End</SPAN> are used to specify the period of time to draw trend charts. You may click <IMG SRC="./Images/Calendar.jpg" ALT="Calendar image" /> to pick the start and the end dates separately or enter the start and the end dates manually. Then click <SPAN CLASS="HL_Key">Redraw</SPAN> to redraw trend charts.</P>							</TD>
+                  </TR>
+					</TABLE>
+					<H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;How to Operate Trend Chart</H3>
+					<TABLE>
+                  <TR>
+                     <TD WIDTH="5px">&nbsp;</TD>
+                     <TD><P>When you click any place on trend charts, the red line shows as below.</P>
+                        <DIV><IMG SRC="./Images/TrendAnalysis_TrendChart.jpg" ALT="Trend Charts" /></DIV>
+								<P>The point-in-time values under the red line on diagrams are displayed in the Legend-Value table as below. They are listed in diagram order from top to bottom. The date and time of the red line shows above the Legend-Value table. For a diagram with more than one trend line representing separate cpu, device, DBSpace etc, the legend-value pair of each trend line will be displayed separately in the Legend-Value table with the same prefix.</P>
+								<P>For example:.</P>
+						      <UL>
+						         <LI CLASS="legend_desc">"CPU Busy Rate(Avg)" is the legend for the line on the  "CPU Busy Rate(Avg)" diagram.</LI>
+							      <LI CLASS="legend_desc">"CPU I/O Wait&quot;  is a legend prefix for each line on the  "CPU I/O Wait" diagram. A line represents a CPU. </LI>
+						      </UL>
+                        <DIV><IMG SRC="./Images/TrendAnalysis_LegendValue.jpg" ALT="Legend_Value table" /></DIV>                     </TD>
+                  </TR>
+            </TABLE>
+				</TD>	   <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

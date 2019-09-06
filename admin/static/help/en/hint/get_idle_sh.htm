@@ -1,0 +1,68 @@
+<HTML>
+   <HEAD>
+      <TITLE>Show Idle Session</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" /> 
+      <SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT>
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD>
+	            <H1>Show Idle Session</H1>
+	         </TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+				   <P>Idle connections are often seen in applications that require user interaction. Even though the user does not send any request to the database engine, the connection remains opened and consumes resources. A possible outcome is that the number of connections reaches to the maximum limit and the database server rejects the connection
+requests from then on. If you notice the number of connections surging above a normal value, then you may want to check the list of idle connections and terminate idle connections that have been sitting idle for long durations in order to release resources.</P>
+			   <P>You can click a column head to sort the list in ascending/descending order of the selected column and click <IMG SRC="./Images/refresh.gif" ALT="Refresh Button" /> or <IMG SRC="./Images/autoRefresh.gif" ALT="Auto Refresh Button" /> anytime to refresh information on the page.</P>
+			      <DIV><IMG SRC="./Images/Show_Idle_Session.jpg" ALT="List of Idle Sessions" width="844" height="212" /></DIV>
+				  <BR />
+                   <TABLE CELLSPACING="0">
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Column</Td>
+                     <TD STYLE="border-top:#000000 solid 2px">Description</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 2px; border-right:#000000 solid 1px">Session </Td>
+                     <TD STYLE="border-top:#000000 solid 2px">Identification of a session</TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">User</Td>
+                     <TD STYLE="border-top:#000000 solid 1px">Name of user initiating the session </TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Idle Time </Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The lapse of time that the connection has been idle </TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Lock Hold </Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The number of locks held by the session </TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Lock Wait </Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The number of lock waits experienced by the session </TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Buffer Read </Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The number of buffer read operations of the session </TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td NOWRAP STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px">Buffer Write </Td>
+                     <TD STYLE="border-top:#000000 solid 1px">The number of buffer write operations of the session </TD>
+                  </TR>
+                  <TR VALIGN="TOP" >
+                     <Td STYLE="border-top:#000000 solid 1px; border-right:#000000 solid 1px; border-bottom:#000000 solid 2px">Database</Td>
+                     <TD STYLE="border-top:#000000 solid 1px; border-bottom:#000000 solid 2px">Name of the database connected by the session </TD>
+                  </TR>
+               </TABLE>
+		      </TD>  
+			   <!-- end of content -->
+         </TR>
+      </TABLE>
+   </BODY>
+</HTML>

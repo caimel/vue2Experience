@@ -1,0 +1,66 @@
+<template>
+  {{SafeString template}}
+
+</template>
+
+<script>
+  {{#if this.import_script}}
+    import { {{ import_function}} }from '{{import_script}}'
+  {{/if}}
+  export default {
+    name: 'index',
+    {{#each lifecycle_function}}
+    {{@key}}: function() {
+      if ({{this}} && {{this}} instanceof Function)
+        {{this}}(this);
+    },
+    {{/each}}
+    data () {
+      return {
+        GLOBAL: {
+          route: {
+            params: this.$route.params,
+            query:this.$route.query
+          }
+        },
+      {{#each stores}}
+        {{#each this.data }}
+          {{this.key}}:{{json_stringify this.value }},
+        {{/each}}
+      {{/each}}
+    }
+    },
+  methods:{
+    {{#each stores.methods}}
+      {{#with this.value}}
+        {{methodName}}({{#each params}}{{SafeString this}},{{/each}} ){
+          {{SafeString content}}
+      },
+      {{/with}}
+    {{/each}}
+    {{#each stores}}
+    {{#each this.events}}
+      {{this.key}}({{#each this.params}}{{this}},{{/each}}) {
+      {{#each this.value}}
+        {{#if target}}
+          this.$refs['{{target}}'].{{method}}( {{#each params}}{{SafeString this}},{{/each}} )
+        {{else}}
+          this.{{method}}( {{#each params}}{{SafeString this}},{{/each}} )
+        {{/if}}
+      {{/each}}
+    },
+    {{/each}}
+    {{/each}}
+    {{#each stores.timers}}
+      {{this.key}}() {
+      {{SafeString trigger}}
+    },
+    {{/each}}
+  },
+  timers :[
+    {{#each stores.timers}}
+      {{json_stringify this.value}}
+    {{/each}}
+  ]
+}
+</script>

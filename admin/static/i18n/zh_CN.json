@@ -1,0 +1,43 @@
+{
+  "login": {
+    "title": "ilia",
+    "username": "用户名",
+    "password": "密码",
+    "sign_in": "登录"
+  },
+  "menu_group": {
+    "Home": "主页",
+    "Merch_Home": "商户主页",
+    "configurator": "系统配置",
+    "merch": "商户管理",
+    "merch_center": "商户中心"
+  },
+  "menu_item": {
+    "Home": "主页",
+    "Merch_Home": "商户主页",
+    "user": "用户管理",
+    "role": "角色管理",
+    "authority": "权限管理",
+
+    "all_merch": "商户",
+    "all_merch_order": "订单",
+    "all_merch_settle": "结算",
+
+    "merch_conf": "配置",
+    "merch_order": "订单",
+    "merch_settle": "结算"
+  },
+  "main": {
+      "user_settings": "用户设置",
+      "sign_out": "登出"
+  },
+  "button": {
+      "submit": "提交",
+      "confirm": "确定",
+      "cancel": "取消",
+      "resetKey": "重置密钥"
+  },
+  "tips": {
+    "submit_success": "提交成功！"
+  }
+}

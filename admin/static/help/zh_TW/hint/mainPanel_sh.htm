@@ -1,0 +1,180 @@
+<HTML>
+   <HEAD>
+      <TITLE>MainPanel</TITLE>
+      <LINK rel=stylesheet TYPE="text/css" HREF="./OnlineHelp.css" />
+		<SCRIPT TYPE="text/javascript" SRC="./BackLink.js"></SCRIPT> 
+   </HEAD>
+   <BODY>
+      <TABLE>
+         <TR>
+	         <TD>
+	            <H1>MainPanel</H1>
+	         </TD>
+		      <TD ALIGN="right">
+		         <SCRIPT LANGUAGE="javascript">BackLink();</SCRIPT>
+		      </TD>
+			</TR>
+			<TR>
+			   <!-- begin of content -->
+			   <TD COLSPAN="2">
+               <P>This page gives an overview of current performance status of the monitored database server<A HREF="./Glossary.htm#MDS">*</A>. It includes several sections to show OS and DB level KPIs, top busy sessions and message log of the  monitored database server respectively.</P>
+               <P>As high CPU load, high disk I/O, frequency memory swap or unusual busy session shows, you may drill down from the corresponding KPI chart or the suspicious session to identify that performance bottlenecks come from OS or database level.</P>
+				</TD>
+			</TR>
+			<TR><TD COLSPAN="2">&nbsp;</TD></TR>
+			<TR>
+				<TD COLSPAN="2">
+               <H2>Symptom and Approach</H2>
+		         <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;OS Overview</H3>      
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD><IMG SRC="Images/MainPanel_OSOverview.jpg" ALT="OS Overview" width="779" height="151" /></TD>
+                 </TR>
+               </TABLE>
+               <TABLE>
+               <TR>
+                 <TD WIDTH="5px">&nbsp;</TD>
+                 <TD CLASS="HL_Key" COLSPAN=2>CPU Busy %</TD>
+               </TR>
+               <TR>
+                 <TD WIDTH="5px">&nbsp;</TD>
+                 <TD WIDTH="5px">&nbsp;</TD>
+                 <TD>
+                   <P>The KPI chart shows variations in  CPU utilization rate. If CPU is keeping a high utilization rate (exceeding 80%+), you may consider that CPU has became the bottleneck.
+                           You may need to find out how the resource has been taken and which process has taken the resource in order to 
+                     find any possible way to reduce the CPU utilization.</P>
+                   <P> Related drilling-down options in the right-click menu : <A HREF="./OSCPUPanel_sh.htm">OS CPU Panel</A>, <A HREF="./CPULoadPanel_sh.htm">CPU Loading Panel</A>, <A HREF="CPUBottleneckPanel_sh.htm">CPU Bottleneck Panel</A>, <A HREF="./ps2_sh.htm">Top OS Process List</A></P></TD>
+               </TR>
+               </TABLE>
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD CLASS="HL_Key" COLSPAN=2>Disk Busy %</TD>
+                 </TR>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD>
+                     <P>The KPI chart shows variations in disk I/O rate. If disk is keeping busy (exceeding 80%+), you may need to find out how the resource has been taken 
+                       and which session has taken the resource in order to find any possible way to reduce the disk I/O.</P>
+                     <P>Related drilling-down options in the right-click menu : <A HREF="./OSDiskPanel_sh.htm">OS Disk Panel</A>, <A HREF="./DiskLoadPanel_sh.htm">Disk Loading Panel</A>, <A href="DiskBottleneckPanel_sh.htm">Disk Bottleneck Panel</A></P></TD>
+                 </TR>
+               </TABLE>
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD CLASS="HL_Key" COLSPAN=2>Page In Out / Sec</TD>
+                 </TR>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD>
+                     <P>The KPI chart shows variations in   memory page swap. If the amount of page swapped in/out is keeping high, 
+                     it definitely will hurt performance a lot; you may need to find out how the resource has been taken and 
+                     which session has taken the resource in order to find any possible way to reduce the memory swap.</P>
+                     <P> Related drilling-down options in the right-click menu : <A HREF="./OSMemoryPanel_sh.htm">OS Memory Panel</A>, <A HREF="./MemoryLoadPanel_sh.htm">Memory Loading Panel</A>, <A href="MemoryBottleneckPanel_sh.htm">Memory Bottleneck Panel</A></P></TD>
+                 </TR>
+               </TABLE>
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD CLASS="HL_Key" COLSPAN=2>Host<A HREF="./Glossary.htm#Host">*</A></TD>
+                 </TR>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD><P>It gives an idea of system loading. If any  unusual situation is observed, you may diagnose what the running  processes are, how the resource has been taken and the network connection  status in order to find any possible way to solve the unusual situation.</P>
+                      <P> Related drilling-down options in the right-click menu : <A HREF="./ps2_sh.htm">Top OS Process List</A>, <A HREF="./allPS_sh.htm">Process List</A>, <A HREF="./netstat_sh.htm">All Network Connections/Network Connections in Waiting</A></P></TD>
+                 </TR>
+               </TABLE>
+		         <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Database Overview</H3>
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD><IMG src="Images/MainPanel_DBOverview.jpg" alt="Database Overview" width="765" height="153" /></TD>
+                 </TR>
+               </TABLE>
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD CLASS="HL_Key" COLSPAN=2>VP Busy %</TD>
+                 </TR>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD><P>The KPI chart shows the CPU utilization rate of database server virtual processes. If it is keeping high and close to the rate on the <SPAN CLASS="HL_Key">CPU Busy %</SPAN>, you may need to check the virtual process queue, the virtual process loading and the CPU loading, and find out which session has taken the resource in order to find any possible way to reduce the CPU utilization.</P>
+                      <P>Related drilling-down options in the right-click menu : <A HREF="./DBVPPanel_sh.htm">Database VP Panel</A>, <A HREF="./busySes_sh.htm">Top Busy Session</A>, <A HREF="./allRunningSQL_sh.htm">Top Running SQL</A></P></TD>
+                 </TR>
+               </TABLE>
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD CLASS="HL_Key" COLSPAN=2>DB Disk RW / Sec</TD>
+                 </TR>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD><P>The KPI chart shows variations in the size of disk read/write on the database server. If disk read/write size is large and the <SPAN CLASS="HL_Key">Disk Busy %</SPAN> shows a very busy rate, you many need to check the disk loading and find out which session has taken the resource in order to find any possible way to reduce the disk I/O rate.</P>
+                      <P>Related drilling-down options in the right-click menu : <A HREF="./DBDiskPanel_sh.htm">Database Disk Panel</A>, <A HREF="./busyDskIOSes_sh.htm">Top I/O Session</A></P>
+                   </TD>
+                 </TR>
+               </TABLE>
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD CLASS="HL_Key" COLSPAN=2>Virtual Mem Alloc / Used </TD>
+                 </TR>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD><P>The KPI chart shows variations in the size of allocated and used virtual memory. The used size depends primarily on the types of applications and queries that you are running. The size of the free virtual memory will affect how busy disk I/O will be and how many sessions can be run simutaneously. If the size of the free virtual memory is reducing,  you many need to check the utilization of memory pool, the OS memory loading and the database memory loading, and find out which session has taken the resource in order to find any possible way to reduce the used virtual memory.</P>
+                      <P>Related drilling-down options in the right-click menu : <A HREF="./DBMemoryPanel_sh.htm">Database Memory Trend Panel</A>, <A HREF="./sys_mem_pool_sh.htm">DB System Memory Pool</A>, <A HREF="./topMemSes_sh.htm">Top Memory Consuming Sessions</A> </P></TD>
+                 </TR>
+               </TABLE>
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD CLASS="HL_Key" COLSPAN=2>DB Server  </TD>
+                 </TR>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD><P>It gives an idea of database server loading. If any  unusual situation is observed, you may check what the running  sessions are, how the resource has been taken by the top sessions or top SQLs in order to find any possible way to solve the unusual situation.</P>
+                       <P>Related drilling-down on the right-click menu : <A HREF="./DbServerStatus_sh.htm">Database Server Status</A>, <A HREF="dbInfo_sh.htm">Database Information</A>, <A HREF="./activeConnection_sh.htm">Active Connections </A>, <A HREF="./busySes_sh.htm">Top Busy Session</A>, <A HREF="./allRunningSQL_sh.htm">Top Running SQL</A></P></TD>
+                 </TR>
+               </TABLE>
+               <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Top Busy Session</H3>      
+		         <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD><IMG src="./Images/MainPanel_SessionList.jpg" alt="Top Busy Session" width="777" height="155" /></TD>
+                 </TR>
+                 <TR>
+                   <TD>&nbsp;</TD>
+                   <TD><P>The table lists active busiest sessions on the database server. It is sorted based on the column <SPAN CLASS="HL_Key">OP+</SPAN> and will be refreshed automatically every couple of seconds. The <SPAN CLASS="HL_Key">OP+</SPAN>, and the <SPAN CLASS="HL_Key">SEQ+</SPAN>  are  the incremental operations like read/write and networking etc. and  the incremental sequential scans exercised by a session respectively in a refreshing interval. You may need to drill down the session with tremendous amount in the <SPAN CLASS="HL_Key">OP+</SPAN> or the <SPAN CLASS="HL_Key">SEQ+</SPAN> to check what SQLs are running in the session, how SQLs in the session are running and how the resource has been taken by SQLs in the session.</P>
+                      <P>You can click a column head to sort the list in ascending/descending order of the selected column.</P>
+                     <P>Related drilling-down options in the right-click menu : <A HREF="./getActiveSqlTree_sh.htm">Active SQL Tree Diagram</A>, <A HREF="./gcsql_sh.htm">Active SQL in a Session</A>, <A HREF="./ap_analysis_sh.htm">Start Analysis Session</A></P>
+                     <P>The login user with permission to terminate session can  terminate an abnormal session by selecting <SPAN CLASS="HL_Key">Terminate Session</SPAN> option in the right-clicking context menu. </P></TD>
+                 </TR>
+               </TABLE>
+		         <H3>&nbsp;&nbsp;<SPAN><IMG SRC="./Images/Arrow_Bullet.gif" ALT="Bullet" /></SPAN>&nbsp;Message Log</H3>      
+               <TABLE>
+                 <TR>
+                   <TD WIDTH="5px">&nbsp;</TD>
+                   <TD><IMG SRC="./Images/MainPanel_MessageLog.jpg" ALT="Message Log" width="778" height="86" BORDER="1" /></TD>
+                 </TR>
+                 <TR>
+                   <TD>&nbsp;</TD>
+                   <TD>
+                       <P>It lists the most latest database message logs. You may drill down to view more database message logs.</P>
+                       <P>Related drilling-down options in the right-click menu : <A HREF="./outstanding_log_sh.htm">Outstanding Database Message Log</A>, <A HREF="./dblog_sh.htm">Database Message Log</A> </P>
+                   </TD>
+                 </TR>
+               </TABLE>
+		      </TD>  
+			   <!-- end of content -->
+         </TR>
+      </TABLE>
+</BODY>
+</HTML>
